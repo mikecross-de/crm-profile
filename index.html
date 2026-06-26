@@ -3777,7 +3777,7 @@ function startProspectAIEnrichment(donorName, emptyId, fullId) {
     var enriched = document.getElementById(fullId);
     if (empty) empty.style.display = 'none';
     if (enriched) enriched.style.display = 'block';
-    showToast('<i class="fa-solid fa-check" style="color:var(--crm-100);margin-right:6px;"></i> Prospect AI report generated for ' + (donorName === 'Eleanor' ? 'Eleanor Richardson' : 'Amy Patterson') + ' \u00b7 141 credits remaining');
+    showToast('<i class="fa-solid fa-check" style="color:var(--crm-100);margin-right:6px;"></i> Prospect AI report generated for ' + (donorName === 'Eleanor' ? 'Eleanor Richardson' : 'Amy Patterson') + '');
   }, totalDuration + 350));
 }
 function cancelProspectAIEnrichment() {
@@ -5876,7 +5876,7 @@ function startProspectAIEnrichment(donorName, emptyId, fullId) {
     var enriched = document.getElementById(fullId);
     if (empty) empty.style.display = 'none';
     if (enriched) enriched.style.display = 'block';
-    showToast('<i class="fa-solid fa-circle-check" style="font-size:20px;color:var(--crm-100);flex-shrink:0;"></i> <span>Prospect AI report generated for ' + (donorName === 'Eleanor' ? 'Eleanor Richardson' : 'Sarah Mitchell') + ' \u00b7 141 credits remaining</span>');
+    showToast('<i class="fa-solid fa-circle-check" style="font-size:20px;color:var(--crm-100);flex-shrink:0;"></i> <span>Prospect AI report generated for ' + (donorName === 'Eleanor' ? 'Eleanor Richardson' : 'Sarah Mitchell') + '</span>');
   }, totalDuration + 350));
 }
 function cancelProspectAIEnrichment() {
@@ -5912,7 +5912,7 @@ function runEleanorPai() {
     if (empty) empty.style.display = 'none';
     if (loading) loading.style.display = 'none';
     if (full) full.style.display = 'block';
-    showToast('<i class="fa-solid fa-circle-check" style="font-size:20px;color:var(--crm-100);flex-shrink:0;"></i> <span>Prospect AI report ready for Eleanor Richardson &middot; 141 credits remaining</span>');
+    showToast('<i class="fa-solid fa-circle-check" style="font-size:20px;color:var(--crm-100);flex-shrink:0;"></i> <span>Prospect AI report ready for Eleanor Richardson</span>');
   }, 15000);
 }
 
@@ -5940,7 +5940,7 @@ function reEnrichEleanor() {
     if (title) title.textContent = 'Enrich Eleanor\u2019s profile with Prospect AI';
     if (sub) sub.innerHTML = 'You\u2019re seeing CRM data and Dataro predictions. Prospect AI scans public sources to add biographical context, capacity signals, and conversation-ready talking points.';
     if (btn) { btn.innerHTML = '<i class="fa-solid fa-sparkles" style="font-size:11px;"></i> Enrich profile'; btn.disabled = false; }
-    showToast('<i class="fa-solid fa-circle-check" style="font-size:20px;color:var(--crm-100);flex-shrink:0;"></i> <span>Prospect AI report updated for Eleanor Richardson &middot; 140 credits remaining</span>');
+    showToast('<i class="fa-solid fa-circle-check" style="font-size:20px;color:var(--crm-100);flex-shrink:0;"></i> <span>Prospect AI report updated for Eleanor Richardson</span>');
   }, 15000);
 }
 
