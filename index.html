@@ -1948,7 +1948,7 @@ table.atbl tr:last-child td{border-bottom:none;}
       <div id="photoCropOverlay" style="display:none;position:fixed;inset:0;background:rgba(31,27,46,0.58);z-index:9998;align-items:center;justify-content:center;padding:24px;">
         <div class="edit-modal" style="max-width:400px;" onclick="event.stopPropagation()">
           <div class="edit-modal-header">
-            <span class="edit-modal-title">Edit Photo</span>
+            <span class="edit-modal-title">Edit Constituent Photo</span>
             <button class="edit-modal-close" onclick="cancelCrop()"><i class="fa-solid fa-xmark"></i></button>
           </div>
           <div class="edit-modal-body">
@@ -1956,18 +1956,12 @@ table.atbl tr:last-child td{border-bottom:none;}
               <img id="cropImg">
               <div class="crop-circle-mask"></div>
             </div>
-            <div class="crop-zoom-row">
-              <i class="fa-solid fa-image" style="font-size:11px;"></i>
-              <input type="range" id="cropZoom" min="100" max="250" value="100">
-              <i class="fa-solid fa-image" style="font-size:18px;"></i>
-            </div>
-            <p style="font-size:13px;color:var(--platform-60);text-align:center;margin-top:8px;">Drag to reposition &middot; use the slider to zoom</p>
           </div>
           <div class="edit-modal-footer">
             <div></div>
             <div style="display:flex;gap:8px;">
               <button class="btn-secondary" onclick="cancelCrop()">Cancel</button>
-              <button class="btn-primary" onclick="confirmCropPhoto()">Set as Profile Picture</button>
+              <button class="btn-primary" onclick="confirmCropPhoto()">Set as Picture</button>
             </div>
           </div>
         </div>
@@ -5183,7 +5177,6 @@ var cropState = {scale: 1, x: 0, y: 0, dragging: false, startX: 0, startY: 0};
 function openPhotoCrop(dataUrl) {
   var img = document.getElementById('cropImg');
   cropState = {scale: 1, x: 0, y: 0, dragging: false, startX: 0, startY: 0};
-  document.getElementById('cropZoom').value = 100;
   img.onload = function() {
     var stageSize = 280;
     var minDim = Math.min(img.naturalWidth, img.naturalHeight);
@@ -5216,10 +5209,6 @@ function updateCropTransform() {
   });
   document.addEventListener('mouseup', function() {
     cropState.dragging = false;
-  });
-  document.getElementById('cropZoom').addEventListener('input', function(e) {
-    cropState.scale = e.target.value / 100;
-    updateCropTransform();
   });
 })();
 function cancelCrop() {
