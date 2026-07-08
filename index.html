@@ -701,10 +701,9 @@ table.atbl tr:last-child td{border-bottom:none;}
 .con-avatar-wrap{width:70px;height:70px;border-radius:50%;flex-shrink:0;position:relative;cursor:pointer;overflow:hidden;}
 .con-avatar{width:70px;height:70px;border-radius:50%;background:var(--platform-10);display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700;color:var(--platform-60);flex-shrink:0;}
 .con-avatar-img{width:70px;height:70px;border-radius:50%;object-fit:cover;display:block;}
-.con-avatar-hover{position:absolute;inset:0;border-radius:50%;background:rgba(31,27,46,0.55);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;opacity:0;transition:opacity .12s;color:var(--white);}
+.con-avatar-hover{position:absolute;inset:0;border-radius:50%;background:rgba(31,27,46,0.55);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .12s;color:var(--white);}
 .con-avatar-wrap:hover .con-avatar-hover{opacity:1;}
-.con-avatar-hover i{font-size:15px;}
-.con-avatar-hover span{font-size:10px;font-weight:700;}
+.con-avatar-hover i{font-size:20px;}
 .con-header-info{flex:1;min-width:0;}
 .con-name-row{display:flex;align-items:center;gap:12px;margin-bottom:8px;}
 .con-name{font-size:36px;font-weight:700;line-height:42px;}
@@ -1211,7 +1210,7 @@ table.atbl tr:last-child td{border-bottom:none;}
         <div class="con-avatar-wrap" id="conAvatarWrap" onclick="openPhotoUpload()">
           <div class="con-avatar" id="conAvatarEmpty">ER</div>
           <img class="con-avatar-img" id="conAvatarImg" style="display:none;">
-          <div class="con-avatar-hover"><i class="fa-solid fa-camera"></i><span>Edit</span></div>
+          <div class="con-avatar-hover"><i class="fa-solid fa-camera"></i></div>
         </div>
         <div class="con-header-info">
           <div class="con-name-row" style="display:flex;align-items:center;gap:16px;">
@@ -3787,7 +3786,7 @@ function showView(name) {
 /* ── TASK & INTERACTION TOAST ── */
 var toastTimeout;
 function createTaskToast(subject, channel, purpose) {
-  showToast('<i class="fa-solid fa-check" style="color:var(--crm-100);margin-right:6px;"></i> <strong>Task created:</strong> ' + subject + '<br><span style="font-size:12px;color:var(--platform-60);">Channel: ' + channel + ' · Purpose: ' + purpose + ' · Due: Today · Assigned to you</span>');
+  showToast('<i class="fa-solid fa-check" style="color:var(--crm-100);margin-right:6px;"></i> <strong>Task created:</strong> ' + subject + '<br><span style="font-size:12px;color:rgba(255,255,255,0.7);">Channel: ' + channel + ' · Purpose: ' + purpose + ' · Due: Today · Assigned to you</span>');
 }
 function logInteractionToast(msg) {
   setTimeout(function() {
@@ -3800,7 +3799,7 @@ function showToast(html) {
   clearTimeout(toastTimeout);
   var toast = document.createElement('div');
   toast.id = 'actionToast';
-  toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--white);border:1px solid var(--crm-20);border-radius:6px;padding:14px 20px;box-shadow:0 8px 24px rgba(0,0,0,0.12);z-index:800;font-family:var(--font);font-size:14px;color:var(--platform-100);max-width:560px;line-height:20px;animation:toastIn 0.25s ease;';
+  toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--platform-100);border-radius:4px;padding:12px 16px;box-shadow:0 4px 4px rgba(0,0,0,0.25);z-index:800;font-family:var(--font);font-size:14px;color:var(--white);max-width:640px;line-height:20px;animation:toastIn 0.25s ease;display:flex;align-items:center;gap:8px;white-space:nowrap;';
   toast.innerHTML = html;
   document.body.appendChild(toast);
   toastTimeout = setTimeout(function() {
