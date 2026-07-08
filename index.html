@@ -814,7 +814,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .snapshot-row:last-child{border-bottom:none;}
 .snapshot-lbl{font-size:14px;color:var(--platform-80);}
 .snapshot-val{font-size:14px;font-weight:600;color:var(--platform-100);}
-.snapshot-badge{font-size:12px;font-weight:700;padding:2px 6px;border-radius:4px;display:inline-block;}
+.snapshot-badge{font-size:12px;font-weight:700;line-height:18px;padding:2px 6px;border-radius:4px;display:inline-block;}
 .snapshot-badge.red{background:var(--red-10);color:var(--red-200);}
 .snapshot-badge.orange{background:var(--orange-10);color:var(--orange-200);}
 .snapshot-badge.green{background:var(--crm-10);color:var(--crm-200);}
@@ -1208,18 +1208,18 @@ table.atbl tr:last-child td{border-bottom:none;}
           <div class="con-avatar-hover"><i class="fa-solid fa-camera"></i><span>Edit</span></div>
         </div>
         <div class="con-header-info">
-          <div class="con-name-row">
+          <div class="con-name-row" style="display:flex;align-items:center;gap:16px;">
             <span class="con-name">Eleanor Richardson</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;">
+              <span class="snapshot-badge green">Active</span>
+              <span class="snapshot-badge" style="background:var(--blue-10);color:var(--blue-200);">Mid</span>
+            </span>
           </div>
           <div class="con-contact-row">
             <span class="con-contact-item"><i class="fa-solid fa-hashtag"></i> <span class="con-id">2089</span></span>
             <span class="con-contact-item"><i class="fa-solid fa-envelope"></i> <a href="#">eleanor.richardson@email.com</a></span>
             <span class="con-contact-item"><i class="fa-solid fa-phone"></i> (317) 555-0294</span>
             <span class="con-contact-item"><i class="fa-solid fa-location-dot"></i> Indianapolis, IN</span>
-            <span style="display:inline-flex;align-items:center;gap:6px;">
-              <span class="snapshot-badge green">Active</span>
-              <span class="snapshot-badge" style="background:var(--blue-10);color:var(--blue-200);">Mid</span>
-            </span>
           </div>
         </div>
         <div class="con-header-actions">
