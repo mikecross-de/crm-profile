@@ -701,9 +701,10 @@ table.atbl tr:last-child td{border-bottom:none;}
 .con-avatar-wrap{width:70px;height:70px;border-radius:50%;flex-shrink:0;position:relative;cursor:pointer;overflow:hidden;}
 .con-avatar{width:70px;height:70px;border-radius:50%;background:var(--platform-10);display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700;color:var(--platform-60);flex-shrink:0;}
 .con-avatar-img{width:70px;height:70px;border-radius:50%;object-fit:cover;display:block;}
-.con-avatar-hover{position:absolute;inset:0;border-radius:50%;background:rgba(31,27,46,0.55);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .12s;color:var(--white);}
+.con-avatar-hover{position:absolute;inset:0;border-radius:50%;background:rgba(31,27,46,0.55);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;opacity:0;transition:opacity .12s;color:var(--white);}
 .con-avatar-wrap:hover .con-avatar-hover{opacity:1;}
-.con-avatar-hover i{font-size:20px;}
+.con-avatar-hover i{font-size:15px;}
+.con-avatar-hover span{font-size:10px;font-weight:700;}
 .con-header-info{flex:1;min-width:0;}
 .con-name-row{display:flex;align-items:center;gap:12px;margin-bottom:8px;}
 .con-name{font-size:36px;font-weight:700;line-height:42px;}
@@ -767,7 +768,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .di-bar{width:3px;border-radius:2px;align-self:stretch;flex-shrink:0;}
 .di-body{flex:1;font-size:15px;color:var(--platform-100);line-height:22px;}
 .di-body strong{font-weight:700;}
-.di-action{font-family:var(--font);font-size:16px;font-weight:700;padding:4px 8px;border-radius:4px;cursor:pointer;border:none;flex-shrink:0;white-space:nowrap;line-height:21px;background:none;margin:-4px -8px;color:var(--crm-100);transition:background .12s;}
+.di-action{font-family:var(--font);font-size:14px;font-weight:700;padding:4px 12px;border-radius:4px;cursor:pointer;border:none;flex-shrink:0;white-space:nowrap;line-height:21px;background:none;margin:-4px 0px;color:var(--crm-100);transition:background .12s;}
 .di-action:hover{background:var(--crm-20);}
 .di-footer{display:flex;justify-content:space-between;align-items:center;padding-top:12px;margin-top:4px;position:relative;}
 .di-more{font-size:16px;font-weight:700;color:var(--crm-100);cursor:pointer;}
@@ -1210,7 +1211,7 @@ table.atbl tr:last-child td{border-bottom:none;}
         <div class="con-avatar-wrap" id="conAvatarWrap" onclick="openPhotoUpload()">
           <div class="con-avatar" id="conAvatarEmpty">ER</div>
           <img class="con-avatar-img" id="conAvatarImg" style="display:none;">
-          <div class="con-avatar-hover"><i class="fa-solid fa-camera"></i></div>
+          <div class="con-avatar-hover"><i class="fa-solid fa-camera"></i><span>Edit</span></div>
         </div>
         <div class="con-header-info">
           <div class="con-name-row" style="display:flex;align-items:center;gap:16px;">
@@ -1948,7 +1949,7 @@ table.atbl tr:last-child td{border-bottom:none;}
       <div id="photoCropOverlay" style="display:none;position:fixed;inset:0;background:rgba(31,27,46,0.58);z-index:9998;align-items:center;justify-content:center;padding:24px;">
         <div class="edit-modal" style="max-width:400px;" onclick="event.stopPropagation()">
           <div class="edit-modal-header">
-            <span class="edit-modal-title">Edit Constituent Photo</span>
+            <span class="edit-modal-title">Edit Photo</span>
             <button class="edit-modal-close" onclick="cancelCrop()"><i class="fa-solid fa-xmark"></i></button>
           </div>
           <div class="edit-modal-body">
@@ -1956,12 +1957,18 @@ table.atbl tr:last-child td{border-bottom:none;}
               <img id="cropImg">
               <div class="crop-circle-mask"></div>
             </div>
+            <div class="crop-zoom-row">
+              <i class="fa-solid fa-image" style="font-size:11px;"></i>
+              <input type="range" id="cropZoom" min="100" max="250" value="100">
+              <i class="fa-solid fa-image" style="font-size:18px;"></i>
+            </div>
+            <p style="font-size:13px;color:var(--platform-60);text-align:center;margin-top:8px;">Drag to reposition &middot; use the slider to zoom</p>
           </div>
           <div class="edit-modal-footer">
             <div></div>
             <div style="display:flex;gap:8px;">
               <button class="btn-secondary" onclick="cancelCrop()">Cancel</button>
-              <button class="btn-primary" onclick="confirmCropPhoto()">Set as Picture</button>
+              <button class="btn-primary" onclick="confirmCropPhoto()">Set as Profile Picture</button>
             </div>
           </div>
         </div>
@@ -5177,6 +5184,7 @@ var cropState = {scale: 1, x: 0, y: 0, dragging: false, startX: 0, startY: 0};
 function openPhotoCrop(dataUrl) {
   var img = document.getElementById('cropImg');
   cropState = {scale: 1, x: 0, y: 0, dragging: false, startX: 0, startY: 0};
+  document.getElementById('cropZoom').value = 100;
   img.onload = function() {
     var stageSize = 280;
     var minDim = Math.min(img.naturalWidth, img.naturalHeight);
@@ -5209,6 +5217,10 @@ function updateCropTransform() {
   });
   document.addEventListener('mouseup', function() {
     cropState.dragging = false;
+  });
+  document.getElementById('cropZoom').addEventListener('input', function(e) {
+    cropState.scale = e.target.value / 100;
+    updateCropTransform();
   });
 })();
 function cancelCrop() {
