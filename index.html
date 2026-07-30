@@ -41,10 +41,11 @@
   --platform-40:#A9ABAC;--platform-20:#D4D5D6;--platform-10:#E9EAEA;--platform-5:#F4F4F5;
   --crm-300:#224E04;--crm-200:#296401;--crm-100:#357A06;--crm-80:#65A739;
   --crm-20:#D9E9CD;--crm-10:#ECF4E6;--crm-5:#F5FAF2;
-  --penny-200:#524BC7;--penny-100:#675EF9;--penny-60:#9A94F1;--penny-10:#D8D7E7;--penny-5:#F1F0FA;
-  --red-100:#F93A57;--red-10:#FEEBEE;--red-5:#FFF2F4;
-  --orange-100:#F4913C;--orange-10:#FEF4EB;--orange-200:#C4731F;--yellow-10:#FFF8E1;
-  --blue-100:#2A80E4;--blue-10:#EAF2FC;
+  --penny-300:#3E3895;--penny-200:#524BC7;--penny-100:#675EF9;--penny-60:#9A94F1;--penny-20:#CCCAE9;--penny-10:#D8D7E7;--penny-5:#F1F0FA;
+  --red-300:#630312;--red-200:#C60623;--red-100:#F93A57;--red-20:#FED8DD;--red-10:#FEEBEE;--red-5:#FFF2F4;
+  --orange-300:#914708;--orange-100:#F4913C;--orange-20:#FDE9D8;--orange-10:#FEF4EB;--orange-200:#C4731F;--yellow-300:#664F00;--yellow-20:#FFF4CC;--yellow-10:#FFF8E1;
+  --blue-300:#092648;--blue-200:#10437F;--blue-100:#2A80E4;--blue-20:#D4E6FA;--blue-10:#EAF2FC;
+  --volunteer-300:#391141;--volunteer-200:#521B65;--volunteer-100:#722281;--volunteer-20:#E3D3E6;
   --white:#FFFFFF;
   --font:'proxima-nova','Helvetica Neue',Arial,sans-serif;
   --nav-width:220px;--nav-collapsed:50px;--topnav-h:60px;
@@ -136,6 +137,7 @@ button{font-family:var(--font);cursor:pointer;}
 .breadcrumb{font-size:12px;color:var(--crm-100);font-weight:600;margin-bottom:10px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;}
 /* BUTTONS */
 .btn-primary{background:var(--crm-100);color:var(--white);border:none;border-radius:4px;padding:8px 16px 10px;font-family:var(--font);font-size:14px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background 0.15s;line-height:16px;}
+.btn-primary:disabled{background:var(--platform-10);color:var(--platform-40);cursor:default;}
 .btn-primary:hover{background:var(--crm-200);}
 .btn-primary.penny{background:var(--penny-100);}
 .btn-primary.penny:hover{background:var(--penny-200);}
@@ -155,7 +157,7 @@ button{font-family:var(--font);cursor:pointer;}
 .fb-shimmer-wrap::after{content:'';position:absolute;top:-50%;left:-75%;width:40%;height:200%;background:linear-gradient(to right,transparent 0%,rgba(255,255,255,0.6) 50%,transparent 100%);transform:skewX(-15deg);animation:bb-shimmer-sweep 1.8s ease-in-out infinite;pointer-events:none;}
 .fb-card{background:var(--white);border:none;border-radius:4px;padding:24px;position:relative;z-index:1;}
 .fb-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
-.fb-badge{display:inline-flex;align-items:center;gap:5px;font-size:14px;font-weight:700;background:var(--crm-20);color:var(--crm-200);padding:3px 10px;border-radius:4px;}
+.fb-badge{display:inline-flex;align-items:center;gap:5px;font-size:14px;font-weight:700;background:var(--crm-20);color:var(--crm-300);padding:3px 10px;border-radius:4px;}
 .fb-date{font-size:14px;color:var(--platform-80);display:inline-flex;align-items:center;gap:5px;}
 .fb-powered{font-size:14px;color:var(--platform-80);}
 .fb-columns{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
@@ -235,9 +237,9 @@ button{font-family:var(--font);cursor:pointer;}
 .gl-donor-name{font-weight:700;color:var(--platform-100);font-size:16px;}
 .gl-donor-title{font-size:12px;color:var(--platform-60);}
 .gl-score{display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;padding:3px 8px;border-radius:4px;min-width:32px;}
-.gl-score.high{background:#fed8dd;color:#c60623;}
+.gl-score.high{background:#fed8dd;color:#630312;}
 .gl-score.good{background:#fde9d8;color:#914708;}
-.gl-score.med{background:var(--crm-20);color:var(--crm-200);}
+.gl-score.med{background:var(--crm-20);color:var(--crm-300);}
 .gl-ask{font-weight:700;color:var(--platform-100);white-space:nowrap;}
 .gl-insight{font-size:13px;color:var(--platform-100);line-height:18px;max-width:280px;}
 .gl-nba{font-size:12px;font-weight:700;padding:4px 10px;border-radius:4px;white-space:nowrap;}
@@ -252,7 +254,7 @@ button{font-family:var(--font);cursor:pointer;}
 .penny-tile-chip{background:none;color:var(--penny-100);font-size:14px;font-weight:700;padding:7px 16px;border-radius:36px;cursor:pointer;border:2px solid var(--penny-100);font-family:var(--font);text-align:left;transition:background 0.15s,color 0.15s;}
 .penny-tile-chip:hover{background:var(--penny-100);color:var(--white);}
 @keyframes bbShimmer{0%{transform:translateX(-150%);}65%,100%{transform:translateX(150%);}}
-.bb-icon{width:34px;height:34px;border-radius:50%;background:var(--crm-10);display:flex;align-items:center;justify-content:center;color:var(--crm-100);font-size:15px;flex-shrink:0;margin-top:1px;}
+.bb-icon{width:34px;height:34px;border-radius:50%;background:var(--crm-20);display:flex;align-items:center;justify-content:center;color:var(--crm-300);font-size:15px;flex-shrink:0;margin-top:1px;}
 .bb-label{font-size:16px;font-weight:700;color:var(--crm-200);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;}
 .bb-title{font-size:20px;font-weight:700;color:var(--crm-100);margin-bottom:16px;display:flex;align-items:center;gap:6px;}
 .bb-items{display:flex;flex-direction:column;gap:10px;margin-bottom:20px;}
@@ -271,8 +273,8 @@ button{font-family:var(--font);cursor:pointer;}
 .stat-val{font-size:28px;font-weight:700;line-height:34px;color:var(--platform-100);}
 .stat-sub{font-size:13px;color:var(--platform-60);margin-top:2px;}
 .stat-badge{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:700;padding:2px 6px;border-radius:3px;margin-top:7px;}
-.stat-badge.up{background:var(--crm-10);color:var(--crm-200);}
-.stat-badge.warn{background:var(--orange-10);color:var(--orange-100);}
+.stat-badge.up{background:var(--crm-20);color:var(--crm-300);}
+.stat-badge.warn{background:var(--orange-20);color:var(--orange-300);}
 .goal-bar-track{height:5px;background:var(--platform-10);border-radius:3px;overflow:hidden;margin-top:10px;}
 .goal-bar-fill{height:100%;background:var(--crm-100);border-radius:3px;}
 .goal-pct{font-size:12px;font-weight:700;color:var(--crm-100);margin-top:3px;}
@@ -301,20 +303,20 @@ button{font-family:var(--font);cursor:pointer;}
 .wc-oc-delta{font-size:12px;font-weight:700;color:var(--platform-100);display:flex;align-items:center;gap:4px;}
 .wc-oc-delta i{color:var(--crm-100);}
 .wc-oc-sub{font-size:12px;color:var(--platform-100);}
-.dataro-chip{display:flex;align-items:center;gap:5px;background:var(--penny-5);border:1px solid var(--penny-10);border-radius:4px;padding:4px 9px;font-size:11px;font-weight:700;color:var(--penny-200);margin-top:2px;}
+.dataro-chip{display:flex;align-items:center;gap:5px;background:var(--penny-20);border:1px solid var(--penny-10);border-radius:4px;padding:4px 9px;font-size:11px;font-weight:700;color:var(--penny-300);margin-top:2px;}
 .wc-tabs{display:flex;margin-top:0;background:var(--white);border-bottom:1px solid var(--platform-20);border-radius:6px 6px 0 0;}
 .wc-tab{padding:0 24px;height:55px;display:flex;align-items:center;gap:6px;font-size:16px;font-weight:400;color:var(--platform-60);cursor:pointer;border-bottom:2px solid transparent;border-top:none;border-left:none;border-right:none;background:none;font-family:var(--font);transition:all 0.15s;white-space:nowrap;margin-bottom:-1px;}
 .wc-tab:hover{color:var(--platform-100);}
 .wc-tab.active{color:var(--platform-100);font-weight:700;border-bottom:2px solid var(--crm-100);}
 .wc-tab-ct{font-size:12px;font-weight:700;background:var(--platform-10);color:var(--platform-80);padding:2px 6px;border-radius:4px;}
-.wc-tab.active .wc-tab-ct[data-color="red"]{background:var(--red-10);color:var(--red-100);}
-.wc-tab.active .wc-tab-ct[data-color="green"]{background:var(--crm-20);color:var(--crm-200);}
-.wc-tab.active .wc-tab-ct[data-color="blue"]{background:var(--blue-10);color:#10437F;}
-.wc-tab.active .wc-tab-ct[data-color="penny"]{background:var(--penny-5);color:var(--penny-200);}
-.pc-sub-tab.active .wc-tab-ct[data-color="red"]{background:var(--red-10);color:var(--red-100);}
-.pc-sub-tab.active .wc-tab-ct[data-color="orange"]{background:var(--orange-10);color:var(--orange-100);}
-.pc-sub-tab.active .wc-tab-ct[data-color="green"]{background:var(--crm-20);color:var(--crm-200);}
-.pc-sub-tab.active .wc-tab-ct[data-color="blue"]{background:var(--blue-10);color:#10437F;}
+.wc-tab.active .wc-tab-ct[data-color="red"]{background:var(--red-20);color:var(--red-300);}
+.wc-tab.active .wc-tab-ct[data-color="green"]{background:var(--crm-20);color:var(--crm-300);}
+.wc-tab.active .wc-tab-ct[data-color="blue"]{background:var(--blue-20);color:var(--blue-300);}
+.wc-tab.active .wc-tab-ct[data-color="penny"]{background:var(--penny-20);color:var(--penny-300);}
+.pc-sub-tab.active .wc-tab-ct[data-color="red"]{background:var(--red-20);color:var(--red-300);}
+.pc-sub-tab.active .wc-tab-ct[data-color="orange"]{background:var(--orange-20);color:var(--orange-300);}
+.pc-sub-tab.active .wc-tab-ct[data-color="green"]{background:var(--crm-20);color:var(--crm-300);}
+.pc-sub-tab.active .wc-tab-ct[data-color="blue"]{background:var(--blue-20);color:var(--blue-300);}
 .wc-tab.active .wc-tab-ct[data-color="gray"]{background:var(--platform-10);color:var(--platform-80);}
 .wc-body{padding:0 24px 18px 24px;display:flex;flex-direction:column;gap:14px;}
 .wc-panel{display:none;background:var(--white);border-radius:0 0 6px 6px;}
@@ -323,10 +325,10 @@ button{font-family:var(--font);cursor:pointer;}
 .predict-card{background:var(--white);border-radius:0 0 6px 6px;overflow:visible;}
 .pc-hd{padding:20px 24px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--platform-10);}
 .pc-icon{width:34px;height:34px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
-.pc-icon.retain{background:var(--red-10);color:var(--red-100);}
-.pc-icon.grow{background:var(--crm-10);color:var(--crm-100);}
-.pc-icon.acquire{background:var(--blue-10);color:var(--blue-100);}
-.pc-icon.steward{background:var(--penny-5);color:var(--penny-100);}
+.pc-icon.retain{background:var(--red-20);color:var(--red-300);}
+.pc-icon.grow{background:var(--crm-20);color:var(--crm-300);}
+.pc-icon.acquire{background:var(--blue-20);color:var(--blue-300);}
+.pc-icon.steward{background:var(--penny-20);color:var(--penny-300);}
 .pc-meta{flex:1;}
 .pc-title{font-size:16px;font-weight:700;}
 .pc-sub{font-size:14px;color:var(--platform-60);margin-top:1px;}
@@ -354,10 +356,10 @@ button{font-family:var(--font);cursor:pointer;}
 .score-pill .tooltip::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:var(--platform-100);}
 .score-pill:hover .tooltip{display:block;}
 .score-pill .tooltip::after{content:'';position:absolute;top:100%;right:12px;left:auto;border:5px solid transparent;border-top-color:var(--platform-100);}
-.score-pill.high{background:#fed8dd;color:#c60623;}
+.score-pill.high{background:#fed8dd;color:#630312;}
 .score-pill.med{background:#fde9d8;color:#914708;}
-.score-pill.good{background:#d9e9cd;color:#317005;}
-.score-pill.blue{background:var(--blue-10);color:var(--blue-100);}
+.score-pill.good{background:#d9e9cd;color:#224e04;}
+.score-pill.blue{background:var(--blue-20);color:var(--blue-300);}
 .donor-action{font-size:14px;font-weight:700;color:var(--platform-100);background:var(--white);border:1px solid var(--platform-100);border-radius:4px;padding:4px 8px;cursor:pointer;white-space:nowrap;flex-shrink:0;display:inline-flex;align-items:center;font-family:var(--font);}
 .donor-action:hover{background:var(--platform-5);}
 .pc-foot{padding:10px 24px 14px;background:var(--white);border-top:none;}
@@ -379,12 +381,12 @@ button{font-family:var(--font);cursor:pointer;}
 .con-ci i{font-size:11px;}
 .con-scores{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;}
 .s-badge{display:inline-flex;align-items:center;font-size:14px;font-weight:700;padding:3px 6px;border-radius:4px;line-height:18px;white-space:nowrap;}
-.s-badge.churn{background:#FED8DD;color:#C60623;}
-.s-badge.upgrade{background:var(--crm-20);color:var(--crm-200);}
-.s-badge.prospect{background:#E3D3E6;color:#521B65;}
+.s-badge.churn{background:var(--red-20);color:var(--red-300);}
+.s-badge.upgrade{background:var(--crm-20);color:var(--crm-300);}
+.s-badge.prospect{background:var(--volunteer-20);color:var(--volunteer-300);}
 .con-tabs{display:flex;border-bottom:1px solid var(--platform-20);}
 .con-tab-body-wrap{background:var(--white);border-radius:6px;margin:16px 24px 18px;overflow:hidden;}
-.con-tab{padding:0 24px;height:55px;display:flex;align-items:center;gap:6px;font-size:16px;font-weight:400;color:var(--platform-60);cursor:pointer;border-bottom:2px solid transparent;border-top:none;border-left:none;border-right:none;background:none;font-family:var(--font);transition:all 0.15s;white-space:nowrap;margin-bottom:-1px;}
+.con-tab{padding:0 32px;height:55px;display:flex;align-items:center;gap:6px;font-size:16px;font-weight:400;color:var(--platform-60);cursor:pointer;border-bottom:2px solid transparent;border-top:none;border-left:none;border-right:none;background:none;font-family:var(--font);transition:all 0.15s;white-space:nowrap;margin-bottom:-1px;}
 .con-tab:hover{color:var(--platform-100);}
 .con-tab.active{color:var(--platform-100);font-weight:600;border-bottom:2px solid var(--crm-100);}
 .tab-new{font-size:10px;font-weight:700;background:var(--penny-100);color:var(--white);padding:1px 5px;border-radius:3px;}
@@ -455,9 +457,9 @@ button{font-family:var(--font);cursor:pointer;}
 .mc-hd{display:flex;align-items:center;padding:16px;gap:10px;border-bottom:1px solid var(--platform-20);}
 .model-card.open .mc-hd{border-bottom-color:var(--platform-10);}
 .mc-icon{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;}
-.mc-icon.churn{background:var(--red-10);color:var(--red-100);}
-.mc-icon.grow{background:var(--crm-10);color:var(--crm-100);}
-.mc-icon.ask{background:var(--penny-5);color:var(--penny-100);}
+.mc-icon.churn{background:var(--red-20);color:var(--red-300);}
+.mc-icon.grow{background:var(--crm-20);color:var(--crm-300);}
+.mc-icon.ask{background:var(--penny-20);color:var(--penny-300);}
 .mc-label{font-size:16px;font-weight:700;color:var(--platform-100);text-transform:capitalize;letter-spacing:normal;}
 .mc-name{font-size:14px;font-weight:400;color:var(--platform-100);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .mc-score{font-size:18px;font-weight:700;margin-right:4px;}
@@ -470,7 +472,7 @@ button{font-family:var(--font);cursor:pointer;}
 .model-card.open .mc-body{display:flex;}
 .ev-item{display:flex;gap:8px;align-items:flex-start;}
 .ev-icon{width:26px;height:26px;border-radius:4px;background:var(--platform-5);display:flex;align-items:center;justify-content:center;color:var(--platform-60);font-size:11px;flex-shrink:0;margin-top:1px;}
-.ev-icon.dataro{background:var(--penny-5);color:var(--penny-100);}
+.ev-icon.dataro{background:var(--penny-20);color:var(--penny-300);}
 .ev-text{font-size:14px;color:var(--platform-100);line-height:20px;margin-bottom:6px;}
 .ev-src{display:inline-flex;align-items:center;gap:4px;font-size:14px;font-weight:400;margin-top:4px;}
 .ev-src.crm{color:var(--platform-60);}
@@ -492,8 +494,8 @@ button{font-family:var(--font);cursor:pointer;}
 .agent-step-row{display:flex;align-items:center;padding:16px;gap:10px;border-bottom:1px solid var(--platform-5);}
 .agent-step-row:last-child{border-bottom:none;}
 .ast-num{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;}
-.ast-num.done{background:var(--crm-10);color:var(--crm-200);}
-.ast-num.running{background:var(--penny-5);color:var(--penny-200);}
+.ast-num.done{background:var(--crm-20);color:var(--crm-300);}
+.ast-num.running{background:var(--penny-20);color:var(--penny-300);}
 .ast-num.pending{background:var(--platform-10);color:var(--platform-60);}
 .ast-body{flex:1;}
 .ast-name{font-size:16px;font-weight:700;}
@@ -503,10 +505,10 @@ button{font-family:var(--font);cursor:pointer;}
 .ast-status.running{color:var(--penny-100);}
 .ast-status.pending{color:var(--platform-40);}
 .prod-chip{font-size:14px;font-weight:700;padding:3px 6px;border-radius:4px;}
-.prod-chip.crm{background:var(--crm-10);color:var(--crm-200);}
-.prod-chip.bf{background:var(--blue-10);color:var(--blue-100);}
+.prod-chip.crm{background:var(--crm-20);color:var(--crm-300);}
+.prod-chip.bf{background:var(--blue-20);color:var(--blue-300);}
 .prod-chip.comm{background:var(--platform-10);color:var(--platform-80);}
-.prod-chip.dat{background:var(--penny-5);color:var(--penny-200);}
+.prod-chip.dat{background:var(--penny-20);color:var(--penny-300);}
 /* ASK TABLE */
 .ask-table-card{background:var(--white);border-radius:6px;overflow:hidden;margin-top:14px;border:none;}
 .ask-table-hd{padding:16px 24px;display:flex;align-items:center;justify-content:space-between;}
@@ -536,7 +538,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .ask-val{font-size:22px;font-weight:700;color:var(--platform-100);white-space:nowrap;}
 .ask-mo{font-size:13px;font-weight:400;color:var(--platform-60);margin-left:2px;}
 .ask-lbl{font-size:12px;color:var(--platform-60);margin-top:2px;}
-.rec-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--crm-100);color:white;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;white-space:nowrap;}
+.rec-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--crm-20);color:var(--crm-300);font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;white-space:nowrap;}
 .form-donate-btn{width:100%;background:var(--crm-100);color:var(--white);border:none;border-radius:8px;height:52px;font-family:var(--font);font-size:16px;font-weight:700;cursor:pointer;margin-top:4px;}
 .form-donate-btn:hover{background:var(--crm-200);}
 .approve-note{flex:1;font-size:14px;color:var(--platform-80);}
@@ -591,9 +593,9 @@ table.atbl tr:last-child td{border-bottom:none;}
 .comm-journey-name{font-size:13px;font-weight:600;color:var(--platform-100);margin-bottom:4px;line-height:18px;}
 .comm-journey-meta{display:flex;align-items:center;gap:6px;}
 .j-badge{font-size:10px;font-weight:700;padding:2px 7px;border-radius:9px;}
-.j-badge.running{background:var(--crm-10);color:var(--crm-200);}
-.j-badge.paused{background:var(--orange-10);color:var(--orange-100);}
-.j-badge.draft{background:var(--blue-10);color:#10437F;}
+.j-badge.running{background:var(--crm-20);color:var(--crm-300);}
+.j-badge.paused{background:var(--orange-20);color:var(--orange-300);}
+.j-badge.draft{background:var(--blue-20);color:var(--blue-300);}
 .j-badge.archived{background:var(--platform-10);color:var(--platform-60);}
 .comm-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-top:8px;}
 .comm-metric{background:var(--platform-5);border-radius:3px;padding:5px 3px;text-align:center;cursor:pointer;border:1px solid transparent;transition:border-color 0.1s;}
@@ -606,7 +608,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .comm-toolbar-name{font-size:17px;font-weight:700;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .comm-canvas-body{flex:1;padding:28px 24px;display:flex;flex-direction:column;align-items:center;}
 .comm-entry-card{background:var(--white);border:2px solid var(--crm-100);border-radius:6px;padding:14px 18px;width:460px;display:flex;align-items:center;gap:12px;box-shadow:0 2px 8px rgba(63,145,7,0.08);}
-.comm-entry-icon{width:38px;height:38px;border-radius:6px;background:var(--crm-10);display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--crm-100);flex-shrink:0;}
+.comm-entry-icon{width:38px;height:38px;border-radius:6px;background:var(--crm-20);display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--crm-300);flex-shrink:0;}
 .comm-entry-body{flex:1;}
 .comm-entry-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--crm-100);margin-bottom:2px;}
 .comm-entry-title{font-size:14px;font-weight:700;color:var(--platform-100);}
@@ -645,10 +647,10 @@ table.atbl tr:last-child td{border-bottom:none;}
 .comm-donor-name{font-size:12px;font-weight:700;color:var(--platform-100);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .comm-donor-sub{font-size:11px;color:var(--platform-60);margin-top:1px;}
 .comm-donor-badge{font-size:9px;font-weight:700;padding:1px 5px;border-radius:7px;white-space:nowrap;flex-shrink:0;}
-.comm-donor-badge.within{background:var(--crm-10);color:var(--crm-200);}
+.comm-donor-badge.within{background:var(--crm-20);color:var(--crm-300);}
 .comm-donor-badge.completed{background:var(--platform-10);color:var(--platform-60);}
-.comm-donor-badge.exited{background:var(--orange-10);color:var(--orange-100);}
-.comm-donor-badge.new{background:var(--crm-100);color:var(--white);}
+.comm-donor-badge.exited{background:var(--orange-20);color:var(--orange-300);}
+.comm-donor-badge.new{background:var(--crm-20);color:var(--crm-300);}
 /* ── MANUAL ACTIONS ── */
 .ma-list{display:flex;flex-direction:column;gap:10px;margin-bottom:16px;}
 .ma-card{background:var(--white);border:1px solid var(--platform-20);border-radius:6px;padding:14px 16px;display:flex;align-items:flex-start;gap:12px;transition:box-shadow 0.1s;}
@@ -696,7 +698,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .ma-hist-done{font-size:11px;font-weight:700;color:var(--crm-200);background:var(--crm-10);padding:2px 7px;border-radius:9px;white-space:nowrap;flex-shrink:0;}
 /* ═══ CONSTITUENT PROFILE REDESIGN ═══ */
 /* ═══ CONSTITUENT HEADER ═══ */
-.con-header{background:var(--white);padding:20px 32px;border-bottom:1px solid var(--platform-10);}
+.con-header{background:var(--white);padding:24px 32px;border-bottom:1px solid var(--platform-10);}
 .con-header-top{display:flex;align-items:flex-start;gap:16px;}
 .con-avatar-wrap{width:70px;height:70px;border-radius:50%;flex-shrink:0;position:relative;cursor:pointer;overflow:hidden;}
 .con-avatar{width:70px;height:70px;border-radius:50%;background:var(--platform-10);display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700;color:var(--platform-60);flex-shrink:0;}
@@ -709,8 +711,8 @@ table.atbl tr:last-child td{border-bottom:none;}
 .con-name-row{display:flex;align-items:center;gap:12px;margin-bottom:8px;}
 .con-name{font-size:36px;font-weight:700;line-height:42px;}
 .con-id{font-size:16px;color:var(--platform-80);font-weight:400;}
-.con-status-badge{font-size:12px;font-weight:700;padding:2px 8px;border-radius:4px;background:var(--crm-10);color:var(--crm-200);}
-.con-status-badge.lapsed{background:var(--red-10);color:var(--red-200);}
+.con-status-badge{font-size:12px;font-weight:700;padding:2px 8px;border-radius:4px;background:var(--crm-20);color:var(--crm-300);}
+.con-status-badge.lapsed{background:var(--red-20);color:var(--red-300);}
 .con-contact-row{display:flex;align-items:center;gap:16px;font-size:16px;color:var(--platform-80);flex-wrap:wrap;margin-top:4px;}
 .con-contact-item{display:flex;align-items:center;gap:5px;}
 .con-contact-item i{font-size:12px;color:var(--platform-40);}
@@ -727,7 +729,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .con-header-actions{display:flex;gap:8px;flex-shrink:0;margin-left:auto;align-self:center;}
 /* ═══ TABS ═══ */
 .con-tab-bar{display:flex;background:var(--white);border-bottom:1px solid var(--platform-20);padding:0 32px;}
-.con-tab{padding:0 20px;height:48px;display:flex;align-items:center;gap:6px;font-size:16px;font-weight:400;color:var(--platform-60);cursor:pointer;border-bottom:2px solid transparent;border-top:none;border-left:none;border-right:none;background:none;font-family:var(--font);transition:all .15s;white-space:nowrap;margin-bottom:-1px;}
+.con-tab{padding:0 32px;height:48px;display:flex;align-items:center;gap:6px;font-size:16px;font-weight:400;color:var(--platform-60);cursor:pointer;border-bottom:2px solid transparent;border-top:none;border-left:none;border-right:none;background:none;font-family:var(--font);transition:all .15s;white-space:nowrap;margin-bottom:-1px;}
 .con-tab:hover{color:var(--platform-100);}
 .con-tab.active{color:var(--platform-100);font-weight:600;border-bottom-color:var(--crm-100);}
 /* ═══ TAB PANELS ═══ */
@@ -801,12 +803,12 @@ table.atbl tr:last-child td{border-bottom:none;}
 .activity-title{font-size:16px;font-weight:700;color:var(--platform-100);}
 .activity-detail{font-size:14px;color:var(--platform-80);margin-top:2px;line-height:20px;}
 .activity-tag{font-size:12px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;}
-.activity-tag.donation{background:var(--crm-10);color:var(--crm-200);}
+.activity-tag.donation{background:var(--crm-20);color:var(--crm-300);}
 .activity-tag.note{background:var(--platform-10);color:var(--platform-80);}
-.activity-tag.email{background:var(--blue-10);color:var(--blue-200);}
-.activity-tag.event{background:var(--penny-5);color:var(--penny-200);}
-.activity-tag.interaction{background:var(--orange-10);color:var(--orange-200);}
-.activity-tag.red{background:var(--red-10);color:var(--red-200);}
+.activity-tag.email{background:var(--blue-20);color:var(--blue-300);}
+.activity-tag.event{background:var(--penny-20);color:var(--penny-300);}
+.activity-tag.interaction{background:var(--orange-20);color:var(--orange-300);}
+.activity-tag.red{background:var(--red-20);color:var(--red-300);}
 /* Groups tile */
 .sidebar-card .btn-secondary{transition:background 0.12s;}
 /* Donor Snapshot */
@@ -815,14 +817,14 @@ table.atbl tr:last-child td{border-bottom:none;}
 .snapshot-lbl{font-size:14px;color:var(--platform-80);}
 .snapshot-val{font-size:14px;font-weight:600;color:var(--platform-100);}
 .snapshot-badge{font-size:12px;font-weight:700;line-height:18px;padding:2px 6px;border-radius:4px;display:inline-block;}
-.snapshot-badge.red{background:var(--red-10);color:var(--red-200);}
-.snapshot-badge.orange{background:var(--orange-10);color:var(--orange-200);}
-.snapshot-badge.green{background:var(--crm-10);color:var(--crm-200);}
+.snapshot-badge.red{background:var(--red-20);color:var(--red-300);}
+.snapshot-badge.orange{background:var(--orange-20);color:var(--orange-300);}
+.snapshot-badge.green{background:var(--crm-20);color:var(--crm-300);}
 /* Donor Type status colors (Req #26 precedence: Deceased/Inactive gray, First Time Donor blue, Lapsed red, Growing green, Active neutral) */
 .snapshot-badge.status-deceased,.snapshot-badge.status-inactive{background:var(--platform-10);color:var(--platform-80);}
-.snapshot-badge.status-first-time{background:var(--blue-10);color:var(--blue-200);}
-.snapshot-badge.status-lapsed{background:var(--red-10);color:var(--red-100);}
-.snapshot-badge.status-growing{background:var(--crm-10);color:var(--crm-200);}
+.snapshot-badge.status-first-time{background:var(--blue-20);color:var(--blue-300);}
+.snapshot-badge.status-lapsed{background:var(--red-20);color:var(--red-300);}
+.snapshot-badge.status-growing{background:var(--crm-20);color:var(--crm-300);}
 .snapshot-badge.status-active{background:var(--platform-10);color:var(--platform-80);}
 .snapshot-badge.gray{background:var(--platform-10);color:var(--platform-80);}
 /* Relationship sidebar */
@@ -864,20 +866,20 @@ table.atbl tr:last-child td{border-bottom:none;}
 .profile-address-card:first-child{padding-top:6px;}
 .profile-address-card:last-child{padding-bottom:6px;}
 .address-type{font-size:14px;color:var(--platform-80);margin-bottom:6px;font-weight:500;}
-.address-badge{font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;background:var(--crm-20);color:var(--crm-200);margin-left:6px;}
+.address-badge{font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;background:var(--crm-20);color:var(--crm-300);margin-left:6px;}
 /* ═══ EDIT MODAL / FORM SYSTEM (ported from crm-profile.html) ═══ */
 .edit-modal{width:100%;max-width:480px;background:var(--white);border-radius:4px;box-shadow:0 24px 64px rgba(31,27,46,0.28);font-family:var(--font);overflow:hidden;max-height:85vh;display:flex;flex-direction:column;}
 .edit-modal-header{padding:20px 24px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
 .edit-modal-title{font-size:20px;font-weight:700;color:var(--platform-100);}
-.edit-modal-close{width:30px;height:30px;border-radius:50%;background:none;border:none;cursor:pointer;display:grid;place-items:center;color:var(--platform-40);font-size:12px;transition:background .12s,color .12s;}
-.edit-modal-close:hover{background:var(--platform-5);color:var(--platform-100);}
-.edit-modal-body{padding:10px 24px 24px;display:flex;flex-direction:column;gap:16px;overflow-y:auto;}
+.edit-modal-close{width:24px;height:24px;border-radius:50%;background:none;border:none;cursor:pointer;display:grid;place-items:center;color:var(--platform-60);font-size:18px;transition:background .12s,color .12s;}
+.edit-modal-close:hover{background:var(--platform-20);color:var(--platform-80);}
+.edit-modal-body{padding:0 24px 24px;display:flex;flex-direction:column;gap:16px;overflow-y:auto;}
 .edit-modal-footer{padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
 .form-group{display:flex;flex-direction:column;gap:0;position:relative;padding-top:0;flex:1;}
 .form-label{font-size:16px;font-weight:400;color:#A9ABAC;position:absolute;top:18px;left:16px;background:transparent;padding:0 4px;z-index:1;line-height:21px;pointer-events:none;transition:all .15s ease;}
 .form-input,.form-select{font-family:var(--font);font-size:16px;color:#272D30;padding:16px;height:56px;border:1px solid #A9ABAC;border-radius:4px;background:var(--white);outline:none;transition:border-color .15s;width:100%;box-sizing:border-box;}
 .form-input:hover,.form-select:hover{border-color:#272D30;}
-.form-input:focus,.form-select:focus{border-color:var(--crm-100);}
+.form-input:focus,.form-select:focus{border-color:var(--crm-100);box-shadow:inset 0 0 0 1px var(--crm-100);}
 .form-input:focus~.form-label,.form-input:not(:placeholder-shown)~.form-label,.form-select:focus~.form-label,.form-select:not([data-empty])~.form-label{top:-8px;left:12px;font-size:12px;line-height:18px;background:var(--white);color:#272D30;}
 .form-input:focus~.form-label,.form-select:focus~.form-label{color:var(--crm-100);}
 .form-label-float{top:-8px !important;left:12px !important;font-size:12px !important;line-height:18px !important;background:var(--white) !important;color:#272D30 !important;}
@@ -909,13 +911,28 @@ table.atbl tr:last-child td{border-bottom:none;}
 .crop-zoom-row{display:flex;align-items:center;gap:12px;margin-top:16px;padding:0 4px;}
 .crop-zoom-row i{color:var(--platform-40);font-size:14px;}
 .crop-zoom-row input[type="range"]{flex:1;accent-color:var(--crm-100);}
-#tileEditOverlay.active,#contactEditOverlay.active,#addressEditOverlay.active,#commPrefsOverlay.active,#groupsOverlay.active,#deleteConfirmOverlay.active,#photoUploadOverlay.active,#photoCropOverlay.active{display:flex !important;}
+#tileEditOverlay.active,#contactEditOverlay.active,#addressEditOverlay.active,#commPrefsOverlay.active,#groupsOverlay.active,#deleteConfirmOverlay.active,#photoUploadOverlay.active,#photoCropOverlay.active,#tlViewOverlay.active,#tlDonationEditOverlay.active,#newRelOverlay.active{display:flex !important;}
+.rel-search-field{position:relative;display:flex;align-items:center;gap:8px;min-height:56px;padding:0 16px;background:var(--white);border:1px solid var(--platform-60);border-radius:4px;transition:border-color .15s,box-shadow .15s;}
+.rel-search-field:focus-within{border-color:var(--crm-100);box-shadow:inset 0 0 0 1px var(--crm-100);}
+.rel-search-field .rel-search-icon{flex:none;display:flex;align-items:center;justify-content:center;color:var(--platform-60);font-size:16px;width:16px;height:16px;}
+.rel-search-field input{flex:1;border:none;outline:none;font-family:var(--font);font-size:16px;color:var(--platform-100);background:transparent;}
+.rel-result-row{display:flex;align-items:center;padding:12px 16px;cursor:pointer;border-radius:4px;}
+.rel-result-row:hover{background:var(--platform-10);}
+.rel-result-row .lbl{font-size:16px;line-height:21px;color:var(--platform-100);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.rel-search-menu{margin-top:8px;padding:8px 0;max-height:360px;overflow-y:auto;}
+.rel-search-group .form-label{left:40px;}
+.rel-search-group:has(.rel-search-field:focus-within) .form-label,.rel-search-group:has(input:not(:placeholder-shown)) .form-label{top:-8px;left:12px;font-size:12px;line-height:18px;background:var(--white);color:#272D30;}
+.rel-search-group:has(.rel-search-field:focus-within) .form-label{color:var(--crm-100);}
+.tlv-row{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-top:1px solid var(--platform-10);font-size:14px;}
+.tlv-row:first-child{border-top:none;}
+.tlv-label{color:var(--platform-60);}
+.tlv-value{color:var(--platform-100);text-align:right;}
 .address-text{font-size:14px;color:var(--platform-100);line-height:20px;margin-bottom:6px;}
 .address-text a{color:var(--crm-100);font-weight:600;}
 .profile-section.full-width{}
 /* ═══ TIMELINE TAB — connected ═══ */
 .timeline-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:50;background:var(--white);padding:16px 24px;margin:-24px -24px 20px;border-bottom:1px solid var(--platform-10);}
-.timeline-filter{display:inline-flex;align-items:center;gap:5px;background:none;border:1px solid var(--platform-40);border-radius:39px;padding:6px 12px;font-size:14px;font-weight:400;color:var(--platform-100);cursor:pointer;font-family:var(--font);transition:background .12s;}
+.timeline-filter{display:inline-flex;align-items:center;gap:5px;background:none;border:1px solid var(--platform-20);border-radius:39px;padding:6px 12px;font-size:14px;font-weight:400;color:var(--platform-100);cursor:pointer;font-family:var(--font);transition:background .12s;}
 .timeline-filter:hover{background:var(--platform-10);}
 .timeline-filter.active{background:var(--crm-100);border-color:var(--crm-100);color:var(--white);font-weight:700;}
 .timeline-filter.active::before{content:"\f00c";font-family:"Font Awesome 6 Pro";font-weight:900;font-size:12px;}
@@ -925,14 +942,14 @@ table.atbl tr:last-child td{border-bottom:none;}
 .tl-entry{display:flex;gap:16px;padding:16px 0;position:relative;align-items:flex-start;}
 .tl-entry+.tl-entry{border-top:1px solid var(--platform-5);}
 .tl-node{position:absolute;left:-49px;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;z-index:1;border:3px solid var(--white);}
-.tl-node.donation{background:var(--crm-10);color:var(--crm-100);}
-.tl-node.email{background:var(--blue-10);color:var(--blue-100);}
-.tl-node.interaction{background:var(--orange-10);color:var(--orange-200);}
+.tl-node.donation{background:var(--crm-20);color:var(--crm-300);}
+.tl-node.email{background:var(--blue-20);color:var(--blue-300);}
+.tl-node.interaction{background:var(--orange-20);color:var(--orange-300);}
 .tl-node.note{background:var(--platform-10);color:var(--platform-60);}
-.tl-node.task{background:var(--penny-5);color:var(--penny-100);}
-.tl-node.event{background:var(--yellow-10);color:var(--orange-200);}
-.tl-node.alert{background:var(--red-10);color:var(--red-200);}
-.tl-node.warn{background:var(--orange-10);color:var(--orange-200);}
+.tl-node.task{background:var(--platform-10);color:var(--platform-60);}
+.tl-node.event{background:var(--yellow-20);color:var(--yellow-300);}
+.tl-node.alert{background:var(--red-20);color:var(--red-300);}
+.tl-node.warn{background:var(--orange-20);color:var(--orange-300);}
 .tl-entry-title.alert{color:var(--red-200);}
 .tl-entry-title.warn{color:var(--orange-200);}
 .tl-entry-date{font-size:14px;color:var(--platform-80);min-width:76px;flex-shrink:0;padding-top:2px;}
@@ -1055,9 +1072,9 @@ table.atbl tr:last-child td{border-bottom:none;}
 /* ═══ PAI FAILURE STATES ═══ */
 .pai-error-card{padding:24px;background:var(--white);border-radius:4px;border:3px solid var(--crm-100);}
 .pai-error-icon{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;margin-bottom:16px;}
-.pai-error-icon.orange{background:var(--orange-10);color:var(--orange-200);}
-.pai-error-icon.blue{background:var(--blue-10);color:var(--blue-100);}
-.pai-error-icon.yellow{background:#FFF8E1;color:#C4731F;}
+.pai-error-icon.orange{background:var(--orange-20);color:var(--orange-300);}
+.pai-error-icon.blue{background:var(--blue-20);color:var(--blue-300);}
+.pai-error-icon.yellow{background:var(--yellow-20);color:var(--yellow-300);}
 .pai-error-title{font-size:18px;font-weight:700;color:var(--platform-100);margin-bottom:8px;}
 .pai-error-body{font-size:14px;color:var(--platform-80);line-height:22px;max-width:540px;margin-bottom:20px;}
 .pai-error-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
@@ -1078,10 +1095,11 @@ table.atbl tr:last-child td{border-bottom:none;}
 .actions-btn{display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--platform-100);border-radius:4px;padding:4px 8px;font-size:14px;font-weight:700;color:var(--platform-100);cursor:pointer;line-height:21px;}
 .actions-btn:hover{background:var(--platform-20);border-color:#DAD7D9;}
 .dd-menu{position:absolute;top:calc(100% + 4px);left:0;background:var(--white);border-radius:4px;box-shadow:0 4px 4px rgba(0,0,0,.25);z-index:200;min-width:200px;padding:8px 0;display:none;}
+.dd-menu.flip-up{top:auto;bottom:calc(100% + 4px);}
 .dd-menu.open{display:block;}
 .dd-menu.right{left:auto;right:0;}
 .dd-divider{height:1px;background:var(--platform-20);margin:4px 0;}
-.dd-item{display:flex;align-items:center;gap:6px;padding:8px 16px;font-size:14px;color:var(--platform-100);cursor:pointer;white-space:nowrap;border:none;background:none;width:100%;text-align:left;font-family:var(--font);line-height:21px;transition:background .08s;}
+.dd-item{display:flex;align-items:center;gap:6px;padding:12px 16px;font-size:16px;color:var(--platform-100);cursor:pointer;white-space:nowrap;border:none;background:none;width:100%;text-align:left;font-family:var(--font);line-height:21px;transition:background .08s;}
 .dd-item:hover{background:var(--platform-10);}
 #el-relationships .actions-btn.open{background:var(--platform-20);border-color:#DAD7D9;}
 #el-relationships .sidebar-card{overflow:visible;}
@@ -1219,7 +1237,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <span class="con-name">Eleanor Richardson</span>
             <span style="display:inline-flex;align-items:center;gap:6px;">
               <span class="snapshot-badge green">Active</span>
-              <span class="snapshot-badge" style="background:var(--blue-10);color:var(--blue-200);">Mid</span>
+              <span class="snapshot-badge" style="background:var(--blue-20);color:var(--blue-300);">Mid</span>
             </span>
           </div>
           <div class="con-contact-row">
@@ -1232,7 +1250,7 @@ table.atbl tr:last-child td{border-bottom:none;}
         <div class="con-header-actions">
           <div class="dropdown" id="kebabDropdown" style="display:inline-flex;">
             <div class="dropdown-overlay" onclick="document.getElementById('kebabDropdown').classList.remove('open')"></div>
-            <button class="btn-secondary" style="display:inline-flex;align-items:center;gap:8px;padding:8px 12px;font-size:16px;font-weight:700;" onclick="toggleHeaderDropdown('kebabDropdown', this)">More <i class="fa-solid fa-chevron-down" style="font-size:12px;width:12px;height:12px;"></i></button>
+            <button class="btn-secondary" style="display:inline-flex;align-items:center;gap:8px;padding:8px 12px;font-size:16px;font-weight:700;" onclick="toggleHeaderDropdown('kebabDropdown', this)">More <i class="fa-solid fa-caret-down" style="font-size:16px;width:16px;height:16px;"></i></button>
             <div class="dropdown-menu" style="right:0;left:auto;min-width:160px;">
               <button class="dropdown-item" onclick="document.getElementById('kebabDropdown').classList.remove('open');document.getElementById('mergeOverlay').classList.add('active')">Merge</button>
               <button class="dropdown-item" onclick="document.getElementById('kebabDropdown').classList.remove('open');document.getElementById('changeTypeOverlay').classList.add('active')">Change Type</button>
@@ -1242,7 +1260,7 @@ table.atbl tr:last-child td{border-bottom:none;}
           </div>
           <div class="dropdown" id="newDropdown">
             <div class="dropdown-overlay" onclick="document.getElementById('newDropdown').classList.remove('open')"></div>
-            <button class="btn-primary" style="display:inline-flex;align-items:center;gap:8px;" onclick="toggleHeaderDropdown('newDropdown', this)">New <i class="fa-solid fa-chevron-down" style="font-size:12px;width:12px;height:12px;"></i></button>
+            <button class="btn-primary" style="display:inline-flex;align-items:center;gap:8px;" onclick="toggleHeaderDropdown('newDropdown', this)">New <i class="fa-solid fa-caret-down" style="font-size:16px;width:16px;height:16px;"></i></button>
             <div class="dropdown-menu">
               <button class="dropdown-item">Donation</button>
               <button class="dropdown-item">Pledge</button>
@@ -1250,8 +1268,8 @@ table.atbl tr:last-child td{border-bottom:none;}
               <button class="dropdown-item">Membership</button>
               <button class="dropdown-item">Interaction</button>
               <button class="dropdown-item" onclick="document.getElementById('newDropdown').classList.remove('open');document.getElementById('newTaskOverlay').classList.add('active')">Task</button>
-              <button class="dropdown-item">Note</button>
-              <button class="dropdown-item" onclick="document.getElementById('newDropdown').classList.remove('open');document.getElementById('newRelOverlay').classList.add('active')">Relationship</button>
+              <button class="dropdown-item" onclick="document.getElementById('newDropdown').classList.remove('open');openNotePage(null,'create')">Note</button>
+              <button class="dropdown-item" onclick="document.getElementById('newDropdown').classList.remove('open');openNewRel()">Relationship</button>
             </div>
           </div>
         </div>
@@ -1284,7 +1302,7 @@ table.atbl tr:last-child td{border-bottom:none;}
           <div class="di-title">Donor Intelligence</div>
           <div class="di-row">
             <div class="di-bar" style="background:var(--crm-100);"></div>
-            <span class="di-next" style="background:var(--crm-10);color:var(--crm-200);">Next Action</span>
+            <span class="di-next" style="background:var(--crm-20);color:var(--crm-300);">Next Action</span>
             <div class="di-body">Likely to give again <span style="margin:0 6px 0 4px;">&middot;</span><strong>91 (Very Likely)</strong></div>
             <button class="di-action" onclick="showOutreachModal('eleanor')">Draft Email</button>
           </div>
@@ -1422,7 +1440,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                       <div class="tl-entry-title">Email — Spring Appeal 2026</div>
                       <div class="tl-entry-detail">Mass email &middot; Opened &middot; Clicked donation link</div>
                     </div>
-                    <span class="tl-entry-tag" style="background:var(--blue-10);color:var(--blue-200);">Email</span>
+                    <span class="tl-entry-tag" style="background:var(--blue-20);color:var(--blue-300);">Email</span>
                   </div>
                   <div class="tl-entry">
                     <div class="tl-node email"><i class="fa-solid fa-envelope"></i></div>
@@ -1431,7 +1449,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                       <div class="tl-entry-title">Email — Year-End Thank You</div>
                       <div class="tl-entry-detail">Mass email &middot; Opened &middot; Clicked donation link</div>
                     </div>
-                    <span class="tl-entry-tag" style="background:var(--blue-10);color:var(--blue-200);">Email</span>
+                    <span class="tl-entry-tag" style="background:var(--blue-20);color:var(--blue-300);">Email</span>
                   </div>
                   <div class="tl-entry">
                     <div class="tl-node donation"><i class="fa-solid fa-dollar-sign"></i></div>
@@ -1440,7 +1458,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                       <div class="tl-entry-title">$5,000.00 Donation</div>
                       <div class="tl-entry-detail">Annual Fund &middot; Online &middot; Year-end gift</div>
                     </div>
-                    <span class="tl-entry-tag" style="background:var(--crm-10);color:var(--crm-200);">Donation</span>
+                    <span class="tl-entry-tag" style="background:var(--crm-20);color:var(--crm-300);">Donation</span>
                   </div>
                   <div class="tl-entry">
                     <div class="tl-node donation"><i class="fa-solid fa-dollar-sign"></i></div>
@@ -1449,7 +1467,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                       <div class="tl-entry-title">$2,500.00 Donation</div>
                       <div class="tl-entry-detail">Gala Sponsorship &middot; Event &middot; Bronze table sponsor</div>
                     </div>
-                    <span class="tl-entry-tag" style="background:var(--crm-10);color:var(--crm-200);">Donation</span>
+                    <span class="tl-entry-tag" style="background:var(--crm-20);color:var(--crm-300);">Donation</span>
                   </div>
                   <div class="tl-entry" style="border-bottom:none;">
                     <div class="tl-node event"><i class="fa-solid fa-calendar"></i></div>
@@ -1458,7 +1476,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                       <div class="tl-entry-title">Event — Youth Forward Gala 2025</div>
                       <div class="tl-entry-detail">Attended &middot; Honored at event &middot; Sat at ED's table</div>
                     </div>
-                    <span class="tl-entry-tag" style="background:var(--yellow-10);color:var(--orange-200);">Event</span>
+                    <span class="tl-entry-tag" style="background:var(--yellow-20);color:var(--yellow-300);">Event</span>
                   </div>
                 </div>
                 <div style="text-align:center;padding-top:16px;padding-bottom:12px;">
@@ -1481,7 +1499,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                 </div>
                 <div class="snapshot-row">
                   <span class="snapshot-lbl">Giving Level</span>
-                  <span class="snapshot-badge" style="background:var(--blue-10);color:var(--blue-200);">Mid</span>
+                  <span class="snapshot-badge" style="background:var(--blue-20);color:var(--blue-300);">Mid</span>
                 </div>
                 <div class="snapshot-row">
                   <span class="snapshot-lbl">Giving Capacity</span>
@@ -1731,6 +1749,190 @@ table.atbl tr:last-child td{border-bottom:none;}
       </div>
 
       <!-- ═══ PROFILE EDIT MODALS ═══ -->
+      <!-- TEMP: donation-only read view before jumping to the edit modal; Donation should migrate to the same page pattern as Note once that's settled -->
+      <div id="tlViewOverlay" style="display:none;position:fixed;inset:0;background:rgba(31,27,46,0.58);z-index:9998;align-items:center;justify-content:center;padding:24px;" onclick="if(event.target===this)closeTlView()">
+        <div class="edit-modal" style="max-width:420px;" onclick="event.stopPropagation()">
+          <div class="edit-modal-header">
+            <span class="edit-modal-title" id="tlViewTitle">Donation</span>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <button class="btn-secondary" id="tlViewEditBtn" style="padding:4px 12px;font-size:14px;" onclick="tlViewEditClick()">Edit</button>
+              <button class="edit-modal-close" onclick="closeTlView()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+          </div>
+          <div class="edit-modal-body" id="tlViewBody"></div>
+        </div>
+      </div>
+
+      <div id="tlDonationEditOverlay" style="display:none;position:fixed;inset:0;background:rgba(31,27,46,0.58);z-index:9998;align-items:center;justify-content:center;padding:24px;" onclick="if(event.target===this)closeTlDonationEdit()">
+        <div class="edit-modal" style="max-width:820px;" onclick="event.stopPropagation()">
+          <div class="edit-modal-header">
+            <span class="edit-modal-title">Edit Donation</span>
+            <button class="edit-modal-close" onclick="closeTlDonationEdit()"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <div class="edit-modal-body" style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+            <div id="tlDonationEditBody" style="display:flex;flex-direction:column;gap:16px;"></div>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div style="border:1px solid var(--platform-20);border-radius:6px;padding:16px;display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-size:16px;font-weight:700;color:var(--platform-100);">Acknowledgements</span>
+                <button class="btn-secondary" style="padding:4px 10px;font-size:14px;" aria-label="Add acknowledgement"><i class="fa-solid fa-plus"></i></button>
+              </div>
+              <div style="border:1px solid var(--platform-20);border-radius:6px;padding:16px;display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-size:16px;font-weight:700;color:var(--platform-100);">Soft Credits</span>
+                <button class="btn-secondary" style="padding:4px 10px;font-size:14px;" aria-label="Add soft credit"><i class="fa-solid fa-plus"></i></button>
+              </div>
+              <div style="border:1px solid var(--platform-20);border-radius:6px;padding:16px;display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-size:16px;font-weight:700;color:var(--platform-100);">Fundraiser</span>
+                <button class="btn-secondary" style="padding:4px 10px;font-size:14px;" aria-label="Add fundraiser"><i class="fa-solid fa-plus"></i></button>
+              </div>
+              <div style="border:1px solid var(--platform-20);border-radius:6px;padding:16px;display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-size:16px;font-weight:700;color:var(--platform-100);">Tribute</span>
+                <button class="btn-secondary" style="padding:4px 10px;font-size:14px;" aria-label="Add tribute"><i class="fa-solid fa-plus"></i></button>
+              </div>
+              <div style="border:1px solid var(--platform-20);border-radius:6px;padding:16px;display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-size:16px;font-weight:700;color:var(--platform-100);">Attachments</span>
+                <button class="btn-secondary" style="padding:4px 10px;font-size:14px;" aria-label="Add attachment"><i class="fa-solid fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="edit-modal-footer">
+            <div></div>
+            <div style="display:flex;gap:8px;">
+              <button class="btn-secondary" onclick="closeTlDonationEdit()">Cancel</button>
+              <button class="btn-primary" onclick="saveTlDonationEdit()">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NOTE: full-page pattern (read-only default, Edit toggles the same page into a form) — the model for every custom-field-capable type -->
+      <div id="notePageOverlay" style="display:none;position:fixed;inset:0;background:var(--white);z-index:9999;overflow-y:auto;">
+        <div class="con-header" style="display:flex;justify-content:space-between;align-items:center;">
+          <span id="notePageTitle" style="font-size:24px;font-weight:700;color:var(--platform-100);">New Note</span>
+          <div id="notePageActionsView" style="display:none;gap:8px;">
+            <button class="btn-secondary" onclick="notePageEditClick()">Edit</button>
+            <button class="btn-secondary" onclick="closeNotePage()">Close</button>
+          </div>
+          <div id="notePageActionsEdit" style="display:flex;gap:8px;">
+            <button class="btn-secondary" onclick="closeNotePage()">Cancel</button>
+            <button class="btn-primary" onclick="saveNotePage()">Save</button>
+          </div>
+        </div>
+        <div style="padding:24px 32px;max-width:1100px;">
+
+          <div id="notePageViewContent" style="display:none;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+              <div id="notePageViewLeft"></div>
+              <div style="border:1px solid var(--platform-20);border-radius:6px;padding:16px;">
+                <div style="font-size:16px;font-weight:700;color:var(--platform-100);margin-bottom:8px;">Attachments</div>
+                <div style="font-size:14px;color:var(--platform-60);">No attachments</div>
+              </div>
+            </div>
+            <div id="notePageViewCustom" style="margin-top:24px;"></div>
+          </div>
+
+          <div id="notePageFormContent">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+              <div style="display:flex;flex-direction:column;gap:16px;">
+                <div class="form-group"><input class="form-input" type="text" id="noteFormDate" value="7/30/2026" placeholder=" "><label class="form-label form-label-float">Date</label></div>
+                <div class="form-group"><textarea class="form-input" id="noteFormNote" style="height:140px;resize:vertical;" placeholder=" "></textarea><label class="form-label form-label-float">Note</label></div>
+                <label style="display:flex;align-items:center;gap:8px;font-size:14px;color:var(--platform-100);cursor:pointer;"><input type="checkbox" id="noteFormPinned"> Pin this note</label>
+              </div>
+              <div style="border:1px solid var(--platform-20);border-radius:6px;padding:16px;display:flex;justify-content:space-between;align-items:center;height:44px;">
+                <span style="font-size:16px;font-weight:700;color:var(--platform-100);">Attachments</span>
+                <button class="btn-secondary" style="padding:4px 10px;font-size:14px;" aria-label="Add attachment"><i class="fa-solid fa-plus"></i></button>
+              </div>
+            </div>
+
+            <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--platform-10);">
+              <div style="font-size:12px;font-weight:700;color:var(--platform-60);text-transform:uppercase;letter-spacing:.04em;margin-bottom:12px;">Custom Fields</div>
+              <div class="form-group" style="max-width:340px;">
+                <select class="form-select" id="noteFormType" data-empty="true" onchange="onNoteTypeChange(this.value)">
+                  <option value=""></option>
+                  <option value="Grant">Grant</option>
+                  <option value="Prospect Management">Prospect Management</option>
+                </select>
+                <label class="form-label form-label-float">Note Type</label>
+              </div>
+            </div>
+
+            <div id="noteGrantFieldsEdit" style="display:none;margin-top:20px;padding-top:20px;border-top:1px solid var(--platform-10);">
+              <div style="font-size:12px;font-weight:700;color:var(--platform-60);text-transform:uppercase;letter-spacing:.04em;margin-bottom:12px;">Grant Fields</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                <div class="form-group"><input class="form-input" type="text" id="grantAskAmount" placeholder=" "><label class="form-label form-label-float">Grant Ask Amount</label></div>
+                <div class="form-group"><input class="form-input" type="text" id="grantAwardAmount" placeholder=" "><label class="form-label form-label-float">Grant Award Amount</label></div>
+                <div class="form-group"><select class="form-select" id="grantStatus" data-empty="true"><option value=""></option><option>Application Submitted</option><option>Grant Awarded</option><option>Grant Denied</option></select><label class="form-label form-label-float">Grant Status</label></div>
+                <div class="form-group"><select class="form-select" id="grantType" data-empty="true"><option value=""></option><option>Capacity Building</option><option>Program Services</option><option>Technology</option></select><label class="form-label form-label-float">Grant Type</label></div>
+                <div class="form-group"><input class="form-input" type="text" id="grantProgressDeadline" placeholder=" "><label class="form-label form-label-float">Progress Report Deadline</label></div>
+                <div class="form-group"><input class="form-input" type="text" id="grantProgressSubmitted" placeholder=" "><label class="form-label form-label-float">Progress Report Submission Date</label></div>
+                <div class="form-group"><input class="form-input" type="text" id="grantProposalDeadline" placeholder=" "><label class="form-label form-label-float">Proposal Deadline</label></div>
+                <div class="form-group"><input class="form-input" type="text" id="grantProposalSubmitted" placeholder=" "><label class="form-label form-label-float">Proposal Submission Date</label></div>
+              </div>
+            </div>
+
+            <div id="noteProspectFieldsEdit" style="display:none;margin-top:20px;padding-top:20px;border-top:1px solid var(--platform-10);">
+              <div style="font-size:12px;font-weight:700;color:var(--platform-60);text-transform:uppercase;letter-spacing:.04em;margin-bottom:12px;">Prospect Management Info</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                <div class="form-group"><input class="form-input" type="text" id="prospectLastActionDate" placeholder=" "><label class="form-label form-label-float">Last Action Date</label></div>
+                <div class="form-group"><select class="form-select" id="prospectLastActionType" data-empty="true"><option value=""></option><option>Email</option><option>In Person</option><option>Phone Call</option></select><label class="form-label form-label-float">Last Action Type</label></div>
+                <div class="form-group"><input class="form-input" type="text" id="prospectNextActionDate" placeholder=" "><label class="form-label form-label-float">Next Action Date</label></div>
+                <div class="form-group"><select class="form-select" id="prospectNextActionType" data-empty="true"><option value=""></option><option>Email</option><option>In Person</option><option>Phone Call</option></select><label class="form-label form-label-float">Next Action Type</label></div>
+                <div class="form-group"><input class="form-input" type="text" id="prospectAskAmount" placeholder=" "><label class="form-label form-label-float">Prospect Ask Amount</label></div>
+                <div class="form-group"><select class="form-select" id="prospectStage" data-empty="true"><option value=""></option><option>Cultivate</option><option>Identify</option><option>Solicit</option><option>Stewardship</option></select><label class="form-label form-label-float">Prospect Stage</label></div>
+                <div class="form-group"><select class="form-select" id="prospectSolicitor" data-empty="true"><option value=""></option><option>Jason Oliver</option><option>Jay Love</option><option>Melissa Signorelli</option><option>Tim Paris</option></select><label class="form-label form-label-float">Solicitor</label></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="newRelOverlay" style="display:none;position:fixed;inset:0;background:rgba(31,27,46,0.58);z-index:9998;align-items:center;justify-content:center;padding:24px;" onclick="if(event.target===this)closeNewRel()">
+        <div class="edit-modal" style="max-width:480px;" onclick="event.stopPropagation()">
+          <div class="edit-modal-header">
+            <span class="edit-modal-title">New Relationship</span>
+            <button class="edit-modal-close" onclick="closeNewRel()"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <div class="edit-modal-body">
+            <div id="relStepSearch">
+              <p style="font-size:16px;color:var(--platform-100);margin:0 0 16px;">Search for a constituent to assign a new relationship.</p>
+              <div class="form-group rel-search-group">
+                <div class="rel-search-field">
+                  <span class="rel-search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                  <input type="text" id="relSearchInput" placeholder=" " oninput="filterRelSearch(this.value)" autofocus>
+                </div>
+                <label class="form-label">Search constituents</label>
+              </div>
+              <div id="relSearchResults" class="rel-search-menu"></div>
+            </div>
+            <div id="relStepType" style="display:none;">
+              <p id="relOtherLabel" style="font-size:16px;font-weight:700;color:var(--platform-100);margin:0 0 8px;"></p>
+              <div class="form-group" style="margin-bottom:20px;">
+                <select class="form-select" id="relOtherType" data-empty="true" onchange="checkRelSaveEnabled()">
+                  <option value=""></option>
+                  <option>Spouse</option><option>Parent</option><option>Child</option><option>Brother</option><option>Sister</option><option>Son</option><option>Daughter</option><option>Grandparent</option><option>Grandchild</option><option>Aunt/Uncle</option><option>Niece/Nephew</option><option>Cousin</option><option>Friend</option><option>Employer</option><option>Employee</option><option>Business Partner</option><option>Other</option>
+                </select>
+                <label class="form-label form-label-float">Select relationship</label>
+              </div>
+              <p style="font-size:16px;font-weight:700;color:var(--platform-100);margin:0 0 8px;">Eleanor Richardson is the...</p>
+              <div class="form-group" style="margin-bottom:20px;">
+                <select class="form-select" id="relSelfType" data-empty="true" onchange="checkRelSaveEnabled()">
+                  <option value=""></option>
+                  <option>Spouse</option><option>Parent</option><option>Child</option><option>Brother</option><option>Sister</option><option>Son</option><option>Daughter</option><option>Grandparent</option><option>Grandchild</option><option>Aunt/Uncle</option><option>Niece/Nephew</option><option>Cousin</option><option>Friend</option><option>Employer</option><option>Employee</option><option>Business Partner</option><option>Other</option>
+                </select>
+                <label class="form-label form-label-float">Select relationship</label>
+              </div>
+              <div class="form-group"><textarea class="form-input" id="relNote" style="height:80px;resize:vertical;" placeholder=" "></textarea><label class="form-label form-label-float">Note</label></div>
+            </div>
+          </div>
+          <div class="edit-modal-footer" id="relStepTypeFooter" style="display:none;">
+            <div></div>
+            <div style="display:flex;gap:8px;">
+              <button class="btn-secondary" onclick="closeNewRel()">Cancel</button>
+              <button class="btn-primary" id="relSaveBtn" disabled onclick="saveNewRel()">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div id="tileEditOverlay" style="display:none;position:fixed;inset:0;background:rgba(31,27,46,0.58);z-index:9998;align-items:center;justify-content:center;padding:24px;" onclick="if(event.target===this)closeTileEdit()">
         <div class="edit-modal" onclick="event.stopPropagation()">
           <div class="edit-modal-header">
@@ -1993,7 +2195,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div style="display:flex;align-items:center;gap:8px;">
               <div class="dropdown" id="yearDropdown" style="display:inline-flex;">
                 <div class="dropdown-overlay" onclick="document.getElementById('yearDropdown').classList.remove('open')"></div>
-                <button class="timeline-year-btn" onclick="document.getElementById('yearDropdown').classList.toggle('open')" style="gap:8px;" id="yearLabel">All years <i class="fa-solid fa-chevron-down" style="font-size:9px;color:var(--platform-40);"></i></button>
+                <button class="timeline-year-btn" onclick="document.getElementById('yearDropdown').classList.toggle('open')" style="gap:8px;" id="yearLabel">All years <i class="fa-solid fa-caret-down" style="font-size:16px;color:var(--platform-40);"></i></button>
                 <div class="dropdown-menu" style="min-width:160px;right:0;left:auto;max-height:240px;overflow-y:auto;">
                   <button class="dropdown-item active" onclick="filterYear('all',this)">All years</button>
                   <button class="dropdown-item" onclick="filterYear('2026',this)">2026</button>
@@ -2013,7 +2215,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <div class="tl-entry-title">Email — Spring Appeal 2026</div>
                 <div class="tl-entry-detail">Mass email &middot; Opened &middot; Clicked donation link</div>
               </div>
-              <span class="tl-entry-tag" style="background:var(--blue-10);color:var(--blue-200);">Email</span>
+              <span class="tl-entry-tag" style="background:var(--blue-20);color:var(--blue-300);">Email</span>
             </div>
             <div class="tl-entry" data-type="email" data-year="2026">
               <div class="tl-node email"><i class="fa-solid fa-envelope"></i></div>
@@ -2022,7 +2224,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <div class="tl-entry-title">Email — Year-End Thank You</div>
                 <div class="tl-entry-detail">Mass email &middot; Opened &middot; Clicked donation link</div>
               </div>
-              <span class="tl-entry-tag" style="background:var(--blue-10);color:var(--blue-200);">Email</span>
+              <span class="tl-entry-tag" style="background:var(--blue-20);color:var(--blue-300);">Email</span>
             </div>
             <div class="tl-entry" data-type="transaction" data-year="2025">
               <div class="tl-node donation"><i class="fa-solid fa-dollar-sign"></i></div>
@@ -2031,7 +2233,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <div class="tl-entry-title">$5,000.00 Donation</div>
                 <div class="tl-entry-detail">Annual Fund &middot; Online &middot; Year-end gift</div>
               </div>
-              <span class="tl-entry-tag" style="background:var(--crm-10);color:var(--crm-200);">Donation</span>
+              <span class="tl-entry-tag" style="background:var(--crm-20);color:var(--crm-300);">Donation</span>
             </div>
             <div class="tl-entry" data-type="transaction" data-year="2025">
               <div class="tl-node donation"><i class="fa-solid fa-dollar-sign"></i></div>
@@ -2040,7 +2242,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <div class="tl-entry-title">$2,500.00 Donation</div>
                 <div class="tl-entry-detail">Gala Sponsorship &middot; Event &middot; Bronze table sponsor</div>
               </div>
-              <span class="tl-entry-tag" style="background:var(--crm-10);color:var(--crm-200);">Donation</span>
+              <span class="tl-entry-tag" style="background:var(--crm-20);color:var(--crm-300);">Donation</span>
             </div>
             <div class="tl-entry" data-type="interaction" data-year="2025">
               <div class="tl-node event"><i class="fa-solid fa-calendar"></i></div>
@@ -2049,7 +2251,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <div class="tl-entry-title">Event — Youth Forward Gala 2025</div>
                 <div class="tl-entry-detail">Attended &middot; Honored at event &middot; Sat at Executive Director's table</div>
               </div>
-              <span class="tl-entry-tag" style="background:var(--yellow-10);color:var(--orange-200);">Event</span>
+              <span class="tl-entry-tag" style="background:var(--yellow-20);color:var(--yellow-300);">Event</span>
             </div>
             <div class="tl-entry" data-type="email" data-year="2025">
               <div class="tl-node email"><i class="fa-solid fa-envelope"></i></div>
@@ -2058,7 +2260,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <div class="tl-entry-title">Email — Fall Newsletter</div>
                 <div class="tl-entry-detail">Mass email &middot; Opened &middot; Forwarded</div>
               </div>
-              <span class="tl-entry-tag" style="background:var(--blue-10);color:var(--blue-200);">Email</span>
+              <span class="tl-entry-tag" style="background:var(--blue-20);color:var(--blue-300);">Email</span>
             </div>
             <div class="tl-entry" data-type="transaction" data-year="2025">
               <div class="tl-node donation"><i class="fa-solid fa-dollar-sign"></i></div>
@@ -2067,7 +2269,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <div class="tl-entry-title">$2,000.00 Donation</div>
                 <div class="tl-entry-detail">Youth Mentoring &middot; Check &middot; Restricted to summer cohort</div>
               </div>
-              <span class="tl-entry-tag" style="background:var(--crm-10);color:var(--crm-200);">Donation</span>
+              <span class="tl-entry-tag" style="background:var(--crm-20);color:var(--crm-300);">Donation</span>
             </div>
             <div class="tl-entry" data-type="task" data-year="2025">
               <div class="tl-node task"><i class="fa-solid fa-list-check"></i></div>
@@ -2086,7 +2288,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <div class="tl-entry-title">$2,500.00 Donation</div>
                 <div class="tl-entry-detail">Annual Fund &middot; Online &middot; Year-end gift</div>
               </div>
-              <span class="tl-entry-tag" style="background:var(--crm-10);color:var(--crm-200);">Donation</span>
+              <span class="tl-entry-tag" style="background:var(--crm-20);color:var(--crm-300);">Donation</span>
             </div>
             <div class="tl-entry" data-type="interaction" data-year="2024">
               <div class="tl-node interaction"><i class="fa-solid fa-phone"></i></div>
@@ -2095,7 +2297,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <div class="tl-entry-title">Interaction — Phone call</div>
                 <div class="tl-entry-detail">Stewardship call by Tim Paris &middot; Discussed expanding Youth Mentoring support &middot; Interested in named giving</div>
               </div>
-              <span class="tl-entry-tag" style="background:var(--orange-10);color:var(--orange-200);">Interaction</span>
+              <span class="tl-entry-tag" style="background:var(--orange-20);color:var(--orange-300);">Interaction</span>
             </div>
             <div class="tl-entry" data-type="transaction" data-year="2024">
               <div class="tl-node donation"><i class="fa-solid fa-dollar-sign"></i></div>
@@ -2104,7 +2306,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <div class="tl-entry-title">$5,000.00 Donation</div>
                 <div class="tl-entry-detail">Youth Mentoring &middot; Online &middot; Tied largest gift on record</div>
               </div>
-              <span class="tl-entry-tag" style="background:var(--crm-10);color:var(--crm-200);">Donation</span>
+              <span class="tl-entry-tag" style="background:var(--crm-20);color:var(--crm-300);">Donation</span>
             </div>
             <div class="tl-entry" data-type="transaction" data-year="2023">
               <div class="tl-node donation"><i class="fa-solid fa-dollar-sign"></i></div>
@@ -2113,7 +2315,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <div class="tl-entry-title">$1,500.00 Donation</div>
                 <div class="tl-entry-detail">Annual Fund &middot; Online &middot; Year-end gift</div>
               </div>
-              <span class="tl-entry-tag" style="background:var(--crm-10);color:var(--crm-200);">Donation</span>
+              <span class="tl-entry-tag" style="background:var(--crm-20);color:var(--crm-300);">Donation</span>
             </div>
             <div class="tl-entry" data-type="transaction" data-year="2023">
               <div class="tl-node donation"><i class="fa-solid fa-dollar-sign"></i></div>
@@ -2122,7 +2324,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <div class="tl-entry-title">$750.00 Donation</div>
                 <div class="tl-entry-detail">Youth Mentoring &middot; Check</div>
               </div>
-              <span class="tl-entry-tag" style="background:var(--crm-10);color:var(--crm-200);">Donation</span>
+              <span class="tl-entry-tag" style="background:var(--crm-20);color:var(--crm-300);">Donation</span>
             </div>
             <div class="tl-entry" data-type="email" data-year="2023">
               <div class="tl-node email"><i class="fa-solid fa-envelope"></i></div>
@@ -2132,16 +2334,16 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <div class="tl-entry-detail">Mass email &middot; Opened &middot; Clicked volunteer link</div>
                 <div class="tl-highlight positive"><strong>Highlight:</strong> Recurring monthly gift started &mdash; <strong>$250/mo</strong> to Annual Fund</div>
               </div>
-              <span class="tl-entry-tag" style="background:var(--blue-10);color:var(--blue-200);">Email</span>
+              <span class="tl-entry-tag" style="background:var(--blue-20);color:var(--blue-300);">Email</span>
             </div>
-            <div class="tl-entry" data-type="transaction" data-year="2022">
+            <div class="tl-entry" data-type="transaction" data-year="2022" onclick="openTlView('donation-1222')" style="cursor:pointer;">
               <div class="tl-node donation"><i class="fa-solid fa-dollar-sign"></i></div>
               <div class="tl-entry-date">Dec 2022</div>
               <div class="tl-entry-body">
                 <div class="tl-entry-title">$1,500.00 Donation</div>
                 <div class="tl-entry-detail">Annual Fund &middot; Online &middot; Year-end gift</div>
               </div>
-              <span class="tl-entry-tag" style="background:var(--crm-10);color:var(--crm-200);">Donation</span>
+              <span class="tl-entry-tag" style="background:var(--crm-20);color:var(--crm-300);">Donation</span>
             </div>
             <div class="tl-entry" data-type="transaction" data-year="2022">
               <div class="tl-node donation"><i class="fa-solid fa-dollar-sign"></i></div>
@@ -2151,7 +2353,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <div class="tl-entry-detail">Youth Mentoring &middot; Online</div>
                 <div class="tl-highlight negative"><strong>Highlight:</strong> Recurring gift cancelled &mdash; <strong>$100/mo</strong> to Annual Fund</div>
               </div>
-              <span class="tl-entry-tag" style="background:var(--crm-10);color:var(--crm-200);">Donation</span>
+              <span class="tl-entry-tag" style="background:var(--crm-20);color:var(--crm-300);">Donation</span>
             </div>
             <div class="tl-entry" data-type="interaction" data-year="2022">
               <div class="tl-node event"><i class="fa-solid fa-calendar"></i></div>
@@ -2160,9 +2362,9 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <div class="tl-entry-title">Event — Spring Gala 2022</div>
                 <div class="tl-entry-detail">Attended &middot; Guest of board member &middot; Met Executive Director</div>
               </div>
-              <span class="tl-entry-tag" style="background:var(--yellow-10);color:var(--orange-200);">Event</span>
+              <span class="tl-entry-tag" style="background:var(--yellow-20);color:var(--yellow-300);">Event</span>
             </div>
-            <div class="tl-entry" data-type="note" data-year="2022">
+            <div class="tl-entry" data-type="note" data-year="2022" onclick="openNotePage('note-0122','view')" style="cursor:pointer;">
               <div class="tl-node note"><i class="fa-solid fa-pen"></i></div>
               <div class="tl-entry-date">Jan 2022</div>
               <div class="tl-entry-body">
@@ -2202,7 +2404,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                         <td style="color:var(--platform-100);">Head of Household</td>
                         <td class="col-actions" onclick="event.stopPropagation()">
                           <div class="dd-wrap">
-                            <button class="actions-btn" onclick="toggleRelMenu(event,this)">Actions <i class="fa-solid fa-chevron-down" style="font-size:10px;"></i></button>
+                            <button class="actions-btn" onclick="toggleRelMenu(event,this)">Actions <i class="fa-solid fa-caret-down" style="font-size:16px;"></i></button>
                             <div class="dd-menu right">
                               <button class="dd-item" onclick="closeRelMenus()">Edit</button>
                               <div class="dd-divider"></div>
@@ -2216,7 +2418,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                         <td style="color:var(--platform-100);">Spouse</td>
                         <td class="col-actions" onclick="event.stopPropagation()">
                           <div class="dd-wrap">
-                            <button class="actions-btn" onclick="toggleRelMenu(event,this)">Actions <i class="fa-solid fa-chevron-down" style="font-size:10px;"></i></button>
+                            <button class="actions-btn" onclick="toggleRelMenu(event,this)">Actions <i class="fa-solid fa-caret-down" style="font-size:16px;"></i></button>
                             <div class="dd-menu right">
                               <button class="dd-item" onclick="closeRelMenus()">Edit</button>
                               <button class="dd-item" onclick="closeRelMenus()">Go to Related Constituent</button>
@@ -2240,7 +2442,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Relationships</span>
-                <span style="font-size:14px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="document.getElementById('newRelOverlay').classList.add('active')">New Relationship</span>
+                <span style="font-size:14px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openNewRel()">New Relationship</span>
               </div>
               <div class="sidebar-card-body">
                 <div id="relContent">
@@ -2258,7 +2460,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                         <td style="color:var(--platform-100);">Board Member</td>
                         <td class="col-actions" onclick="event.stopPropagation()">
                           <div class="dd-wrap">
-                            <button class="actions-btn" onclick="toggleRelMenu(event,this)">Actions <i class="fa-solid fa-chevron-down" style="font-size:10px;"></i></button>
+                            <button class="actions-btn" onclick="toggleRelMenu(event,this)">Actions <i class="fa-solid fa-caret-down" style="font-size:16px;"></i></button>
                             <div class="dd-menu right">
                               <button class="dd-item" onclick="closeRelMenus()">Edit</button>
                               <button class="dd-item" onclick="closeRelMenus()">Go to Related Constituent</button>
@@ -2273,7 +2475,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                         <td style="color:var(--platform-100);">Board Member</td>
                         <td class="col-actions" onclick="event.stopPropagation()">
                           <div class="dd-wrap">
-                            <button class="actions-btn" onclick="toggleRelMenu(event,this)">Actions <i class="fa-solid fa-chevron-down" style="font-size:10px;"></i></button>
+                            <button class="actions-btn" onclick="toggleRelMenu(event,this)">Actions <i class="fa-solid fa-caret-down" style="font-size:16px;"></i></button>
                             <div class="dd-menu right">
                               <button class="dd-item" onclick="closeRelMenus()">Edit</button>
                               <button class="dd-item" onclick="closeRelMenus()">Go to Related Constituent</button>
@@ -2395,7 +2597,7 @@ table.atbl tr:last-child td{border-bottom:none;}
         <div id="elPaiEmpty">
         <div style="padding:24px;background:var(--white);border-radius:4px;">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
-              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;background:var(--crm-10);color:var(--crm-200);padding:3px 10px;border-radius:4px;"><i class="fa-solid fa-sparkles" style="font-size:11px;"></i> Prospect AI</span>
+              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;background:var(--crm-20);color:var(--crm-300);padding:3px 10px;border-radius:4px;"><i class="fa-solid fa-sparkles" style="font-size:11px;"></i> Prospect AI</span>
             </div>
             <div style="font-size:20px;font-weight:700;color:var(--platform-100);line-height:24px;margin-bottom:8px;" data-pai-title>Enrich Eleanor's profile with Prospect AI</div>
             <div style="font-size:14px;color:var(--platform-80);line-height:22px;max-width:560px;margin-bottom:20px;" data-pai-sub>You're seeing CRM data and Dataro predictions. Prospect AI scans public sources to add biographical context, capacity signals, and conversation-ready talking points.</div>
@@ -2437,7 +2639,7 @@ table.atbl tr:last-child td{border-bottom:none;}
         <div id="elPaiLoading" style="display:none;">
           <div style="padding:24px;background:var(--white);border-radius:4px;margin-bottom:20px;">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
-              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;background:var(--crm-10);color:var(--crm-200);padding:3px 10px;border-radius:4px;"><i class="fa-solid fa-sparkles" style="font-size:11px;"></i> Prospect AI</span>
+              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;background:var(--crm-20);color:var(--crm-300);padding:3px 10px;border-radius:4px;"><i class="fa-solid fa-sparkles" style="font-size:11px;"></i> Prospect AI</span>
             </div>
             <div class="pai-loading-banner">
               <div class="pai-loading-spinner"></div>
@@ -2473,7 +2675,7 @@ table.atbl tr:last-child td{border-bottom:none;}
         <div id="elPaiError1" style="display:none;">
           <div class="pai-error-card" style="border-color:var(--crm-100);">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
-              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;background:var(--crm-10);color:var(--crm-200);padding:3px 10px;border-radius:4px;"> Prospect AI</span>
+              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;background:var(--crm-20);color:var(--crm-300);padding:3px 10px;border-radius:4px;"> Prospect AI</span>
             </div>
             <div class="pai-error-title">You've used all your Prospect AI credits</div>
             <div class="pai-error-body">Your organization has reached its annual credit limit of 200 enrichments. Previously enriched reports are still accessible. Credits reset on your contract renewal date.</div>
@@ -2519,7 +2721,7 @@ table.atbl tr:last-child td{border-bottom:none;}
         <div id="elPaiError2" style="display:none;">
           <div class="pai-error-card">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
-              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;background:var(--crm-10);color:var(--crm-200);padding:3px 10px;border-radius:4px;"> Prospect AI</span>
+              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;background:var(--crm-20);color:var(--crm-300);padding:3px 10px;border-radius:4px;"> Prospect AI</span>
             </div>
             <div class="pai-error-title">No match found for Eleanor Richardson</div>
             <div class="pai-error-body">Prospect AI searched public sources but couldn't find a reliable match. This is most common when a constituent uses a name variation, has a limited public presence, or record data is incomplete. <strong>No credit was used.</strong></div>
@@ -2565,7 +2767,7 @@ table.atbl tr:last-child td{border-bottom:none;}
         <div id="elPaiError3" style="display:none;">
           <div class="pai-error-card">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
-              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;background:var(--crm-10);color:var(--crm-200);padding:3px 10px;border-radius:4px;"> Prospect AI</span>
+              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;background:var(--crm-20);color:var(--crm-300);padding:3px 10px;border-radius:4px;"> Prospect AI</span>
             </div>
             <div class="pai-error-title">Match found, but confidence is too low to generate a report</div>
             <div class="pai-error-body">Prospect AI found potential matches for Eleanor Richardson, but the confidence score wasn't high enough to generate a reliable report. Generating a low-confidence report risks surfacing inaccurate information about the wrong person. <strong>No credit was used.</strong></div>
@@ -2612,7 +2814,7 @@ table.atbl tr:last-child td{border-bottom:none;}
         <div id="elPaiError4" style="display:none;">
           <div class="pai-error-card">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
-              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;background:var(--crm-10);color:var(--crm-200);padding:3px 10px;border-radius:4px;"> Prospect AI</span>
+              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;background:var(--crm-20);color:var(--crm-300);padding:3px 10px;border-radius:4px;"> Prospect AI</span>
             </div>
             <div class="pai-error-title">Prospect AI is temporarily unavailable</div>
             <div class="pai-error-body">The enrichment service is experiencing high demand right now. This is temporary — your request wasn't processed and <strong>no credit was used.</strong></div>
@@ -2799,7 +3001,7 @@ table.atbl tr:last-child td{border-bottom:none;}
               <div class="sidebar-card-body">
                 <div class="snapshot-row"><span class="snapshot-lbl">Gift Capacity</span><span class="snapshot-val" style="font-weight:600;">$25k&ndash;$50k</span></div>
                 <div class="snapshot-row"><span class="snapshot-lbl">Optimal Ask</span><span class="snapshot-val" style="font-weight:600;">$25,000</span></div>
-                <div class="snapshot-row"><span class="snapshot-lbl">Prospect Score</span><span style="background:var(--crm-10);color:var(--crm-200);font-size:12px;font-weight:700;padding:2px 8px;border-radius:4px;">96</span></div>
+                <div class="snapshot-row"><span class="snapshot-lbl">Prospect Score</span><span style="background:var(--crm-20);color:var(--crm-300);font-size:12px;font-weight:700;padding:2px 8px;border-radius:4px;">96</span></div>
                 <div class="snapshot-row"><span class="snapshot-lbl">Last Gift</span><span class="snapshot-val" style="font-weight:600;">Dec 18, 2025</span></div>
               </div>
             </div>
@@ -2962,12 +3164,12 @@ CEO, Dataro · Hope Valley Foundation</textarea>
       <div style="display:grid;grid-template-columns:72px 1fr;gap:6px;font-size:14px;align-items:center;">
         <span style="color:var(--platform-60);">From</span><span style="color:var(--platform-100);">Sarah Davis &lt;sarah.davis@hopevalleyfoundation.org&gt;</span>
         <span style="color:var(--platform-60);">Audience</span>
-        <span id="outreachAudience" style="color:var(--platform-100);display:flex;align-items:center;gap:8px;">Recurring Donors at Risk of Lapsing <span style="background:var(--red-10);color:var(--red-100);font-size:12px;font-weight:700;padding:2px 6px;border-radius:4px;">13 donors</span></span>
+        <span id="outreachAudience" style="color:var(--platform-100);display:flex;align-items:center;gap:8px;">Recurring Donors at Risk of Lapsing <span style="background:var(--red-20);color:var(--red-300);font-size:12px;font-weight:700;padding:2px 6px;border-radius:4px;">13 donors</span></span>
         <span style="color:var(--platform-60);">Subject</span><span id="outreachSubject" style="font-weight:700;color:var(--platform-100);">We Miss You — Your Impact Matters</span>
         <span style="color:var(--platform-60);">Form link</span>
         <span style="color:var(--platform-100);display:flex;flex-direction:column;gap:4px;">
           <span style="display:flex;align-items:center;gap:6px;">
-            <span style="font-size:13px;background:var(--crm-10);color:var(--crm-200);padding:2px 8px;border-radius:4px;font-weight:700;">Standard Form</span>
+            <span style="font-size:13px;background:var(--crm-20);color:var(--crm-300);padding:2px 8px;border-radius:4px;font-weight:700;">Standard Form</span>
             <code style="font-size:12px;color:var(--platform-60);background:var(--platform-5);padding:2px 6px;border-radius:3px;">give.hopevalley.org/donate</code>
           </span>
         </span>
@@ -3258,8 +3460,8 @@ function showDonorEmail(slug) {
   
   var srcHtml = '';
   d.sources.forEach(function(s) {
-    var badgeBg = s.badge_color === 'blue' ? 'var(--blue-10,#E8F0FE)' : 'var(--crm-10)';
-    var badgeText = s.badge_color === 'blue' ? 'var(--blue-100,#4285F4)' : 'var(--crm-200)';
+    var badgeBg = s.badge_color === 'blue' ? 'var(--blue-20)' : 'var(--crm-20)';
+    var badgeText = s.badge_color === 'blue' ? 'var(--blue-300)' : 'var(--crm-300)';
     srcHtml += '<div style="background:white;padding:10px 16px;display:flex;flex-direction:column;gap:4px;">';
     srcHtml += '<div style="font-size:14px;color:var(--platform-100);line-height:20px;margin-bottom:6px;">\u201c' + s.quote + '\u201d</div>';
     srcHtml += '<div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">';
@@ -3291,7 +3493,7 @@ function showOutreachModal(type) {
   var cfg = {
         eleanor: {
       title: 'Draft Email — Eleanor Richardson',
-      audience: 'Eleanor Richardson <span style="background:var(--crm-10);color:var(--crm-200);font-size:12px;font-weight:700;padding:2px 6px;border-radius:4px;">Prospect AI</span>',
+      audience: 'Eleanor Richardson <span style="background:var(--crm-20);color:var(--crm-300);font-size:12px;font-weight:700;padding:2px 6px;border-radius:4px;">Prospect AI</span>',
       subject: 'Congrats on Philanthropist of the Year — and a quick thought',
       personalization: '<span style="color:var(--platform-80);">Eleanor R. <strong>$25,000</strong></span><span style="color:var(--platform-100);">Personalized from Prospect AI report</span>',
       body: '<p style="margin-bottom:14px;">Dear <span style="background:var(--penny-5);padding:1px 6px;border-radius:4px;font-weight:700;color:var(--penny-100);">Eleanor</span>,</p><p style="margin-bottom:14px;">Congratulations on being named Philanthropist of the Year \u2014 what a well-earned honor. Recognition from the Indianapolis Business Journal is no small thing, and your years of leadership getting that kind of public spotlight is something I was thrilled to see.</p><p style="margin-bottom:14px;">Your work with the Indianapolis Arts Council and Hamilton County Education Alliance has always resonated with what we\u2019re building at Hope Valley Foundation. We\u2019re heading into the fall expansion of our youth mentoring cohort, and your perspective is one I\u2019ve wanted to hear for a while.</p><p style="margin-bottom:14px;">Would you be open to a 20-minute conversation in the next couple of weeks? I\u2019m happy to come to you, or meet at the Foundation \u2014 whichever is easiest.</p><p style="margin-bottom:4px;">Warmly,</p><p style="margin-bottom:0;font-weight:700;color:var(--platform-100);">Sarah Davis</p><p style="font-size:13px;color:var(--platform-60);">CEO, Dataro \u00b7 Hope Valley Foundation</p>',
@@ -3300,7 +3502,7 @@ function showOutreachModal(type) {
     },
     margaret: {
       title: 'Draft Email \u2014 Margaret Allen',
-      audience: 'Margaret Allen <span style="background:var(--crm-10);color:var(--crm-200);font-size:12px;font-weight:700;padding:2px 6px;border-radius:4px;">Mid-Level Upgrade</span>',
+      audience: 'Margaret Allen <span style="background:var(--crm-20);color:var(--crm-300);font-size:12px;font-weight:700;padding:2px 6px;border-radius:4px;">Mid-Level Upgrade</span>',
       subject: 'Your Legacy in Education Inspires Us',
       personalization: '<span style="color:var(--platform-80);">Margaret A. <strong>$2,500</strong></span><span style="color:var(--platform-100);">Personalized from CRM + Dataro intelligence</span>',
       body: '<p style="margin-bottom:14px;">Dear <span style="background:var(--penny-5);padding:1px 6px;border-radius:4px;font-weight:700;color:var(--penny-100);">Margaret</span>,</p><p style="margin-bottom:14px;">I hope this message finds you well. I\u2019ve been reflecting on the incredible impact you\u2019ve made through your years of dedication to education \u2014 both as a principal at Westside Elementary and as a loyal supporter of Hope Valley Foundation.</p><p style="margin-bottom:14px;">Your consistent generosity over the past five years has helped fund programs that give children the same fair start you championed throughout your career. That means the world to us.</p><p style="margin-bottom:14px;">This year, we\u2019re expanding our youth mentoring cohort to reach 200 students. A gift of <span style="background:var(--penny-5);padding:1px 6px;border-radius:4px;font-weight:700;color:var(--penny-100);">$2,500</span> would sponsor five mentoring pairs for a full year \u2014 and I can\u2019t think of anyone who understands the value of mentorship more than you.</p><p style="margin-bottom:14px;">Would you be open to a brief call this week? I\u2019d love to share how the program has grown.</p><p style="margin-bottom:4px;">With deep appreciation,</p><p style="margin-bottom:0;font-weight:700;color:var(--platform-100);">Sarah Davis</p><p style="font-size:13px;color:var(--platform-60);">CEO, Dataro \u00b7 Hope Valley Foundation</p>',
@@ -3309,7 +3511,7 @@ function showOutreachModal(type) {
     },
     galaFollowup: {
       title: 'Draft Email \u2014 Gala Follow-Up',
-      audience: 'Top Gala Attendees <span style="background:var(--penny-10);color:var(--penny-100);font-size:12px;font-weight:700;padding:2px 6px;border-radius:4px;">138 attendees</span>',
+      audience: 'Top Gala Attendees <span style="background:var(--penny-20);color:var(--penny-300);font-size:12px;font-weight:700;padding:2px 6px;border-radius:4px;">138 attendees</span>',
       subject: 'Thank You for a Wonderful Evening',
       personalization: '<span style="color:var(--platform-80);">Eleanor R. <strong>$25,000</strong></span><span style="color:var(--platform-80);">Robert J. <strong>$15,000</strong></span><span style="color:var(--platform-80);">Linda W. <strong>$10,000</strong></span><span style="color:var(--platform-40);">+135 more</span>',
       body: '<p style="margin-bottom:14px;">Dear <span style="background:var(--penny-5);padding:1px 6px;border-radius:4px;font-weight:700;color:var(--penny-100);">{first_name}</span>,</p><p style="margin-bottom:14px;">What an incredible evening at our Spring Gala! Thank you so much for being there \u2014 your presence truly made the night special.</p><p style="margin-bottom:14px;">Thanks to supporters like you, we raised over <strong>$125,000</strong> toward our summer mentoring initiative. The energy in the room was a powerful reminder of what this community can accomplish together.</p><p style="margin-bottom:14px;">If you were inspired by what you heard, a follow-up gift of <span style="background:var(--penny-5);padding:1px 6px;border-radius:4px;font-weight:700;color:var(--penny-100);">{optimal_ask}</span> would help us reach our full goal of $200,000 by June 30.</p><p style="margin-bottom:14px;">I\u2019d love to continue our conversation from the event. Would you have time for a quick call this week?</p><p style="margin-bottom:4px;">With gratitude,</p><p style="margin-bottom:0;font-weight:700;color:var(--platform-100);">Sarah Davis</p><p style="font-size:13px;color:var(--platform-60);">CEO, Dataro \u00b7 Hope Valley Foundation</p>',
@@ -3318,7 +3520,7 @@ function showOutreachModal(type) {
     },
     churn: {
       title: 'Create Outreach — Lapse Risk Donors',
-      audience: 'Recurring Donors at Risk of Lapsing <span style="background:var(--red-10);color:var(--red-100);font-size:12px;font-weight:700;padding:2px 6px;border-radius:4px;">13 donors</span>',
+      audience: 'Recurring Donors at Risk of Lapsing <span style="background:var(--red-20);color:var(--red-300);font-size:12px;font-weight:700;padding:2px 6px;border-radius:4px;">13 donors</span>',
       subject: 'We Miss You — Your Impact Matters',
       personalization: '<span style="color:var(--platform-80);">Sarah M. <strong>$100</strong></span><span style="color:var(--platform-80);">James T. <strong>$150</strong></span><span style="color:var(--platform-80);">Linda P. <strong>$75</strong></span><span style="color:var(--platform-80);">Robert C. <strong>$200</strong></span><span style="color:var(--platform-80);">Marcus W. <strong>$50</strong></span><span style="color:var(--platform-40);">+8 more</span>',
       body: '<p style="margin-bottom:14px;">Hi <span style="background:var(--penny-5);padding:1px 6px;border-radius:4px;font-weight:700;color:var(--penny-100);">{first_name}</span>,</p><p style="margin-bottom:14px;">I\u2019m reaching out personally because your generosity has made a real difference at Hope Valley Foundation.</p><p style="margin-bottom:14px;">We\u2019ve noticed your recurring gift has paused recently, and I wanted to check in. Your support of <span style="background:var(--penny-5);padding:1px 6px;border-radius:4px;font-weight:700;color:var(--penny-100);">{optimal_ask}</span> helped fund critical programs that serve our community.</p><p style="margin-bottom:14px;">If you\u2019re in a place where you can rejoin us, we\u2019d love to welcome you back at any level that feels right.</p><p style="margin-bottom:14px;"><a href="#" style="color:var(--crm-100);font-weight:700;text-decoration:none;">Restart your monthly gift \u2192</a></p><p style="margin-bottom:4px;">With gratitude,</p><p style="margin-bottom:0;font-weight:700;color:var(--platform-100);">Sarah Davis</p><p style="font-size:13px;color:var(--platform-60);">CEO, Dataro \u00b7 Hope Valley Foundation</p>',
@@ -3327,7 +3529,7 @@ function showOutreachModal(type) {
     },
     upgrade: {
       title: 'Create Outreach — Mid-Level Upgrade',
-      audience: 'Mid-Level Upgrade Candidates <span style="background:var(--crm-10);color:var(--crm-200);font-size:12px;font-weight:700;padding:2px 6px;border-radius:4px;">20 donors</span>',
+      audience: 'Mid-Level Upgrade Candidates <span style="background:var(--crm-20);color:var(--crm-300);font-size:12px;font-weight:700;padding:2px 6px;border-radius:4px;">20 donors</span>',
       subject: 'You\u2019re Making a Bigger Difference Than You Know',
       personalization: '<span style="color:var(--platform-80);">Margaret A. <strong>$2,500</strong></span><span style="color:var(--platform-80);">Robert C. <strong>$2,000</strong></span><span style="color:var(--platform-80);">Karen N. <strong>$1,500</strong></span><span style="color:var(--platform-80);">William F. <strong>$1,500</strong></span><span style="color:var(--platform-80);">Patricia H. <strong>$1,000</strong></span><span style="color:var(--platform-40);">+15 more</span>',
       body: '<p style="margin-bottom:14px;">Hi <span style="background:var(--penny-5);padding:1px 6px;border-radius:4px;font-weight:700;color:var(--penny-100);">{first_name}</span>,</p><p style="margin-bottom:14px;">Your consistent support of Hope Valley Foundation has been incredible, and I wanted to share something exciting: because of donors like you, we\u2019re expanding our programs to reach 200 more families this year.</p><p style="margin-bottom:14px;">You\u2019re one of our most engaged supporters, and I believe a gift of <span style="background:var(--penny-5);padding:1px 6px;border-radius:4px;font-weight:700;color:var(--penny-100);">{optimal_ask}</span> could help us close the gap on our mid-year goal. At this level, you\u2019d join our Leadership Circle with exclusive updates and event invitations.</p><p style="margin-bottom:14px;"><a href="#" style="color:var(--crm-100);font-weight:700;text-decoration:none;">Make your Leadership Gift \u2192</a></p><p style="margin-bottom:4px;">With gratitude,</p><p style="margin-bottom:0;font-weight:700;color:var(--platform-100);">Sarah Davis</p><p style="font-size:13px;color:var(--platform-60);">CEO, Dataro \u00b7 Hope Valley Foundation</p>',
@@ -3336,7 +3538,7 @@ function showOutreachModal(type) {
     },
     propensity: {
       title: 'Create Outreach — Likely to Give This Month',
-      audience: 'Donors Likely to Give This Month <span style="background:var(--blue-10);color:#10437f;font-size:12px;font-weight:700;padding:2px 6px;border-radius:4px;">56 donors</span>',
+      audience: 'Donors Likely to Give This Month <span style="background:var(--blue-20);color:var(--blue-300);font-size:12px;font-weight:700;padding:2px 6px;border-radius:4px;">56 donors</span>',
       subject: 'A Perfect Time to Make Your Gift Count',
       personalization: '<span style="color:var(--platform-80);">Eleanor R. <strong>$25,000</strong></span><span style="color:var(--platform-80);">William F. <strong>$5,000</strong></span><span style="color:var(--platform-80);">Patricia H. <strong>$3,000</strong></span><span style="color:var(--platform-80);">Michael O. <strong>$1,500</strong></span><span style="color:var(--platform-80);">Jennifer W. <strong>$750</strong></span><span style="color:var(--platform-40);">+51 more</span>',
       body: '<p style="margin-bottom:14px;">Hi <span style="background:var(--penny-5);padding:1px 6px;border-radius:4px;font-weight:700;color:var(--penny-100);">{first_name}</span>,</p><p style="margin-bottom:14px;">Spring is a season of renewal, and at Hope Valley Foundation, we\u2019re seeing the impact of your past generosity bloom into real change in our community.</p><p style="margin-bottom:14px;">This month, a gift of <span style="background:var(--penny-5);padding:1px 6px;border-radius:4px;font-weight:700;color:var(--penny-100);">{optimal_ask}</span> would go directly toward our summer mentoring program, connecting 50 youth with career mentors from the community.</p><p style="margin-bottom:14px;"><a href="#" style="color:var(--crm-100);font-weight:700;text-decoration:none;">Give today \u2192</a></p><p style="margin-bottom:4px;">With gratitude,</p><p style="margin-bottom:0;font-weight:700;color:var(--platform-100);">Sarah Davis</p><p style="font-size:13px;color:var(--platform-60);">CEO, Dataro \u00b7 Hope Valley Foundation</p>',
@@ -3345,7 +3547,7 @@ function showOutreachModal(type) {
     },
     annual: {
       title: 'Create Outreach — Annual Fund',
-      audience: 'Annual Fund Donors <span style="background:var(--crm-10);color:var(--crm-200);font-size:12px;font-weight:700;padding:2px 6px;border-radius:4px;">187 donors</span>',
+      audience: 'Annual Fund Donors <span style="background:var(--crm-20);color:var(--crm-300);font-size:12px;font-weight:700;padding:2px 6px;border-radius:4px;">187 donors</span>',
       subject: 'Your Annual Gift Makes Everything Possible',
       personalization: '<span style="color:var(--platform-80);">Sarah M. <strong>$500</strong></span><span style="color:var(--platform-80);">William F. <strong>$2,500</strong></span><span style="color:var(--platform-80);">Patricia H. <strong>$1,000</strong></span><span style="color:var(--platform-80);">Margaret A. <strong>$1,500</strong></span><span style="color:var(--platform-80);">John E. <strong>$750</strong></span><span style="color:var(--platform-40);">+182 more</span>',
       body: '<p style="margin-bottom:14px;">Hi <span style="background:var(--penny-5);padding:1px 6px;border-radius:4px;font-weight:700;color:var(--penny-100);">{first_name}</span>,</p><p style="margin-bottom:14px;">As we approach the midpoint of our fiscal year, I wanted to personally thank you for being part of our Annual Fund family. Your generosity is the foundation everything else is built on.</p><p style="margin-bottom:14px;">This year, your gift of <span style="background:var(--penny-5);padding:1px 6px;border-radius:4px;font-weight:700;color:var(--penny-100);">{optimal_ask}</span> would help us reach our $250,000 Annual Fund goal — we\u2019re 68% of the way there.</p><p style="margin-bottom:14px;"><a href="#" style="color:var(--crm-100);font-weight:700;text-decoration:none;">Renew your Annual Fund gift \u2192</a></p><p style="margin-bottom:4px;">With gratitude,</p><p style="margin-bottom:0;font-weight:700;color:var(--platform-100);">Sarah Davis</p><p style="font-size:13px;color:var(--platform-60);">CEO, Dataro \u00b7 Hope Valley Foundation</p>',
@@ -3354,7 +3556,7 @@ function showOutreachModal(type) {
     },
     gala: {
       title: 'Create Outreach \u2014 Gala Attendees',
-      audience: 'Gala Attendees 2026 <span style="background:var(--penny-10);color:var(--penny-100);font-size:12px;font-weight:700;padding:2px 6px;border-radius:4px;">84 attendees</span>',
+      audience: 'Gala Attendees 2026 <span style="background:var(--penny-20);color:var(--penny-300);font-size:12px;font-weight:700;padding:2px 6px;border-radius:4px;">84 attendees</span>',
       subject: 'Thank You for a Magical Evening',
       personalization: '<span style="color:var(--platform-80);">Eleanor R. <strong>$25,000</strong></span><span style="color:var(--platform-80);">Robert J. <strong>$15,000</strong></span><span style="color:var(--platform-80);">Linda W. <strong>$10,000</strong></span><span style="color:var(--platform-80);">Sarah M. <strong>$1,000</strong></span><span style="color:var(--platform-80);">William F. <strong>$5,000</strong></span><span style="color:var(--platform-40);">+79 more</span>',
       body: '<p style="margin-bottom:14px;">Hi <span style="background:var(--penny-5);padding:1px 6px;border-radius:4px;font-weight:700;color:var(--penny-100);">{first_name}</span>,</p><p style="margin-bottom:14px;">What an incredible evening! The 2025 Spring Gala was our most successful yet, and it wouldn\u2019t have been possible without guests like you.</p><p style="margin-bottom:14px;">Together, we raised over $180,000 to fund youth mentoring and community health programs. If the evening inspired you and you\u2019d like to deepen your impact, a gift of <span style="background:var(--penny-5);padding:1px 6px;border-radius:4px;font-weight:700;color:var(--penny-100);">{optimal_ask}</span> would help us carry this momentum forward.</p><p style="margin-bottom:14px;"><a href="#" style="color:var(--crm-100);font-weight:700;text-decoration:none;">Make your post-gala gift \u2192</a></p><p style="margin-bottom:4px;">With gratitude,</p><p style="margin-bottom:0;font-weight:700;color:var(--platform-100);">Sarah Davis</p><p style="font-size:13px;color:var(--platform-60);">CEO, Dataro \u00b7 Hope Valley Foundation</p>',
@@ -3363,7 +3565,7 @@ function showOutreachModal(type) {
     },
     mentoring: {
       title: 'Create Outreach \u2014 Mentoring Supporters',
-      audience: 'Youth Mentoring Supporters <span style="background:var(--crm-10);color:var(--crm-200);font-size:12px;font-weight:700;padding:2px 6px;border-radius:4px;">38 donors</span>',
+      audience: 'Youth Mentoring Supporters <span style="background:var(--crm-20);color:var(--crm-300);font-size:12px;font-weight:700;padding:2px 6px;border-radius:4px;">38 donors</span>',
       subject: 'See the Difference Your Mentoring Gift Made',
       personalization: '<span style="color:var(--platform-80);">Marcus W. <strong>$500</strong></span><span style="color:var(--platform-80);">Angela C. <strong>$1,000</strong></span><span style="color:var(--platform-80);">Michael O. <strong>$1,500</strong></span><span style="color:var(--platform-80);">Lisa T. <strong>$300</strong></span><span style="color:var(--platform-80);">Diana P. <strong>$750</strong></span><span style="color:var(--platform-40);">+33 more</span>',
       body: '<p style="margin-bottom:14px;">Hi <span style="background:var(--penny-5);padding:1px 6px;border-radius:4px;font-weight:700;color:var(--penny-100);">{first_name}</span>,</p><p style="margin-bottom:14px;">Because of your support of our Youth Mentoring program, 127 young people were matched with career mentors this year. That\u2019s 127 futures changed.</p><p style="margin-bottom:14px;">This summer, we\u2019re expanding to serve 50 more youth \u2014 and a gift of <span style="background:var(--penny-5);padding:1px 6px;border-radius:4px;font-weight:700;color:var(--penny-100);">{optimal_ask}</span> would help us get there. Every dollar goes directly to mentor training and program support.</p><p style="margin-bottom:14px;"><a href="#" style="color:var(--crm-100);font-weight:700;text-decoration:none;">Fuel the next 50 mentorships \u2192</a></p><p style="margin-bottom:4px;">With gratitude,</p><p style="margin-bottom:0;font-weight:700;color:var(--platform-100);">Sarah Davis</p><p style="font-size:13px;color:var(--platform-60);">CEO, Dataro \u00b7 Hope Valley Foundation</p>',
@@ -3715,9 +3917,9 @@ function wcApprove(id, label) {
   }
   updateReadyBadge();
   var statusUpdates = {
-    'amy': {id:'sig-status-sarah', text:'Check-in sent ✓', bg:'#d9e9cd', color:'#317005'},
-    'campaign': {id:'sig-status-campaign', text:'Campaign sent ✓', bg:'#d9e9cd', color:'#317005'},
-    'robert': {id:'sig-status-robert', text:'Note sent ✓', bg:'#d9e9cd', color:'#317005'}
+    'amy': {id:'sig-status-sarah', text:'Check-in sent ✓', bg:'#D9E9CD', color:'#224E04'},
+    'campaign': {id:'sig-status-campaign', text:'Campaign sent ✓', bg:'#D9E9CD', color:'#224E04'},
+    'robert': {id:'sig-status-robert', text:'Note sent ✓', bg:'#D9E9CD', color:'#224E04'}
   };
   var su = statusUpdates[id];
   if (su) {
@@ -4029,7 +4231,7 @@ function filterTimeline(type, btn) {
 function filterYear(year, btn) {
   currentYear = year;
   var label = document.getElementById('yearLabel');
-  label.innerHTML = (year === 'all' ? 'All years' : year) + ' <i class="fa-solid fa-chevron-down" style="font-size:9px;color:var(--platform-40);"></i>';
+  label.innerHTML = (year === 'all' ? 'All years' : year) + ' <i class="fa-solid fa-caret-down" style="font-size:16px;color:var(--platform-40);"></i>';
   document.getElementById('yearDropdown').classList.remove('open');
   document.querySelectorAll('#yearDropdown .dropdown-item').forEach(function(item) {
     item.style.color = '';
@@ -5138,6 +5340,196 @@ function buildFieldHtml(f) {
   }
   return '<div class="form-group"><input class="form-input" type="text" value="' + f.value + '" placeholder=" "><label class="form-label form-label-float">' + f.label + '</label></div>';
 }
+var tlViewConfigs = {
+  'donation-1222': {
+    kind: 'donation',
+    title: 'Donation',
+    rows: [
+      {label:'Date', value:'12/11/2022'},
+      {label:'Amount', value:'$1,500.00'},
+      {label:'Fund', value:'Annual Fund'},
+      {label:'Campaign', value:'2022 Annual Campaign'},
+      {label:'Method', value:'Online'},
+      {label:'Note', value:'Year-end gift'}
+    ],
+    editFields: [
+      {type:'text', label:'Date', value:'12/11/2022'},
+      {type:'text', label:'Amount', value:'$1,500.00'},
+      {type:'text', label:'Fund', value:'Annual Fund'},
+      {type:'text', label:'Campaign', value:'2022 Annual Campaign'},
+      {type:'select', label:'Method', value:'Online', options:['Online','Check','Cash','Credit Card']},
+      {type:'text', label:'Note', value:'Year-end gift'}
+    ]
+  }
+};
+var currentTlView = null;
+function renderTlViewReadonly(cfg) {
+  document.getElementById('tlViewBody').innerHTML = cfg.rows.map(function(r) {
+    return '<div class="tlv-row"><span class="tlv-label">' + r.label + '</span><span class="tlv-value">' + r.value + '</span></div>';
+  }).join('');
+}
+function openTlView(key) {
+  var cfg = tlViewConfigs[key];
+  if (!cfg) return;
+  currentTlView = key;
+  document.getElementById('tlViewTitle').textContent = cfg.title;
+  renderTlViewReadonly(cfg);
+  document.getElementById('tlViewEditBtn').style.display = 'inline-flex';
+  document.getElementById('tlViewOverlay').classList.add('active');
+}
+function closeTlView() {
+  document.getElementById('tlViewOverlay').classList.remove('active');
+  currentTlView = null;
+}
+function tlViewEditClick() {
+  closeTlView();
+  openTlDonationEdit();
+}
+function openTlDonationEdit() {
+  var cfg = tlViewConfigs['donation-1222'];
+  document.getElementById('tlDonationEditBody').innerHTML = cfg.editFields.map(buildFieldHtml).join('');
+  document.getElementById('tlDonationEditOverlay').classList.add('active');
+}
+function closeTlDonationEdit() {
+  document.getElementById('tlDonationEditOverlay').classList.remove('active');
+}
+function saveTlDonationEdit() {
+  closeTlDonationEdit();
+  showToast('<i class="fa-solid fa-circle-check" style="font-size:20px;color:var(--crm-100);flex-shrink:0;"></i> <span>Donation updated</span>');
+}
+var noteData = {
+  'note-0122': {
+    date: '1/15/2022',
+    note: 'Initial outreach and cultivation meeting. Referred by board member.',
+    pinned: false,
+    noteType: 'Prospect Management',
+    prospect: {
+      lastActionDate: '1/15/2022', lastActionType: 'In Person',
+      nextActionDate: '2/1/2022', nextActionType: 'Phone Call',
+      askAmount: '', stage: 'Identify', solicitor: 'Tim Paris'
+    }
+  }
+};
+var currentNoteMode = 'create';
+var currentNoteKey = null;
+function openNotePage(key, mode) {
+  currentNoteKey = key;
+  currentNoteMode = mode;
+  document.getElementById('notePageOverlay').style.display = 'block';
+  if (mode === 'view') { showNoteView(); } else { showNoteForm(key ? noteData[key] : null); }
+}
+function closeNotePage() {
+  document.getElementById('notePageOverlay').style.display = 'none';
+}
+function notePageEditClick() {
+  currentNoteMode = 'edit';
+  showNoteForm(noteData[currentNoteKey]);
+}
+function saveNotePage() {
+  closeNotePage();
+  showToast('<i class="fa-solid fa-circle-check" style="font-size:20px;color:var(--crm-100);flex-shrink:0;"></i> <span>Note saved</span>');
+}
+function showNoteView() {
+  var data = noteData[currentNoteKey];
+  document.getElementById('notePageTitle').textContent = 'Note';
+  document.getElementById('notePageActionsView').style.display = 'flex';
+  document.getElementById('notePageActionsEdit').style.display = 'none';
+  document.getElementById('notePageViewContent').style.display = 'block';
+  document.getElementById('notePageFormContent').style.display = 'none';
+  document.getElementById('notePageViewLeft').innerHTML =
+    '<div class="tlv-row"><span class="tlv-label">Date</span><span class="tlv-value">' + data.date + '</span></div>' +
+    '<div class="tlv-row"><span class="tlv-label">Note</span><span class="tlv-value">' + data.note + '</span></div>' +
+    '<div class="tlv-row"><span class="tlv-label">Pinned</span><span class="tlv-value">' + (data.pinned ? 'Yes' : 'No') + '</span></div>';
+  var customHtml = '';
+  if (data.noteType) {
+    var rows = [];
+    if (data.noteType === 'Prospect Management' && data.prospect) {
+      var p = data.prospect;
+      rows = [['Last Action Date', p.lastActionDate], ['Last Action Type', p.lastActionType], ['Next Action Date', p.nextActionDate], ['Next Action Type', p.nextActionType], ['Prospect Ask Amount', p.askAmount || '\u2014'], ['Prospect Stage', p.stage], ['Solicitor', p.solicitor]];
+    } else if (data.noteType === 'Grant' && data.grant) {
+      var g = data.grant;
+      rows = [['Grant Ask Amount', g.askAmount || '\u2014'], ['Grant Award Amount', g.awardAmount || '\u2014'], ['Grant Status', g.status], ['Grant Type', g.type], ['Progress Report Deadline', g.progressDeadline || '\u2014'], ['Progress Report Submission Date', g.progressSubmitted || '\u2014'], ['Proposal Deadline', g.proposalDeadline || '\u2014'], ['Proposal Submission Date', g.proposalSubmitted || '\u2014']];
+    }
+    customHtml = '<div style="font-size:12px;font-weight:700;color:var(--platform-60);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px;">' + data.noteType + ' Info</div>' +
+      '<div style="display:grid;grid-template-columns:1fr 1fr;gap:0 32px;">' + rows.map(function(r) {
+        return '<div class="tlv-row"><span class="tlv-label">' + r[0] + '</span><span class="tlv-value">' + r[1] + '</span></div>';
+      }).join('') + '</div>';
+  }
+  document.getElementById('notePageViewCustom').innerHTML = customHtml;
+}
+function showNoteForm(data) {
+  document.getElementById('notePageTitle').textContent = currentNoteMode === 'create' ? 'New Note' : 'Edit Note';
+  document.getElementById('notePageActionsView').style.display = 'none';
+  document.getElementById('notePageActionsEdit').style.display = 'flex';
+  document.getElementById('notePageViewContent').style.display = 'none';
+  document.getElementById('notePageFormContent').style.display = 'block';
+  document.getElementById('noteFormDate').value = data ? data.date : '7/30/2026';
+  document.getElementById('noteFormNote').value = data ? data.note : '';
+  document.getElementById('noteFormPinned').checked = data ? data.pinned : false;
+  document.getElementById('noteFormType').value = data && data.noteType ? data.noteType : '';
+  if (data && data.noteType === 'Prospect Management' && data.prospect) {
+    var p = data.prospect;
+    document.getElementById('prospectLastActionDate').value = p.lastActionDate;
+    document.getElementById('prospectLastActionType').value = p.lastActionType;
+    document.getElementById('prospectNextActionDate').value = p.nextActionDate;
+    document.getElementById('prospectNextActionType').value = p.nextActionType;
+    document.getElementById('prospectAskAmount').value = p.askAmount || '';
+    document.getElementById('prospectStage').value = p.stage;
+    document.getElementById('prospectSolicitor').value = p.solicitor;
+  }
+  onNoteTypeChange(document.getElementById('noteFormType').value);
+}
+function onNoteTypeChange(val) {
+  document.getElementById('noteGrantFieldsEdit').style.display = val === 'Grant' ? 'block' : 'none';
+  document.getElementById('noteProspectFieldsEdit').style.display = val === 'Prospect Management' ? 'block' : 'none';
+}
+var relSearchResults = [
+  {name:'Kevin Malone', id:105, email:'test+kevin.malone@bloomerang-mail.com'},
+  {name:'Lucius Malfoy', id:182, email:'test+lucius.malfoy@bloomerang-mail.com'},
+  {name:'Draco Lucius Malfoy', id:183, email:'test+draco.malfoy@bloomerang-mail.com'},
+  {name:'Narcissa Malfoy', id:184, email:'test+narcissa.malfoy@bloomerang-mail.com'},
+  {name:'Amy Patterson', id:210, email:'test+amy.patterson@bloomerang-mail.com'},
+  {name:'Robert Harrison', id:211, email:'test+robert.harrison@bloomerang-mail.com'},
+  {name:'Margaret Allen', id:212, email:'test+margaret.allen@bloomerang-mail.com'}
+];
+function openNewRel() {
+  document.getElementById('relStepSearch').style.display = 'block';
+  document.getElementById('relStepType').style.display = 'none';
+  document.getElementById('relStepTypeFooter').style.display = 'none';
+  document.getElementById('relSearchInput').value = '';
+  document.getElementById('relSearchResults').innerHTML = '';
+  document.getElementById('relOtherType').value = '';
+  document.getElementById('relSelfType').value = '';
+  document.getElementById('relNote').value = '';
+  document.getElementById('newRelOverlay').classList.add('active');
+}
+function closeNewRel() {
+  document.getElementById('newRelOverlay').classList.remove('active');
+}
+function filterRelSearch(q) {
+  q = q.trim().toLowerCase();
+  var box = document.getElementById('relSearchResults');
+  if (!q) { box.innerHTML = ''; return; }
+  var matches = relSearchResults.filter(function(p) { return p.name.toLowerCase().indexOf(q) !== -1; });
+  box.innerHTML = matches.map(function(p) {
+    return '<div class="rel-result-row" onclick="selectRelPerson(\'' + p.name.replace(/'/g,"\\'") + '\',' + p.id + ')">' +
+      '<span class="lbl">' + p.name + ' #' + p.id + '</span></div>';
+  }).join('') || '<div style="padding:12px 16px;color:var(--platform-60);font-size:16px;">No matches</div>';
+}
+function selectRelPerson(name, id) {
+  document.getElementById('relOtherLabel').textContent = name + ' #' + id + ' is the...';
+  document.getElementById('relStepSearch').style.display = 'none';
+  document.getElementById('relStepType').style.display = 'block';
+  document.getElementById('relStepTypeFooter').style.display = 'flex';
+}
+function checkRelSaveEnabled() {
+  var ready = document.getElementById('relOtherType').value && document.getElementById('relSelfType').value;
+  document.getElementById('relSaveBtn').disabled = !ready;
+}
+function saveNewRel() {
+  closeNewRel();
+  showToast('<i class="fa-solid fa-circle-check" style="font-size:20px;color:var(--crm-100);flex-shrink:0;"></i> <span>Relationship added</span>');
+}
 function showFixedTip(btn) {
   var tip = btn.querySelector('.addr-del-tip');
   var rect = btn.getBoundingClientRect();
@@ -5440,10 +5832,19 @@ function toggleRelMenu(evt, btn) {
   var dropdown = btn.nextElementSibling;
   var isOpen = dropdown.classList.contains('open');
   closeRelMenus();
-  if (!isOpen) { dropdown.classList.add('open'); btn.classList.add('open'); }
+  if (!isOpen) {
+    dropdown.classList.add('open');
+    btn.classList.add('open');
+    var btnRect = btn.getBoundingClientRect();
+    var menuHeight = dropdown.offsetHeight;
+    var spaceBelow = window.innerHeight - btnRect.bottom;
+    if (spaceBelow < menuHeight + 8 && btnRect.top > menuHeight + 8) {
+      dropdown.classList.add('flip-up');
+    }
+  }
 }
 function closeRelMenus() {
-  document.querySelectorAll('#el-relationships .dd-menu').forEach(function(d) { d.classList.remove('open'); });
+  document.querySelectorAll('#el-relationships .dd-menu').forEach(function(d) { d.classList.remove('open'); d.classList.remove('flip-up'); });
   document.querySelectorAll('#el-relationships .actions-btn.open').forEach(function(b) { b.classList.remove('open'); });
 }
 document.addEventListener('click', function(e) {
