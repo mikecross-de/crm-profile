@@ -2188,6 +2188,7 @@ table.atbl tr:last-child td{border-bottom:none;}
               <button class="timeline-filter active" onclick="filterTimeline('all',this)">All</button>
               <button class="timeline-filter" onclick="filterTimeline('transaction',this)">Transactions</button>
               <button class="timeline-filter" onclick="filterTimeline('interaction',this)">Interactions</button>
+              <button class="timeline-filter" onclick="filterTimeline('interaction-nomass',this)">Interactions (No Mass Emails)</button>
               <button class="timeline-filter" onclick="filterTimeline('task',this)">Tasks</button>
               <button class="timeline-filter" onclick="filterTimeline('note',this)">Notes</button>
               <button class="timeline-filter" onclick="filterTimeline('email',this)">Emails</button>
@@ -2208,7 +2209,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             </div>
           </div>
           <div class="tl-connected">
-            <div class="tl-entry" data-type="email" data-year="2026">
+            <div class="tl-entry" data-type="email" data-year="2026" data-channel="mass">
               <div class="tl-node email"><i class="fa-solid fa-envelope"></i></div>
               <div class="tl-entry-date">Apr 2026</div>
               <div class="tl-entry-body">
@@ -2217,7 +2218,7 @@ table.atbl tr:last-child td{border-bottom:none;}
               </div>
               <span class="tl-entry-tag" style="background:var(--blue-20);color:var(--blue-300);">Email</span>
             </div>
-            <div class="tl-entry" data-type="email" data-year="2026">
+            <div class="tl-entry" data-type="email" data-year="2026" data-channel="mass">
               <div class="tl-node email"><i class="fa-solid fa-envelope"></i></div>
               <div class="tl-entry-date">Jan 2026</div>
               <div class="tl-entry-body">
@@ -2253,7 +2254,7 @@ table.atbl tr:last-child td{border-bottom:none;}
               </div>
               <span class="tl-entry-tag" style="background:var(--yellow-20);color:var(--yellow-300);">Event</span>
             </div>
-            <div class="tl-entry" data-type="email" data-year="2025">
+            <div class="tl-entry" data-type="email" data-year="2025" data-channel="mass">
               <div class="tl-node email"><i class="fa-solid fa-envelope"></i></div>
               <div class="tl-entry-date">Oct 2025</div>
               <div class="tl-entry-body">
@@ -2299,6 +2300,15 @@ table.atbl tr:last-child td{border-bottom:none;}
               </div>
               <span class="tl-entry-tag" style="background:var(--orange-20);color:var(--orange-300);">Interaction</span>
             </div>
+            <div class="tl-entry" data-type="email" data-year="2024">
+              <div class="tl-node email"><i class="fa-solid fa-envelope"></i></div>
+              <div class="tl-entry-date">Oct 2024</div>
+              <div class="tl-entry-body">
+                <div class="tl-entry-title">Email — Follow-up from Tim Paris</div>
+                <div class="tl-entry-detail">Personal email &middot; Opened &middot; Sent naming opportunity details ahead of stewardship call</div>
+              </div>
+              <span class="tl-entry-tag" style="background:var(--blue-20);color:var(--blue-300);">Email</span>
+            </div>
             <div class="tl-entry" data-type="transaction" data-year="2024">
               <div class="tl-node donation"><i class="fa-solid fa-dollar-sign"></i></div>
               <div class="tl-entry-date">Jun 2024</div>
@@ -2326,7 +2336,7 @@ table.atbl tr:last-child td{border-bottom:none;}
               </div>
               <span class="tl-entry-tag" style="background:var(--crm-20);color:var(--crm-300);">Donation</span>
             </div>
-            <div class="tl-entry" data-type="email" data-year="2023">
+            <div class="tl-entry" data-type="email" data-year="2023" data-channel="mass">
               <div class="tl-node email"><i class="fa-solid fa-envelope"></i></div>
               <div class="tl-entry-date">Mar 2023</div>
               <div class="tl-entry-body">
@@ -4245,7 +4255,12 @@ function filterYear(year, btn) {
 }
 function applyFilters() {
   document.querySelectorAll('.tl-entry').forEach(function(entry) {
-    var typeMatch = activeTypes.size === 0 || activeTypes.has(entry.dataset.type) || entry.dataset.type === 'alert';
+    var t = entry.dataset.type;
+    var isMass = entry.dataset.channel === 'mass';
+    var typeMatch = activeTypes.size === 0 || activeTypes.has(t) || t === 'alert';
+    if (!typeMatch && activeTypes.has('interaction-nomass') && (t === 'interaction' || t === 'email') && !isMass) {
+      typeMatch = true;
+    }
     var yearMatch = currentYear === 'all' || entry.dataset.year === currentYear;
     entry.style.display = (typeMatch && yearMatch) ? 'flex' : 'none';
   });
