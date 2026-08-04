@@ -10,7 +10,7 @@
 <style>
 /* ── Tile grid ── */
 .tile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:18px 24px 20px;}
-.tile{background:var(--white);border-radius:4px;padding:24px;overflow:hidden;}
+.tile{background:var(--white);border-radius:4px;padding:24px;overflow:hidden;border:1px solid var(--platform-10);}
 .tile-wide{grid-column:1/-1;}
 .tile-badge{font-size:14px;font-weight:700;background:var(--platform-10);color:var(--platform-80);padding:3px 6px;border-radius:4px;white-space:nowrap;flex-shrink:0;}
 .tile-toggle{display:flex;align-items:center;flex-shrink:0;}
@@ -753,17 +753,17 @@ table.atbl tr:last-child td{border-bottom:none;}
 .dropdown-overlay{display:none;position:fixed;inset:0;z-index:99;}
 .dropdown.open .dropdown-overlay{display:block;}
 /* ═══ CARDS ═══ */
-.card{background:var(--white);border-radius:4px;overflow:hidden;}
+.card{background:var(--white);border-radius:4px;overflow:hidden;border:1px solid var(--platform-10);}
 .card-header{display:flex;align-items:center;justify-content:space-between;padding:16px 24px 0;}
 .card-title{font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);}
 .card-body{padding:24px;}
 /* ═══ RELATIONSHIP SUMMARY ═══ */
-.rel-summary{background:var(--white);border-radius:4px;padding:24px;}
+.rel-summary{background:var(--white);border-radius:4px;padding:24px;border:1px solid var(--platform-10);}
 /* ═══ DONOR INTELLIGENCE ═══ */
 .gl-action{font-size:13px;font-weight:600;border:1px solid var(--platform-100);border-radius:4px;padding:4px 10px;cursor:pointer;background:var(--white);color:var(--platform-100);transition:background .15s;}
 .gl-action:hover{background:var(--platform-5);}
 .gl-action i{color:var(--platform-100);}
-.di-tile{background:var(--white);border-radius:4px;padding:24px;}
+.di-tile{background:var(--white);border-radius:4px;padding:24px;border:1px solid var(--platform-10);}
 .di-title{font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;}
 .di-row{display:flex;align-items:center;gap:12px;padding:16px 0;}
 .di-row:first-of-type{border-top:none;}
@@ -790,7 +790,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 /* ═══ SUMMARY LAYOUT ═══ */
 .summary-grid{display:grid;grid-template-columns:1fr 350px;gap:16px;}
 /* Recent Activity — signal pattern */
-.sidebar-card{background:var(--white);border-radius:4px;overflow:hidden;}
+.sidebar-card{background:var(--white);border-radius:4px;overflow:hidden;border:1px solid var(--platform-10);}
 .sidebar-card+.sidebar-card{margin-top:0;}
 .sidebar-card-header{padding:16px 24px 0;display:flex;align-items:center;justify-content:space-between;}
 .sidebar-card-title{font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);}
@@ -838,7 +838,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .rel-mini-chev{color:var(--platform-40);font-size:11px;}
 /* ═══ PROFILE TAB — single column, collapsible ═══ */
 .profile-stack{display:flex;flex-direction:column;gap:0;}
-.profile-section{background:var(--white);border-radius:4px;overflow:hidden;margin-bottom:16px;}
+.profile-section{background:var(--white);border-radius:4px;overflow:hidden;margin-bottom:16px;border:1px solid var(--platform-10);}
 .profile-section-hd{padding:16px 24px;display:flex;align-items:center;gap:12px;cursor:pointer;user-select:none;transition:background .1s;}
 .profile-section-hd:hover{background:var(--platform-5);}
 .profile-section-title{font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);flex:1;}
@@ -963,7 +963,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .tl-entry-detail{font-size:14px;color:var(--platform-80);margin-top:2px;line-height:20px;}
 .tl-entry-tag{font-size:12px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;align-self:flex-start;margin-top:2px;}
 /* ═══ RELATIONSHIPS TAB ═══ */
-.rel-section{background:var(--white);border-radius:4px;overflow:hidden;margin-bottom:16px;}
+.rel-section{background:var(--white);border-radius:4px;overflow:hidden;margin-bottom:16px;border:1px solid var(--platform-10);}
 .rel-section-hd{padding:16px 24px;border-bottom:1px solid var(--platform-10);display:flex;align-items:center;justify-content:space-between;}
 .rel-section-title{font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);}
 .rel-row{display:flex;align-items:center;gap:14px;padding:14px 24px;border-bottom:1px solid var(--platform-5);}
@@ -976,11 +976,11 @@ table.atbl tr:last-child td{border-bottom:none;}
 .rel-empty{padding:24px;text-align:center;color:var(--platform-40);font-size:14px;}
 .rel-empty i{display:block;font-size:24px;margin-bottom:8px;color:var(--platform-20);}
 /* ═══ PROSPECT AI TAB ═══ */
-.pai-sec{background:var(--white);border-radius:4px;}
+.pai-sec{background:var(--white);border-radius:4px;border:1px solid var(--platform-10);}
 .pai-sec-hd{padding:16px 24px;display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none;transition:background .1s;}
 .pai-sec-hd:hover{}
 .pai-sec-title{font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);flex:1;}
-.pai-sec-chev{font-size:11px;color:var(--platform-40);transition:transform .2s;}
+.pai-sec-chev{font-size:16px;color:var(--platform-60);transition:transform .2s;}
 .pai-sec-hd.collapsed .pai-sec-chev{transform:rotate(-90deg);}
 .pai-sec-body{padding:16px 24px 24px;font-size:15px;color:var(--platform-80);line-height:24px;}
 .pai-sec-hd.collapsed+.pai-sec-body{display:none;}
