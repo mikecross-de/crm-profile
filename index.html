@@ -965,6 +965,18 @@ table.atbl tr:last-child td{border-bottom:none;}
 .tl-highlight.positive{background:var(--crm-10);}
 .tl-highlight.negative{background:var(--red-10);}
 .tl-highlight strong{font-weight:700;}
+.tl-year-divider{position:relative;padding:32px 0;}
+.tl-year-divider.has-highlights{padding:12px 0 16px;}
+.tl-year-badge{position:absolute;left:-55px;top:45%;transform:translateY(-50%);background:var(--platform-10);color:var(--platform-80);font-size:14px;font-weight:700;line-height:18px;padding:3px 6px;border-radius:4px;white-space:nowrap;z-index:1;}
+.tl-year-highlights{background:var(--yellow-20);border-radius:4px;color:var(--yellow-300);padding:12px 16px;font-size:14px;margin:2px 0 4px 92px;width:calc(100% - 200px);}
+.tl-year-highlights .hl-title{font-weight:700;margin-bottom:4px;}
+.tl-year-highlights ul{margin:0 0 0 16px;}
+.tl-nest{display:flex;flex-direction:column;}
+.tl-nest-hd{display:flex;align-items:center;justify-content:space-between;padding:2px 0;}
+.tl-nest-row{padding:6px 0 0;font-size:14px;color:var(--platform-100);}
+.tl-nest-row .fund{color:var(--platform-80);}
+.tl-nest-link{color:var(--crm-100);cursor:pointer;text-decoration:none;}
+.tl-nest-link:hover{text-decoration:underline;}
 .tl-entry-detail{font-size:14px;color:var(--platform-80);margin-top:2px;line-height:20px;}
 .tl-entry-tag{font-size:12px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;align-self:flex-start;margin-top:2px;}
 /* ═══ RELATIONSHIPS TAB ═══ */
@@ -1524,31 +1536,6 @@ table.atbl tr:last-child td{border-bottom:none;}
                 </div>
               </div>
             </div>
-            <!-- Fundraising Activity -->
-            <div class="sidebar-card">
-              <div class="sidebar-card-header" style="justify-content:flex-start;gap:6px;">
-                <span class="sidebar-card-title">Fundraising Activity</span>
-                <span class="info-tip"><i class="fa-regular fa-circle-info"></i><span class="info-tip-text">Not included in giving totals.</span></span>
-              </div>
-              <div class="sidebar-card-body">
-                <div class="snapshot-row">
-                  <span class="snapshot-lbl">Lifetime Fundraised</span>
-                  <span class="snapshot-val">$12,500</span>
-                </div>
-                <div class="snapshot-row">
-                  <span class="snapshot-lbl">This Year</span>
-                  <span class="snapshot-val">$10,000</span>
-                </div>
-                <div class="snapshot-row">
-                  <span class="snapshot-lbl">Gifts Fundraised</span>
-                  <span class="snapshot-val">2</span>
-                </div>
-                <div class="snapshot-row">
-                  <span class="snapshot-lbl">Top Fundraised Gift</span>
-                  <span class="snapshot-val">$10,000 &middot; Jun 2025</span>
-                </div>
-              </div>
-            </div>
             <!-- Engagement Level -->
             <div class="sidebar-card">
               <div class="sidebar-card-header" style="padding-bottom:24px;">
@@ -1590,6 +1577,31 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <div style="text-align:center;font-size:15px;font-weight:700;color:var(--platform-100);margin-top:4px;">Warm</div>
                 <div style="text-align:center;margin-top:12px;">
                   <span style="font-size:14px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">View in DonorSearch</span>
+                </div>
+              </div>
+            </div>
+            <!-- Fundraising Activity -->
+            <div class="sidebar-card">
+              <div class="sidebar-card-header" style="justify-content:flex-start;gap:6px;">
+                <span class="sidebar-card-title">Fundraising Activity</span>
+                <span class="info-tip"><i class="fa-regular fa-circle-info"></i><span class="info-tip-text">Not included in giving totals.</span></span>
+              </div>
+              <div class="sidebar-card-body">
+                <div class="snapshot-row">
+                  <span class="snapshot-lbl">Lifetime Fundraised</span>
+                  <span class="snapshot-val">$12,500</span>
+                </div>
+                <div class="snapshot-row">
+                  <span class="snapshot-lbl">This Year</span>
+                  <span class="snapshot-val">$10,000</span>
+                </div>
+                <div class="snapshot-row">
+                  <span class="snapshot-lbl">Gifts Fundraised</span>
+                  <span class="snapshot-val">2</span>
+                </div>
+                <div class="snapshot-row">
+                  <span class="snapshot-lbl">Top Fundraised Gift</span>
+                  <span class="snapshot-val">$10,000 &middot; Jun 2025</span>
                 </div>
               </div>
             </div>
@@ -1796,7 +1808,7 @@ table.atbl tr:last-child td{border-bottom:none;}
       <div id="tlDonationEditOverlay" style="display:none;position:fixed;inset:0;background:rgba(31,27,46,0.58);z-index:9998;align-items:center;justify-content:center;padding:24px;" onclick="if(event.target===this)closeTlDonationEdit()">
         <div class="edit-modal" style="max-width:820px;" onclick="event.stopPropagation()">
           <div class="edit-modal-header">
-            <span class="edit-modal-title">Edit Donation</span>
+            <span class="edit-modal-title" id="tlDonationEditTitle">Edit Donation</span>
             <button class="edit-modal-close" onclick="closeTlDonationEdit()"><i class="fa-solid fa-xmark"></i></button>
           </div>
           <div class="edit-modal-body" style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
@@ -2240,6 +2252,23 @@ table.atbl tr:last-child td{border-bottom:none;}
             </div>
           </div>
           <div class="tl-connected">
+            <div class="tl-year-divider"><span class="tl-year-badge">2026</span></div>
+            <div class="tl-entry" data-type="transaction" data-year="2026">
+              <div class="tl-node donation"><i class="fa-solid fa-dollar-sign"></i></div>
+              <div class="tl-entry-date">Aug 2026</div>
+              <div class="tl-entry-body">
+                <div class="tl-nest">
+                  <div class="tl-nest-hd">
+                    <span class="tl-entry-title">$150.00 Split Payment</span>
+                  </div>
+                  <div class="tl-nest-body">
+                    <div class="tl-nest-row"><span class="tl-nest-link" onclick="openTlView('split-donation-2026')">$100.00 Donation</span> &middot; <span class="fund">Youth Mentoring</span></div>
+                    <div class="tl-nest-row"><span class="tl-nest-link" onclick="openTlView('split-pledge-2026')">$50.00 Pledge Payment</span> &middot; <span class="fund">Building Fund</span></div>
+                  </div>
+                </div>
+              </div>
+              <span class="tl-entry-tag" style="background:var(--crm-20);color:var(--crm-300);">Donation</span>
+            </div>
             <div class="tl-entry" data-type="email" data-year="2026" data-channel="mass">
               <div class="tl-node email"><i class="fa-solid fa-envelope"></i></div>
               <div class="tl-entry-date">Apr 2026</div>
@@ -2258,6 +2287,7 @@ table.atbl tr:last-child td{border-bottom:none;}
               </div>
               <span class="tl-entry-tag" style="background:var(--blue-20);color:var(--blue-300);">Email</span>
             </div>
+            <div class="tl-year-divider has-highlights"><span class="tl-year-badge">2025</span><div class="tl-year-highlights"><div class="hl-title">Highlights</div><ul><li>Upgraded to <strong>Major</strong> giving level &mdash; YoY giving increased <strong>233%</strong></li></ul></div></div>
             <div class="tl-entry" data-type="transaction" data-year="2025">
               <div class="tl-node donation"><i class="fa-solid fa-dollar-sign"></i></div>
               <div class="tl-entry-date">Dec 2025</div>
@@ -2318,10 +2348,10 @@ table.atbl tr:last-child td{border-bottom:none;}
               <div class="tl-entry-body">
                 <div class="tl-entry-title">Task — Major gift cultivation call</div>
                 <div class="tl-entry-detail">Assigned to Tim Paris &middot; Completed</div>
-                <div class="tl-highlight positive"><strong>Highlight:</strong> Upgraded to <strong>Major</strong> giving level &mdash; YoY giving increased <strong>233%</strong></div>
               </div>
               <span class="tl-entry-tag" style="background:var(--platform-10);color:var(--platform-80);">Task</span>
             </div>
+            <div class="tl-year-divider"><span class="tl-year-badge">2024</span></div>
             <div class="tl-entry" data-type="transaction" data-year="2024">
               <div class="tl-node donation"><i class="fa-solid fa-dollar-sign"></i></div>
               <div class="tl-entry-date">Dec 2024</div>
@@ -2358,6 +2388,7 @@ table.atbl tr:last-child td{border-bottom:none;}
               </div>
               <span class="tl-entry-tag" style="background:var(--crm-20);color:var(--crm-300);">Donation</span>
             </div>
+            <div class="tl-year-divider has-highlights"><span class="tl-year-badge">2023</span><div class="tl-year-highlights"><div class="hl-title">Highlights</div><ul><li>Recurring monthly gift started &mdash; <strong>$250/mo</strong> to Annual Fund</li></ul></div></div>
             <div class="tl-entry" data-type="transaction" data-year="2023">
               <div class="tl-node donation"><i class="fa-solid fa-dollar-sign"></i></div>
               <div class="tl-entry-date">Dec 2023</div>
@@ -2382,7 +2413,6 @@ table.atbl tr:last-child td{border-bottom:none;}
               <div class="tl-entry-body">
                 <div class="tl-entry-title">Email — Spring Newsletter</div>
                 <div class="tl-entry-detail">Mass email &middot; Opened &middot; Clicked volunteer link</div>
-                <div class="tl-highlight positive"><strong>Highlight:</strong> Recurring monthly gift started &mdash; <strong>$250/mo</strong> to Annual Fund</div>
               </div>
               <span class="tl-entry-tag" style="background:var(--blue-20);color:var(--blue-300);">Email</span>
             </div>
@@ -2395,6 +2425,7 @@ table.atbl tr:last-child td{border-bottom:none;}
               </div>
               <span class="tl-entry-tag" style="background:var(--platform-10);color:var(--platform-80);">Fundraised</span>
             </div>
+            <div class="tl-year-divider has-highlights"><span class="tl-year-badge">2022</span><div class="tl-year-highlights"><div class="hl-title">Highlights</div><ul><li>Recurring gift cancelled &mdash; <strong>$100/mo</strong> to Annual Fund</li></ul></div></div>
             <div class="tl-entry" data-type="transaction" data-year="2022" onclick="openTlView('donation-1222')" style="cursor:pointer;">
               <div class="tl-node donation"><i class="fa-solid fa-dollar-sign"></i></div>
               <div class="tl-entry-date">Dec 2022</div>
@@ -2410,7 +2441,6 @@ table.atbl tr:last-child td{border-bottom:none;}
               <div class="tl-entry-body">
                 <div class="tl-entry-title">$500.00 Donation</div>
                 <div class="tl-entry-detail">Youth Mentoring &middot; Online</div>
-                <div class="tl-highlight negative"><strong>Highlight:</strong> Recurring gift cancelled &mdash; <strong>$100/mo</strong> to Annual Fund</div>
               </div>
               <span class="tl-entry-tag" style="background:var(--crm-20);color:var(--crm-300);">Donation</span>
             </div>
@@ -5405,6 +5435,42 @@ function buildFieldHtml(f) {
   return '<div class="form-group"><input class="form-input" type="text" value="' + f.value + '" placeholder=" "><label class="form-label form-label-float">' + f.label + '</label></div>';
 }
 var tlViewConfigs = {
+  'split-donation-2026': {
+    kind: 'donation',
+    title: 'Donation',
+    rows: [
+      {label:'Date', value:'8/4/2026'},
+      {label:'Amount', value:'$100.00'},
+      {label:'Fund', value:'Youth Mentoring'},
+      {label:'Method', value:'Credit Card'},
+      {label:'Note', value:'Part of $150.00 split payment'}
+    ],
+    editFields: [
+      {type:'text', label:'Date', value:'8/4/2026'},
+      {type:'text', label:'Amount', value:'$100.00'},
+      {type:'text', label:'Fund', value:'Youth Mentoring'},
+      {type:'select', label:'Method', value:'Credit Card', options:['Online','Check','Cash','Credit Card']},
+      {type:'text', label:'Note', value:'Part of $150.00 split payment'}
+    ]
+  },
+  'split-pledge-2026': {
+    kind: 'donation',
+    title: 'Pledge Payment',
+    rows: [
+      {label:'Date', value:'8/4/2026'},
+      {label:'Amount', value:'$50.00'},
+      {label:'Fund', value:'Building Fund'},
+      {label:'Method', value:'Credit Card'},
+      {label:'Note', value:'Part of $150.00 split payment'}
+    ],
+    editFields: [
+      {type:'text', label:'Date', value:'8/4/2026'},
+      {type:'text', label:'Amount', value:'$50.00'},
+      {type:'text', label:'Fund', value:'Building Fund'},
+      {type:'select', label:'Method', value:'Credit Card', options:['Online','Check','Cash','Credit Card']},
+      {type:'text', label:'Note', value:'Part of $150.00 split payment'}
+    ]
+  },
   'donation-1222': {
     kind: 'donation',
     title: 'Donation',
@@ -5446,11 +5512,13 @@ function closeTlView() {
   currentTlView = null;
 }
 function tlViewEditClick() {
+  var key = currentTlView;
   closeTlView();
-  openTlDonationEdit();
+  openTlDonationEdit(key);
 }
-function openTlDonationEdit() {
-  var cfg = tlViewConfigs['donation-1222'];
+function openTlDonationEdit(key) {
+  var cfg = tlViewConfigs[key];
+  document.getElementById('tlDonationEditTitle').textContent = 'Edit ' + cfg.title;
   document.getElementById('tlDonationEditBody').innerHTML = cfg.editFields.map(buildFieldHtml).join('');
   document.getElementById('tlDonationEditOverlay').classList.add('active');
 }
