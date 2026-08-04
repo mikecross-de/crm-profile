@@ -10,7 +10,7 @@
 <style>
 /* ── Tile grid ── */
 .tile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:18px 24px 20px;}
-.tile{background:var(--white);border-radius:4px;padding:24px;overflow:hidden;border:1px solid var(--platform-10);}
+.tile{background:var(--white);border-radius:4px;padding:24px;overflow:hidden;}
 .tile-wide{grid-column:1/-1;}
 .tile-badge{font-size:14px;font-weight:700;background:var(--platform-10);color:var(--platform-80);padding:3px 6px;border-radius:4px;white-space:nowrap;flex-shrink:0;}
 .tile-toggle{display:flex;align-items:center;flex-shrink:0;}
@@ -758,7 +758,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .card-title{font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);}
 .card-body{padding:24px;}
 /* ═══ RELATIONSHIP SUMMARY ═══ */
-.rel-summary{background:var(--white);border-radius:4px;padding:24px;border:1px solid var(--platform-10);}
+.rel-summary{background:var(--white);border-radius:4px;padding:24px;}
 /* ═══ DONOR INTELLIGENCE ═══ */
 .gl-action{font-size:13px;font-weight:600;border:1px solid var(--platform-100);border-radius:4px;padding:4px 10px;cursor:pointer;background:var(--white);color:var(--platform-100);transition:background .15s;}
 .gl-action:hover{background:var(--platform-5);}
@@ -838,7 +838,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .rel-mini-chev{color:var(--platform-40);font-size:11px;}
 /* ═══ PROFILE TAB — single column, collapsible ═══ */
 .profile-stack{display:flex;flex-direction:column;gap:0;}
-.profile-section{background:var(--white);border-radius:4px;overflow:hidden;margin-bottom:16px;border:1px solid var(--platform-10);}
+.profile-section{background:var(--white);border-radius:4px;overflow:hidden;margin-bottom:16px;}
 .profile-section-hd{padding:16px 24px;display:flex;align-items:center;gap:12px;cursor:pointer;user-select:none;transition:background .1s;}
 .profile-section-hd:hover{background:var(--platform-5);}
 .profile-section-title{font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);flex:1;}
@@ -941,12 +941,13 @@ table.atbl tr:last-child td{border-bottom:none;}
 .tl-connected{position:relative;margin-left:15px;padding-left:32px;border-left:2px solid var(--platform-10);}
 .tl-entry{display:flex;gap:16px;padding:16px 0;position:relative;align-items:flex-start;}
 .tl-entry+.tl-entry{border-top:1px solid var(--platform-5);}
-.tl-node{position:absolute;left:-49px;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;z-index:1;border:3px solid var(--white);}
+.tl-node{position:absolute;left:-49px;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;z-index:1;border:3px solid var(--white);}
 .tl-node.donation{background:var(--crm-20);color:var(--crm-300);}
 .tl-node.email{background:var(--blue-20);color:var(--blue-300);}
 .tl-node.interaction{background:var(--orange-20);color:var(--orange-300);}
 .tl-node.note{background:var(--platform-10);color:var(--platform-60);}
 .tl-node.task{background:var(--platform-10);color:var(--platform-60);}
+.tl-node.fundraised{background:var(--platform-10);color:var(--platform-60);}
 .tl-node.event{background:var(--yellow-20);color:var(--yellow-300);}
 .tl-node.alert{background:var(--red-20);color:var(--red-300);}
 .tl-node.warn{background:var(--orange-20);color:var(--orange-300);}
@@ -963,7 +964,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .tl-entry-detail{font-size:14px;color:var(--platform-80);margin-top:2px;line-height:20px;}
 .tl-entry-tag{font-size:12px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;align-self:flex-start;margin-top:2px;}
 /* ═══ RELATIONSHIPS TAB ═══ */
-.rel-section{background:var(--white);border-radius:4px;overflow:hidden;margin-bottom:16px;border:1px solid var(--platform-10);}
+.rel-section{background:var(--white);border-radius:4px;overflow:hidden;margin-bottom:16px;}
 .rel-section-hd{padding:16px 24px;border-bottom:1px solid var(--platform-10);display:flex;align-items:center;justify-content:space-between;}
 .rel-section-title{font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);}
 .rel-row{display:flex;align-items:center;gap:14px;padding:14px 24px;border-bottom:1px solid var(--platform-5);}
@@ -976,7 +977,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .rel-empty{padding:24px;text-align:center;color:var(--platform-40);font-size:14px;}
 .rel-empty i{display:block;font-size:24px;margin-bottom:8px;color:var(--platform-20);}
 /* ═══ PROSPECT AI TAB ═══ */
-.pai-sec{background:var(--white);border-radius:4px;border:1px solid var(--platform-10);}
+.pai-sec{background:var(--white);border-radius:4px;}
 .pai-sec-hd{padding:16px 24px;display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none;transition:background .1s;}
 .pai-sec-hd:hover{}
 .pai-sec-title{font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);flex:1;}
@@ -1516,6 +1517,31 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <div class="snapshot-row">
                   <span class="snapshot-lbl">Recurring</span>
                   <span class="snapshot-val">Monthly, $250</span>
+                </div>
+              </div>
+            </div>
+            <!-- Fundraising Activity -->
+            <div class="sidebar-card">
+              <div class="sidebar-card-header">
+                <span class="sidebar-card-title">Fundraising Activity</span>
+                <span class="snapshot-badge gray">Not in giving totals</span>
+              </div>
+              <div class="sidebar-card-body">
+                <div class="snapshot-row">
+                  <span class="snapshot-lbl">Lifetime Fundraised</span>
+                  <span class="snapshot-val">$12,500</span>
+                </div>
+                <div class="snapshot-row">
+                  <span class="snapshot-lbl">This Year</span>
+                  <span class="snapshot-val">$10,000</span>
+                </div>
+                <div class="snapshot-row">
+                  <span class="snapshot-lbl">Gifts Fundraised</span>
+                  <span class="snapshot-val">2</span>
+                </div>
+                <div class="snapshot-row">
+                  <span class="snapshot-lbl">Top Fundraised Gift</span>
+                  <span class="snapshot-val">$10,000 &middot; Jun 2025</span>
                 </div>
               </div>
             </div>
@@ -2187,6 +2213,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div id="typeFilters" style="display:flex;align-items:center;gap:8px;">
               <button class="timeline-filter active" onclick="filterTimeline('all',this)">All</button>
               <button class="timeline-filter" onclick="filterTimeline('transaction',this)">Transactions</button>
+              <button class="timeline-filter" onclick="filterTimeline('fundraised',this)">Fundraised</button>
               <button class="timeline-filter" onclick="filterTimeline('interaction',this)">Interactions</button>
               <button class="timeline-filter" onclick="filterTimeline('interaction-nomass',this)">Interactions (No Mass Emails)</button>
               <button class="timeline-filter" onclick="filterTimeline('task',this)">Tasks</button>
@@ -2272,6 +2299,15 @@ table.atbl tr:last-child td{border-bottom:none;}
               </div>
               <span class="tl-entry-tag" style="background:var(--crm-20);color:var(--crm-300);">Donation</span>
             </div>
+            <div class="tl-entry" data-type="fundraised" data-year="2025">
+              <div class="tl-node fundraised"><i class="fa-solid fa-hand-holding-heart"></i></div>
+              <div class="tl-entry-date">Jun 2025</div>
+              <div class="tl-entry-body">
+                <div class="tl-entry-title">$10,000 Fundraised</div>
+                <div class="tl-entry-detail">Avery Novak's gift to Youth Mentoring &middot; Personal ask &middot; Not included in Eleanor's giving totals</div>
+              </div>
+              <span class="tl-entry-tag" style="background:var(--platform-10);color:var(--platform-80);">Fundraised</span>
+            </div>
             <div class="tl-entry" data-type="task" data-year="2025">
               <div class="tl-node task"><i class="fa-solid fa-list-check"></i></div>
               <div class="tl-entry-date">Mar 2025</div>
@@ -2345,6 +2381,15 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <div class="tl-highlight positive"><strong>Highlight:</strong> Recurring monthly gift started &mdash; <strong>$250/mo</strong> to Annual Fund</div>
               </div>
               <span class="tl-entry-tag" style="background:var(--blue-20);color:var(--blue-300);">Email</span>
+            </div>
+            <div class="tl-entry" data-type="fundraised" data-year="2023">
+              <div class="tl-node fundraised"><i class="fa-solid fa-hand-holding-heart"></i></div>
+              <div class="tl-entry-date">Feb 2023</div>
+              <div class="tl-entry-body">
+                <div class="tl-entry-title">$2,500 Fundraised</div>
+                <div class="tl-entry-detail">Board give-get commitment &middot; Designation: General Fund &middot; Not included in Eleanor's giving totals</div>
+              </div>
+              <span class="tl-entry-tag" style="background:var(--platform-10);color:var(--platform-80);">Fundraised</span>
             </div>
             <div class="tl-entry" data-type="transaction" data-year="2022" onclick="openTlView('donation-1222')" style="cursor:pointer;">
               <div class="tl-node donation"><i class="fa-solid fa-dollar-sign"></i></div>
