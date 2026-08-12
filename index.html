@@ -714,8 +714,8 @@ table.atbl tr:last-child td{border-bottom:none;}
 .con-status-badge{font-size:12px;font-weight:700;padding:2px 8px;border-radius:4px;background:var(--crm-20);color:var(--crm-300);}
 .con-status-badge.lapsed{background:var(--red-20);color:var(--red-300);}
 .con-contact-row{display:flex;align-items:center;gap:16px;font-size:16px;color:var(--platform-80);flex-wrap:wrap;margin-top:4px;}
-.con-contact-item{display:flex;align-items:center;gap:5px;}
-.con-contact-item i{font-size:12px;color:var(--platform-40);}
+.con-contact-item{display:flex;align-items:center;gap:6px;}
+.con-contact-item i{font-size:12px;color:var(--platform-60);}
 .con-contact-item a{color:var(--crm-100);font-weight:600;text-decoration:none;}
 .con-contact-item a:hover{text-decoration:underline;}
 .con-header-metrics{display:flex;gap:0;flex-shrink:0;margin-left:auto;}
@@ -1261,8 +1261,8 @@ table.atbl tr:last-child td{border-bottom:none;}
           <div class="con-contact-row">
             <span class="con-contact-item"><i class="fa-solid fa-hashtag"></i> <span class="con-id">2089</span></span>
             <span class="con-contact-item"><i class="fa-solid fa-envelope"></i> <a href="#">eleanor.richardson@email.com</a></span>
-            <span class="con-contact-item" style="position:relative;" onmouseenter="this.querySelector('.phone-type-tip').style.opacity='1'" onmouseleave="this.querySelector('.phone-type-tip').style.opacity='0'"><i class="fa-solid fa-phone"></i> (317) 555-0294<span class="phone-type-tip" style="opacity:0;position:absolute;top:calc(100% + 6px);left:50%;transform:translateX(-50%);background:black;color:var(--white);font-family:var(--font);font-size:12px;font-weight:400;padding:4px 8px;border-radius:3px;white-space:nowrap;pointer-events:none;transition:opacity .12s;z-index:10;">Mobile</span></span>
-            <span class="con-contact-item"><i class="fa-solid fa-location-dot"></i> Indianapolis, IN</span>
+            <span class="con-contact-item" style="position:relative;" onmouseenter="this.querySelector('.phone-type-tip').style.opacity='1'" onmouseleave="this.querySelector('.phone-type-tip').style.opacity='0'"><i class="fa-solid fa-phone"></i> (317) 555-0294<span class="phone-type-tip" style="opacity:0;position:absolute;top:calc(100% + 6px);left:50%;transform:translateX(-50%);background:black;color:var(--white);font-family:var(--font);font-size:14px;font-weight:400;padding:4px 8px;border-radius:3px;white-space:nowrap;pointer-events:none;transition:opacity .12s;z-index:10;">Mobile</span></span>
+            <span class="con-contact-item" style="position:relative;" onmouseenter="this.querySelector('.addr-type-tip').style.opacity='1'" onmouseleave="this.querySelector('.addr-type-tip').style.opacity='0'"><i class="fa-solid fa-location-dot"></i> Carmel, IN<button onclick="copyFullAddress(event)" aria-label="Copy full address" style="background:none;border:none;padding:2px 2px 2px 0;cursor:pointer;display:inline-flex;align-items:center;" onmouseover="this.querySelector('i').style.color='var(--crm-200)'" onmouseout="this.querySelector('i').style.color='var(--crm-100)'"><i class="fa-regular fa-copy" style="font-size:12px;color:var(--crm-100);"></i></button><span class="addr-type-tip" style="opacity:0;position:absolute;top:calc(100% + 6px);left:0;background:black;color:var(--white);font-family:var(--font);font-size:14px;font-weight:400;padding:8px 10px;border-radius:3px;white-space:nowrap;line-height:18px;pointer-events:none;transition:opacity .12s;z-index:9999;">1240 Winding Creek Rd<br>Carmel, IN 46032</span></span>
           </div>
         </div>
         <div class="con-header-actions">
@@ -4072,6 +4072,23 @@ function showToast(html) {
     toast.style.transition = 'opacity 0.3s';
     setTimeout(function() { toast.remove(); }, 300);
   }, 4000);
+}
+function copyFullAddress(evt) {
+  evt.stopPropagation();
+  var address = '1240 Winding Creek Rd\nCarmel, IN 46032';
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(address);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = address;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+  }
+  showToast('<i class="fa-solid fa-circle-check" style="font-size:20px;color:var(--crm-100);flex-shrink:0;"></i> <span>Address copied</span>');
 }
 /* Toast animation */
 var toastStyle = document.createElement('style');
