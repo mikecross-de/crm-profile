@@ -195,10 +195,6 @@ button{font-family:var(--font);cursor:pointer;}
 .di-toggle-chev{font-size:10px;transition:transform 0.2s;}
 .di-toggle-chev.open{transform:rotate(90deg);}
 /* PROSPECT AI SECTIONS — see redesign block below */
-.pai-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--platform-10);}
-.pai-row:last-child{border-bottom:none;}
-.pai-key{color:var(--platform-80);font-weight:400;min-width:140px;flex-shrink:0;}
-.pai-val{color:var(--platform-80);text-align:right;}
 /* SMART SEGMENTS */
 .ss-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
 .ss-card{background:var(--white);border:1px solid var(--platform-20);border-radius:4px;padding:24px;display:flex;flex-direction:column;gap:12px;transition:box-shadow 0.15s;}
@@ -763,7 +759,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .gl-action{font-size:13px;font-weight:600;border:1px solid var(--platform-100);border-radius:4px;padding:4px 10px;cursor:pointer;background:var(--white);color:var(--platform-100);transition:background .15s;}
 .gl-action:hover{background:var(--platform-5);}
 .gl-action i{color:var(--platform-100);}
-.di-tile{background:var(--white);border-radius:4px;padding:24px;border:1px solid var(--platform-10);}
+.di-tile{background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);}
 .di-title{font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;}
 .di-row{display:flex;align-items:center;gap:12px;padding:16px 0;}
 .di-row:first-of-type{border-top:none;}
@@ -815,7 +811,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .snapshot-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--platform-10);}
 .snapshot-row:last-child{border-bottom:none;}
 .snapshot-lbl{font-size:14px;color:var(--platform-80);}
-.snapshot-val{font-size:14px;font-weight:600;color:var(--platform-100);}
+.snapshot-val{font-size:14px;font-weight:500;color:var(--platform-100);}
 .snapshot-badge{font-size:12px;font-weight:700;line-height:18px;padding:2px 6px;border-radius:4px;display:inline-block;}
 .snapshot-badge.red{background:var(--red-20);color:var(--red-300);}
 .snapshot-badge.orange{background:var(--orange-20);color:var(--orange-300);}
@@ -855,7 +851,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .profile-right-col .profile-field{justify-content:space-between;}
 .profile-field:last-child{border-bottom:none;}
 .profile-field-lbl{font-size:14px;color:var(--platform-80);width:250px;flex-shrink:0;}
-.profile-field-val{font-size:14px;font-weight:600;color:var(--platform-100);word-break:break-word;}
+.profile-field-val{font-size:14px;font-weight:500;color:var(--platform-100);word-break:break-word;}
 .profile-right-col .profile-field-lbl{width:auto;min-width:0;}
 .profile-right-col .profile-field-val{text-align:right;}
 .profile-field-val.link{color:var(--crm-100);cursor:pointer;}
@@ -869,7 +865,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .profile-address-card{padding:16px 0;}
 .profile-address-card:first-child{padding-top:6px;}
 .profile-address-card:last-child{padding-bottom:6px;}
-.address-type{font-size:14px;color:var(--platform-80);margin-bottom:6px;font-weight:500;}
+.address-type{font-size:14px;color:var(--platform-80);}
 .address-badge{font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;background:var(--crm-20);color:var(--crm-300);margin-left:6px;}
 /* ═══ EDIT MODAL / FORM SYSTEM (ported from crm-profile.html) ═══ */
 .edit-modal{width:100%;max-width:480px;background:var(--white);border-radius:4px;box-shadow:0 24px 64px rgba(31,27,46,0.28);font-family:var(--font);overflow:hidden;max-height:85vh;display:flex;flex-direction:column;}
@@ -931,7 +927,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .tlv-row:first-child{border-top:none;}
 .tlv-label{color:var(--platform-60);}
 .tlv-value{color:var(--platform-100);text-align:right;}
-.address-text{font-size:14px;color:var(--platform-100);line-height:20px;margin-bottom:6px;}
+.address-text{font-size:14px;color:var(--platform-100);font-weight:500;line-height:20px;margin-bottom:6px;}
 .address-text a{color:var(--crm-100);font-weight:600;}
 .profile-section.full-width{}
 /* ═══ TIMELINE TAB — connected ═══ */
@@ -1004,7 +1000,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .pai-sec-hd.collapsed+.pai-sec-body{display:none;}
 .pai-row{display:flex;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--platform-10);}
 .pai-row:last-child{border-bottom:none;}
-.pai-key{color:var(--platform-80);font-size:14px;font-weight:400;color:var(--platform-60);min-width:140px;flex-shrink:0;}
+.pai-key{color:var(--platform-80);font-size:14px;font-weight:400;min-width:140px;flex-shrink:0;}
 .pai-val{font-size:14px;font-weight:600;color:var(--platform-100);text-align:right;}
 .pai-src{color:var(--crm-100);cursor:pointer;margin-left:4px;font-size:10px;position:relative;display:inline-block;}
 .pai-src-tip{display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--platform-100);color:var(--white);font-family:'SFMono-Regular',Consolas,'Courier New',monospace;font-size:11px;font-weight:400;line-height:15px;padding:6px 10px;border-radius:4px;z-index:200;text-align:left;box-shadow:0 4px 12px rgba(0,0,0,0.18);text-decoration:none;width:max-content;max-width:360px;overflow-wrap:anywhere;white-space:normal;}
@@ -1015,7 +1011,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .stmt-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--platform-10);}
 .stmt-row:last-child{border-bottom:none;}
 .stmt-icon{font-size:16px;color:var(--red-100);}
-.stmt-label{font-size:14px;font-weight:600;color:var(--platform-100);flex:1;}
+.stmt-label{font-size:14px;font-weight:500;color:var(--platform-100);flex:1;}
 .stmt-action{font-size:13px;font-weight:700;color:var(--crm-100);cursor:pointer;}
 .stmt-action:hover{text-decoration:underline;}
 /* ═══ AUDIT FOOTER ═══ */
@@ -1610,7 +1606,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Basic Info</span>
-                <span style="font-size:14px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('basic')">Edit</span>
+                <span style="font-size:14px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('basic')">Edit</span>
               </div>
               <div class="sidebar-card-body">
                 <div class="profile-field"><span class="profile-field-lbl">Status</span><span class="profile-field-val"><span class="snapshot-badge green">Active</span></span></div>
@@ -1624,7 +1620,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Personal Information</span>
-                <span style="font-size:14px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('personal')">Edit</span>
+                <span style="font-size:14px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('personal')">Edit</span>
               </div>
               <div class="sidebar-card-body">
                 <div class="profile-field"><span class="profile-field-lbl">Gender</span><span class="profile-field-val">Female</span></div>
@@ -1640,7 +1636,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Contact</span>
-                <span style="font-size:14px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openContactEdit()">Edit</span>
+                <span style="font-size:14px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openContactEdit()">Edit</span>
               </div>
               <div class="sidebar-card-body">
                 <div class="profile-field"><span class="profile-field-lbl">Home Email <span class="address-badge">Primary</span></span><span class="profile-field-val link">eleanor.richardson@email.com</span></div>
@@ -1653,7 +1649,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">General Info</span>
-                <span style="font-size:14px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('general')">Edit</span>
+                <span style="font-size:14px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('general')">Edit</span>
               </div>
               <div class="sidebar-card-body">
                 <div class="profile-field"><span class="profile-field-lbl">Attributes</span><span class="profile-field-val">Volunteer, Major Donor</span></div>
@@ -1665,7 +1661,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Prospect Management Info</span>
-                <span style="font-size:14px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('prospect')">Edit</span>
+                <span style="font-size:14px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('prospect')">Edit</span>
               </div>
               <div class="sidebar-card-body">
                 <div class="profile-field"><span class="profile-field-lbl">Giving Capacity</span><span class="profile-field-val">$25,001&ndash;$50,000</span></div>
@@ -1676,7 +1672,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Volunteer Info</span>
-                <span style="font-size:14px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('volunteer')">Edit</span>
+                <span style="font-size:14px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('volunteer')">Edit</span>
               </div>
               <div class="sidebar-card-body">
                 <div class="profile-field"><span class="profile-field-lbl">Availability</span><span class="profile-field-val">Weekends</span></div>
@@ -1695,18 +1691,18 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Addresses</span>
-                <span style="font-size:14px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openAddressEdit(-1)">Add new</span>
+                <span style="font-size:14px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openAddressEdit(-1)">Add new</span>
               </div>
               <div class="sidebar-card-body">
                 <div class="profile-address-card" style="border-bottom:1px solid var(--platform-10);">
-                  <div class="address-type" style="display:flex;align-items:center;">Home <span class="address-badge">Primary</span><span style="margin-left:auto;font-size:14px;font-weight:700;text-transform:none;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openAddressEdit(0)">Edit</span></div>
+                  <div class="address-type" style="display:flex;align-items:center;">Home <span class="address-badge">Primary</span><span style="margin-left:auto;font-size:14px;font-weight:600;text-transform:none;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openAddressEdit(0)">Edit</span></div>
                   <div class="address-text">1240 Winding Creek Rd<br>Carmel, IN 46032</div>
-                  <a href="https://maps.google.com/maps?q=1240+Winding+Creek+Rd+Carmel+IN+46032" target="_blank" style="font-size:14px;font-weight:700;color:var(--crm-100);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">View on map</a>
+                  <a href="https://maps.google.com/maps?q=1240+Winding+Creek+Rd+Carmel+IN+46032" target="_blank" style="font-size:14px;font-weight:600;color:var(--crm-100);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">View on map</a>
                 </div>
                 <div class="profile-address-card">
-                  <div class="address-type" style="display:flex;align-items:center;">Work<span style="margin-left:auto;font-size:14px;font-weight:700;text-transform:none;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openAddressEdit(1)">Edit</span></div>
+                  <div class="address-type" style="display:flex;align-items:center;">Work<span style="margin-left:auto;font-size:14px;font-weight:600;text-transform:none;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openAddressEdit(1)">Edit</span></div>
                   <div class="address-text">924 N Pennsylvania St, Suite 200<br>Indianapolis, IN 46204</div>
-                  <a href="https://maps.google.com/maps?q=924+N+Pennsylvania+St+Suite+200+Indianapolis+IN+46204" target="_blank" style="font-size:14px;font-weight:700;color:var(--crm-100);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">View on map</a>
+                  <a href="https://maps.google.com/maps?q=924+N+Pennsylvania+St+Suite+200+Indianapolis+IN+46204" target="_blank" style="font-size:14px;font-weight:600;color:var(--crm-100);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">View on map</a>
                 </div>
               </div>
             </div>
@@ -1714,31 +1710,40 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Communication Preferences</span>
-                <span style="font-size:14px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openCommPrefsEdit()">Edit</span>
+                <span style="font-size:14px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openCommPrefsEdit()">Edit</span>
               </div>
               <div class="sidebar-card-body">
-                <div class="profile-field"><span class="profile-field-lbl">Preferred Channel</span><span class="profile-field-val">Email</span></div>
-                <div class="profile-field"><span class="profile-field-lbl">Restrictions</span><span class="profile-field-val">None</span></div>
-                <div class="profile-field"><span class="profile-field-lbl">Email Interests</span><span class="profile-field-val">All emails</span></div>
+                <div style="padding-bottom:12px;border-bottom:1px solid var(--platform-10);">
+                  <div class="address-type">Preferred Channel</div>
+                  <span class="profile-field-val">Email</span>
+                </div>
+                <div style="padding:12px 0;border-bottom:1px solid var(--platform-10);">
+                  <div class="address-type">Restrictions</div>
+                  <span class="profile-field-val">Do Not Call, Do Not Mail, Do Not Solicit</span>
+                </div>
+                <div style="padding-top:12px;">
+                  <div class="address-type">Email Interests</div>
+                  <span class="profile-field-val">Custom Interest, Event, Newsletter, Puppies, Random, Volunteer Information</span>
+                </div>
               </div>
             </div>
             <!-- Groups -->
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Groups</span>
-                <span style="font-size:14px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openGroupsEdit()">Edit</span>
+                <span style="font-size:14px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openGroupsEdit()">Edit</span>
               </div>
               <div class="sidebar-card-body">
                 <div style="padding-bottom:12px;border-bottom:1px solid var(--platform-10);">
                   <div class="address-type">Bloomerang Groups</div>
-                  <div style="font-size:14px;line-height:24px;"><a href="#" style="color:var(--crm-100);font-weight:600;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Major Donor Prospects</a>, <a href="#" style="color:var(--crm-100);font-weight:600;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Board Prospects</a></div>
+                  <div style="font-size:14px;line-height:24px;"><a href="#" style="color:var(--crm-100);font-weight:500;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Major Donor Prospects</a>, <a href="#" style="color:var(--crm-100);font-weight:500;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Board Prospects</a></div>
                 </div>
                 <div style="padding-top:12px;">
                   <div class="address-type">User Groups</div>
-                  <div style="font-size:14px;line-height:24px;"><a href="#" style="color:var(--crm-100);font-weight:600;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Gala Attendees 2026</a>, <a href="#" style="color:var(--crm-100);font-weight:600;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Youth Mentoring Supporters</a></div>
+                  <div style="font-size:14px;line-height:24px;"><a href="#" style="color:var(--crm-100);font-weight:500;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Gala Attendees 2026</a>, <a href="#" style="color:var(--crm-100);font-weight:500;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Youth Mentoring Supporters</a></div>
                 </div>
                 <div style="padding-top:12px;border-top:1px solid var(--platform-10);margin-top:12px;text-align:center;">
-                  <a href="#" style="font-size:14px;font-weight:700;color:var(--crm-100);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">View all groups</a>
+                  <a href="#" style="font-size:14px;font-weight:500;color:var(--crm-100);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">View all groups</a>
                 </div>
               </div>
             </div>
@@ -2686,10 +2691,10 @@ table.atbl tr:last-child td{border-bottom:none;}
                                     <div class="pai-sec pai-ghost"><div class="pai-sec-hd"><span class="pai-sec-title">Due Diligence</span><i class="fa-solid fa-lock" style="font-size:12px;color:var(--platform-40);"></i></div><div class="pai-sec-body" style="display:block;"><div class="pai-skel-line" style="width:95%;"></div><div class="pai-skel-line" style="width:82%;"></div><div class="pai-skel-line" style="width:68%;"></div></div></div>
             </div>
             <div style="display:flex;flex-direction:column;gap:16px;">
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Prospect Intelligence <i class="fa-solid fa-lock" style="font-size:12px;color:var(--platform-40);"></i></div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Affinity Assessment <i class="fa-solid fa-lock" style="font-size:12px;color:var(--platform-40);"></i></div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Volunteering &amp; Advocacy <i class="fa-solid fa-lock" style="font-size:12px;color:var(--platform-40);"></i></div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Events <i class="fa-solid fa-lock" style="font-size:12px;color:var(--platform-40);"></i></div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Prospect Intelligence <i class="fa-solid fa-lock" style="font-size:12px;color:var(--platform-40);"></i></div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Affinity Assessment <i class="fa-solid fa-lock" style="font-size:12px;color:var(--platform-40);"></i></div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Volunteering &amp; Advocacy <i class="fa-solid fa-lock" style="font-size:12px;color:var(--platform-40);"></i></div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Events <i class="fa-solid fa-lock" style="font-size:12px;color:var(--platform-40);"></i></div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
             </div>
           </div>
         </div>
@@ -2717,10 +2722,10 @@ table.atbl tr:last-child td{border-bottom:none;}
                             <div class="pai-sec pai-ghost"><div class="pai-sec-hd"><span class="pai-sec-title">Due Diligence</span><i class="fa-solid fa-lock" style="font-size:12px;color:var(--platform-40);"></i></div><div class="pai-sec-body" style="display:block;"><div class="pai-skel-line" style="width:95%;"></div><div class="pai-skel-line" style="width:82%;"></div><div class="pai-skel-line" style="width:68%;"></div></div></div>
             </div>
             <div style="display:flex;flex-direction:column;gap:16px;">
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Prospect Intelligence <i class="fa-solid fa-lock" style="font-size:12px;color:var(--platform-40);"></i></div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Affinity Assessment <i class="fa-solid fa-lock" style="font-size:12px;color:var(--platform-40);"></i></div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Volunteering &amp; Advocacy <i class="fa-solid fa-lock" style="font-size:12px;color:var(--platform-40);"></i></div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Events <i class="fa-solid fa-lock" style="font-size:12px;color:var(--platform-40);"></i></div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Prospect Intelligence <i class="fa-solid fa-lock" style="font-size:12px;color:var(--platform-40);"></i></div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Affinity Assessment <i class="fa-solid fa-lock" style="font-size:12px;color:var(--platform-40);"></i></div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Volunteering &amp; Advocacy <i class="fa-solid fa-lock" style="font-size:12px;color:var(--platform-40);"></i></div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Events <i class="fa-solid fa-lock" style="font-size:12px;color:var(--platform-40);"></i></div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
             </div>
           </div>
         </div>
@@ -2767,10 +2772,10 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="pai-sec pai-ghost"><div class="pai-sec-hd"><span class="pai-sec-title">Due Diligence</span></div><div class="pai-sec-body" style="display:block;"><div class="pai-skel-line" style="width:95%;"></div><div class="pai-skel-line" style="width:82%;"></div><div class="pai-skel-line" style="width:68%;"></div></div></div>
             </div>
             <div style="display:flex;flex-direction:column;gap:16px;">
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Prospect Intelligence </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Affinity Assessment </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Volunteering &amp; Advocacy </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Events </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Prospect Intelligence </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Affinity Assessment </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Volunteering &amp; Advocacy </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Events </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
             </div>
           </div>
         </div>
@@ -2813,10 +2818,10 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="pai-sec pai-ghost"><div class="pai-sec-hd"><span class="pai-sec-title">Due Diligence</span></div><div class="pai-sec-body" style="display:block;"><div class="pai-skel-line" style="width:95%;"></div><div class="pai-skel-line" style="width:82%;"></div><div class="pai-skel-line" style="width:68%;"></div></div></div>
             </div>
             <div style="display:flex;flex-direction:column;gap:16px;">
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Prospect Intelligence </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Affinity Assessment </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Volunteering &amp; Advocacy </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Events </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Prospect Intelligence </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Affinity Assessment </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Volunteering &amp; Advocacy </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Events </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
             </div>
           </div>
         </div>
@@ -2860,10 +2865,10 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="pai-sec pai-ghost"><div class="pai-sec-hd"><span class="pai-sec-title">Due Diligence</span></div><div class="pai-sec-body" style="display:block;"><div class="pai-skel-line" style="width:95%;"></div><div class="pai-skel-line" style="width:82%;"></div><div class="pai-skel-line" style="width:68%;"></div></div></div>
             </div>
             <div style="display:flex;flex-direction:column;gap:16px;">
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Prospect Intelligence </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Affinity Assessment </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Volunteering &amp; Advocacy </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Events </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Prospect Intelligence </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Affinity Assessment </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Volunteering &amp; Advocacy </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Events </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
             </div>
           </div>
         </div>
@@ -2906,10 +2911,10 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="pai-sec pai-ghost"><div class="pai-sec-hd"><span class="pai-sec-title">Due Diligence</span></div><div class="pai-sec-body" style="display:block;"><div class="pai-skel-line" style="width:95%;"></div><div class="pai-skel-line" style="width:82%;"></div><div class="pai-skel-line" style="width:68%;"></div></div></div>
             </div>
             <div style="display:flex;flex-direction:column;gap:16px;">
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Prospect Intelligence </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Affinity Assessment </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Volunteering &amp; Advocacy </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
-              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:20px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Events </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Prospect Intelligence </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Affinity Assessment </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Volunteering &amp; Advocacy </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
+              <div class="pai-ghost" style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);"><div style="font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;">Events </div><div class="pai-skel-line" style="width:90%;"></div><div class="pai-skel-line" style="width:75%;"></div><div class="pai-skel-line" style="width:60%;"></div></div>
             </div>
           </div>
         </div>
@@ -2917,7 +2922,7 @@ table.atbl tr:last-child td{border-bottom:none;}
         <div id="elPaiFullReport" style="display:none;margin-bottom:16px;">
         <div style="display:grid;grid-template-columns:1fr 350px;gap:16px;align-items:start;">
           <div style="display:flex;flex-direction:column;gap:16px;">
-            <div style="background:var(--white);border-radius:4px;padding:24px;border:1px solid var(--platform-10);">
+            <div style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);">
               <div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:16px;">
                 <div style="flex:1;">
                   <div style="font-size:20px;font-weight:700;color:var(--platform-100);margin-bottom:6px;">Prospect AI Report</div>
@@ -2959,9 +2964,9 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <div class="pai-row"><span class="pai-key">Residence</span><span class="pai-val">$3.2M, Carmel IN <a class="pai-src"><i class="fa-solid fa-link"></i><span class="pai-src-tip">https://propertysearch.hamiltoncounty.in.gov/parcel/14-09-32-04</span></a></span></div>
                 <div class="pai-row"><span class="pai-key">Salary</span><span class="pai-val" style="color:var(--platform-40);font-style:italic;font-weight:400;">Not available</span></div>
                 <div class="pai-row"><span class="pai-key">Donations (past 5y)</span><span class="pai-val">$1.1M across 15+ orgs <a class="pai-src"><i class="fa-solid fa-link"></i><span class="pai-src-tip">https://dataro.io/admin/giving-rollup/eleanor-richardson</span></a></span></div>
-                <div class="pai-row"><span class="pai-key">Gift Capacity</span><span class="pai-val" style="font-weight:600;">$25,000 &ndash; $50,000 <a class="pai-src"><i class="fa-solid fa-link"></i><span class="pai-src-tip">https://dataro.io/admin/capacity-model/eleanor-richardson</span></a></span></div>
+                <div class="pai-row"><span class="pai-key">Gift Capacity</span><span class="pai-val" style="font-weight:500;">$25,000 &ndash; $50,000 <a class="pai-src"><i class="fa-solid fa-link"></i><span class="pai-src-tip">https://dataro.io/admin/capacity-model/eleanor-richardson</span></a></span></div>
                 <div class="pai-row"><span class="pai-key">Total Value of Shares</span><span class="pai-val">$1.3M <a class="pai-src"><i class="fa-solid fa-link"></i><span class="pai-src-tip">https://sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0001551152</span></a></span></div>
-                <div style="margin-top:12px;margin-bottom:4px;font-size:14px;font-weight:600;color:var(--platform-100);">Shares Held</div>
+                <div style="margin-top:12px;margin-bottom:4px;font-size:14px;font-weight:500;color:var(--platform-100);">Shares Held</div>
                 <div style="overflow-x:auto;">
                   <table style="width:100%;border-collapse:collapse;font-size:13px;">
                     <thead>
@@ -3002,11 +3007,11 @@ table.atbl tr:last-child td{border-bottom:none;}
               <div class="pai-sec-body">
                 <p style="margin-bottom:10px;">Nonprofit leader with <strong>20+ years</strong> in philanthropy, education, and arts advocacy across central Indiana.</p>
                 <div class="pai-row"><span class="pai-key">Indianapolis Arts Council</span><span class="pai-val">Board Member (Current) <a class="pai-src"><i class="fa-solid fa-link"></i><span class="pai-src-tip">https://linkedin.com/in/eleanor-richardson-philanthropist</span></a></span></div>
-                <div style="margin-top:16px;font-size:14px;font-weight:600;color:var(--platform-100);">Past Roles</div>
+                <div style="margin-top:16px;font-size:14px;font-weight:500;color:var(--platform-100);">Past Roles</div>
                 <div class="pai-row"><span class="pai-key">Carmel Community Foundation</span><span class="pai-val">President (2018&ndash;2023) <a class="pai-src"><i class="fa-solid fa-link"></i><span class="pai-src-tip">https://carmelcommunityfoundation.org/about/past-presidents</span></a></span></div>
                 <div class="pai-row"><span class="pai-key">Hamilton County Education Alliance</span><span class="pai-val">VP, Donor Relations <a class="pai-src"><i class="fa-solid fa-link"></i><span class="pai-src-tip">https://linkedin.com/in/eleanor-richardson-philanthropist</span></a></span></div>
                 <div class="pai-row"><span class="pai-key">Hope Valley Youth Forward</span><span class="pai-val">Program Director <a class="pai-src"><i class="fa-solid fa-link"></i><span class="pai-src-tip">https://hopevalleyyouthforward.org/about/staff-archive</span></a></span></div>
-                <div style="margin-top:16px;font-size:14px;font-weight:600;color:var(--platform-100);">Education</div>
+                <div style="margin-top:16px;font-size:14px;font-weight:500;color:var(--platform-100);">Education</div>
                 <div class="pai-row"><span class="pai-key">Indiana University Kelley School</span><span class="pai-val">MBA <a class="pai-src"><i class="fa-solid fa-link"></i><span class="pai-src-tip">https://kelley.iu.edu/alumni/directory</span></a></span></div>
                 <div class="pai-row"><span class="pai-key">Butler University</span><span class="pai-val">BA, Public Policy <a class="pai-src"><i class="fa-solid fa-link"></i><span class="pai-src-tip">https://butler.edu/alumni</span></a></span></div>
               </div>
@@ -3022,14 +3027,14 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <p style="margin-bottom:10px;">Known giving to <strong>15+ organizations</strong>; <strong>$1.1M</strong> identified over the past five years.</p>
                 <div class="pai-row"><span class="pai-key">Largest Known Gift</span><span class="pai-val">$50,000 &mdash; Indianapolis Arts Council (2024) <a class="pai-src"><i class="fa-solid fa-link"></i><span class="pai-src-tip">https://indyartscouncil.org/annual-report-2024.pdf</span></a></span></div>
                 <div class="pai-row"><span class="pai-key">Annual Giving (est.)</span><span class="pai-val">$200,000+ across all organizations <a class="pai-src"><i class="fa-solid fa-link"></i><span class="pai-src-tip">https://dataro.io/admin/annual-giving/eleanor-richardson</span></a></span></div>
-                <div style="margin-top:16px;font-size:14px;font-weight:600;color:var(--platform-100);">Education</div>
+                <div style="margin-top:16px;font-size:14px;font-weight:500;color:var(--platform-100);">Education</div>
                 <div class="pai-row"><span class="pai-key">2024 &middot; Hamilton County Education Alliance</span><span class="pai-val">$25,000 <a class="pai-src"><i class="fa-solid fa-link"></i><span class="pai-src-tip">https://hamiltoncountyedu.org/annual-report-2024.pdf</span></a></span></div>
                 <div class="pai-row"><span class="pai-key">2023 &middot; Carmel Education Foundation</span><span class="pai-val">$15,000 <a class="pai-src"><i class="fa-solid fa-link"></i><span class="pai-src-tip">https://carmeleducationfoundation.org/donors-2023</span></a></span></div>
                 <div class="pai-row"><span class="pai-key">2022 &middot; Butler University</span><span class="pai-val">$10,000 <a class="pai-src"><i class="fa-solid fa-link"></i><span class="pai-src-tip">https://butler.edu/giving/honor-roll/2022</span></a></span></div>
-                <div style="margin-top:16px;font-size:14px;font-weight:600;color:var(--platform-100);">Arts &amp; Culture</div>
+                <div style="margin-top:16px;font-size:14px;font-weight:500;color:var(--platform-100);">Arts &amp; Culture</div>
                 <div class="pai-row"><span class="pai-key">2024 &middot; Indianapolis Arts Council</span><span class="pai-val">$50,000 <a class="pai-src"><i class="fa-solid fa-link"></i><span class="pai-src-tip">https://indyartscouncil.org/annual-report-2024.pdf</span></a></span></div>
                 <div class="pai-row"><span class="pai-key">2023 &middot; Indianapolis Symphony Orchestra</span><span class="pai-val">$8,500 <a class="pai-src"><i class="fa-solid fa-link"></i><span class="pai-src-tip">https://indianapolissymphony.org/support/donors-2023</span></a></span></div>
-                <div style="margin-top:16px;font-size:14px;font-weight:600;color:var(--platform-100);">Youth Development</div>
+                <div style="margin-top:16px;font-size:14px;font-weight:500;color:var(--platform-100);">Youth Development</div>
                 <div class="pai-row"><span class="pai-key">2025 &middot; Hope Valley Youth Forward</span><span class="pai-val">$18,750 <a class="pai-src"><i class="fa-solid fa-link"></i><span class="pai-src-tip">https://crm.bloomerang.co/records/20251218-RICHARDSON</span></a></span></div>
                 <div class="pai-row"><span class="pai-key">2024 &middot; Boys &amp; Girls Club of Indianapolis</span><span class="pai-val">$12,000 <a class="pai-src"><i class="fa-solid fa-link"></i><span class="pai-src-tip">https://bgcindy.org/donors-2024</span></a></span></div>
 
@@ -3057,10 +3062,10 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <span class="sidebar-card-title">Prospect Intelligence</span>
               </div>
               <div class="sidebar-card-body">
-                <div class="snapshot-row"><span class="snapshot-lbl">Gift Capacity</span><span class="snapshot-val" style="font-weight:600;">$25k&ndash;$50k</span></div>
-                <div class="snapshot-row"><span class="snapshot-lbl">Optimal Ask</span><span class="snapshot-val" style="font-weight:600;">$25,000</span></div>
+                <div class="snapshot-row"><span class="snapshot-lbl">Gift Capacity</span><span class="snapshot-val" style="font-weight:500;">$25k&ndash;$50k</span></div>
+                <div class="snapshot-row"><span class="snapshot-lbl">Optimal Ask</span><span class="snapshot-val" style="font-weight:500;">$25,000</span></div>
                 <div class="snapshot-row"><span class="snapshot-lbl">Prospect Score</span><span style="background:var(--crm-20);color:var(--crm-300);font-size:12px;font-weight:700;padding:2px 8px;border-radius:4px;">96</span></div>
-                <div class="snapshot-row"><span class="snapshot-lbl">Last Gift</span><span class="snapshot-val" style="font-weight:600;">Dec 18, 2025</span></div>
+                <div class="snapshot-row"><span class="snapshot-lbl">Last Gift</span><span class="snapshot-val" style="font-weight:500;">Dec 18, 2025</span></div>
               </div>
             </div>
             <!-- Affinity Assessment -->
@@ -3070,16 +3075,16 @@ table.atbl tr:last-child td{border-bottom:none;}
               </div>
               <div class="sidebar-card-body">
                 <div class="snapshot-row" style="flex-direction:column;align-items:flex-start;gap:4px;">
-                  <span style="font-size:14px;font-weight:700;color:var(--platform-100);">Education</span>
-                  <span style="font-size:14px;color:var(--platform-80);line-height:20px;">Board member of Hamilton County Education Alliance; <strong style="color:var(--platform-100);">$50K</strong> to education orgs in 2024 alone.</span>
+                  <span class="snapshot-lbl">Education</span>
+                  <span class="snapshot-val" style="line-height:20px;font-weight:400;">Board member of Hamilton County Education Alliance; <strong>$50K</strong> to education orgs in 2024 alone.</span>
                 </div>
                 <div class="snapshot-row" style="flex-direction:column;align-items:flex-start;gap:4px;">
-                  <span style="font-size:14px;font-weight:700;color:var(--platform-100);">Youth Development</span>
-                  <span style="font-size:14px;color:var(--platform-80);line-height:20px;">Volunteer mentor with Hope Valley Youth Forward; 2025 Gala speaker.</span>
+                  <span class="snapshot-lbl">Youth Development</span>
+                  <span class="snapshot-val" style="line-height:20px;font-weight:400;">Volunteer mentor with Hope Valley Youth Forward; 2025 Gala speaker.</span>
                 </div>
                 <div class="snapshot-row" style="flex-direction:column;align-items:flex-start;gap:4px;">
-                  <span style="font-size:14px;font-weight:700;color:var(--platform-100);">Arts &amp; Culture</span>
-                  <span style="font-size:14px;color:var(--platform-80);line-height:20px;">Board member, Indianapolis Arts Council; <strong style="color:var(--platform-100);">$50K</strong> gift in 2024 &mdash; her largest known gift.</span>
+                  <span class="snapshot-lbl">Arts &amp; Culture</span>
+                  <span class="snapshot-val" style="line-height:20px;font-weight:400;">Board member, Indianapolis Arts Council; <strong>$50K</strong> gift in 2024 &mdash; her largest known gift.</span>
                 </div>
               </div>
             </div>
