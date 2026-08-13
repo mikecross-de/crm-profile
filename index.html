@@ -382,7 +382,7 @@ button{font-family:var(--font);cursor:pointer;}
 .s-badge.prospect{background:var(--volunteer-20);color:var(--volunteer-300);}
 .con-tabs{display:flex;border-bottom:1px solid var(--platform-20);}
 .con-tab-body-wrap{background:var(--white);border-radius:6px;margin:16px 24px 18px;overflow:hidden;}
-.con-tab{padding:0 32px;height:55px;display:flex;align-items:center;gap:6px;font-size:16px;font-weight:400;color:var(--platform-60);cursor:pointer;border-bottom:2px solid transparent;border-top:none;border-left:none;border-right:none;background:none;font-family:var(--font);transition:all 0.15s;white-space:nowrap;margin-bottom:-1px;}
+.con-tab{padding:0 32px;height:55px;display:flex;align-items:center;gap:6px;font-size:16px;font-weight:400;color:var(--platform-80);cursor:pointer;border-bottom:2px solid transparent;border-top:none;border-left:none;border-right:none;background:none;font-family:var(--font);transition:all 0.15s;white-space:nowrap;margin-bottom:-1px;}
 .con-tab:hover{color:var(--platform-100);}
 .con-tab.active{color:var(--platform-100);font-weight:600;border-bottom:2px solid var(--crm-100);}
 .tab-new{font-size:10px;font-weight:700;background:var(--penny-100);color:var(--white);padding:1px 5px;border-radius:3px;}
@@ -725,7 +725,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .con-header-actions{display:flex;gap:8px;flex-shrink:0;margin-left:auto;align-self:center;}
 /* ═══ TABS ═══ */
 .con-tab-bar{display:flex;background:var(--white);border-bottom:1px solid var(--platform-20);padding:0 32px;}
-.con-tab{padding:0 32px;height:48px;display:flex;align-items:center;gap:6px;font-size:16px;font-weight:400;color:var(--platform-60);cursor:pointer;border-bottom:2px solid transparent;border-top:none;border-left:none;border-right:none;background:none;font-family:var(--font);transition:all .15s;white-space:nowrap;margin-bottom:-1px;}
+.con-tab{padding:0 32px;height:48px;display:flex;align-items:center;gap:6px;font-size:16px;font-weight:400;color:var(--platform-80);cursor:pointer;border-bottom:2px solid transparent;border-top:none;border-left:none;border-right:none;background:none;font-family:var(--font);transition:all .15s;white-space:nowrap;margin-bottom:-1px;}
 .con-tab:hover{color:var(--platform-100);}
 .con-tab.active{color:var(--platform-100);font-weight:600;border-bottom-color:var(--crm-100);}
 /* ═══ TAB PANELS ═══ */
@@ -1311,7 +1311,7 @@ table.atbl tr:last-child td{border-bottom:none;}
     <div id="pinnedNote" style="display:flex;align-items:center;gap:8px;padding:12px 32px;background:var(--white);border-bottom:1px solid var(--platform-10);">
       <i class="fa-solid fa-thumbtack" style="font-size:12px;color:var(--platform-80);flex-shrink:0;"></i>
       <span style="font-size:14px;color:var(--platform-100);flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">Eleanor prefers to be contacted by email only. Do not call &mdash; she has requested this multiple times. Always reference her late husband Harold when acknowledging major gifts.</span>
-      <a style="font-size:14px;font-weight:700;color:var(--crm-100);white-space:nowrap;cursor:pointer;text-decoration:none;flex-shrink:0;margin-left:16px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">View note</a>
+      <button type="button" style="background:none;border:none;padding:0;font-family:var(--font);font-size:14px;font-weight:700;color:var(--crm-100);white-space:nowrap;cursor:pointer;text-decoration:none;flex-shrink:0;margin-left:16px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">View note</button>
     </div>
     <!-- TAB CONTENT -->
     <div class="con-body">
@@ -1503,7 +1503,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                   </div>
                 </div>
                 <div style="text-align:center;padding-top:16px;padding-bottom:12px;">
-                  <a style="font-size:16px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="document.querySelectorAll('#view-eleanor .con-tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('#view-eleanor .con-panel').forEach(p=>p.classList.remove('active'));document.getElementById('el-timeline').classList.add('active');document.querySelectorAll('.con-tab')[2].classList.add('active');var sc=document.querySelector('#view-eleanor .main-content');if(sc)sc.scrollTop=0;document.getElementById('main').scrollTop=0;">View full timeline</a>
+                  <button type="button" style="background:none;border:none;padding:0;font-family:var(--font);font-size:16px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="document.querySelectorAll('#view-eleanor .con-tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('#view-eleanor .con-panel').forEach(p=>p.classList.remove('active'));document.getElementById('el-timeline').classList.add('active');document.querySelectorAll('.con-tab')[2].classList.add('active');var sc=document.querySelector('#view-eleanor .main-content');if(sc)sc.scrollTop=0;document.getElementById('main').scrollTop=0;">View full timeline</button>
                 </div>
               </div>
             </div>
@@ -1615,7 +1615,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Basic Info</span>
-                <span style="font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('basic')">Edit</span>
+                <button type="button" style="background:none;border:none;padding:0;font-family:var(--font);font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('basic')">Edit</button>
               </div>
               <div class="sidebar-card-body">
                 <div class="profile-field"><span class="profile-field-lbl">Status</span><span class="profile-field-val"><span class="snapshot-badge green">Active</span></span></div>
@@ -1629,7 +1629,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Personal Information</span>
-                <span style="font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('personal')">Edit</span>
+                <button type="button" style="background:none;border:none;padding:0;font-family:var(--font);font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('personal')">Edit</button>
               </div>
               <div class="sidebar-card-body">
                 <div class="profile-field"><span class="profile-field-lbl">Gender</span><span class="profile-field-val">Female</span></div>
@@ -1645,12 +1645,12 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Contact</span>
-                <span style="font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openContactEdit()">Edit</span>
+                <button type="button" style="background:none;border:none;padding:0;font-family:var(--font);font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openContactEdit()">Edit</button>
               </div>
               <div class="sidebar-card-body">
-                <div class="profile-field"><span class="profile-field-lbl">Home Email <span class="address-badge">Primary</span></span><span class="profile-field-val link">eleanor.richardson@email.com</span></div>
+                <div class="profile-field"><span class="profile-field-lbl">Home Email (Primary)</span><span class="profile-field-val link">eleanor.richardson@email.com</span></div>
                 <div class="profile-field"><span class="profile-field-lbl">Work Email</span><span class="profile-field-val link">erichardson@indyartscouncil.org</span></div>
-                <div class="profile-field"><span class="profile-field-lbl">Mobile <span class="address-badge">Primary</span></span><span class="profile-field-val">(317) 555-0294</span></div>
+                <div class="profile-field"><span class="profile-field-lbl">Mobile (Primary)</span><span class="profile-field-val">(317) 555-0294</span></div>
                 <div class="profile-field"><span class="profile-field-lbl">Home Phone</span><span class="profile-field-val">(317) 555-8812</span></div>
               </div>
             </div>
@@ -1658,7 +1658,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">General Info</span>
-                <span style="font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('general')">Edit</span>
+                <button type="button" style="background:none;border:none;padding:0;font-family:var(--font);font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('general')">Edit</button>
               </div>
               <div class="sidebar-card-body">
                 <div class="profile-field"><span class="profile-field-lbl">Attributes</span><span class="profile-field-val">Volunteer, Major Donor</span></div>
@@ -1670,7 +1670,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Prospect Management Info</span>
-                <span style="font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('prospect')">Edit</span>
+                <button type="button" style="background:none;border:none;padding:0;font-family:var(--font);font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('prospect')">Edit</button>
               </div>
               <div class="sidebar-card-body">
                 <div class="profile-field"><span class="profile-field-lbl">Giving Capacity</span><span class="profile-field-val">$25,001&ndash;$50,000</span></div>
@@ -1681,7 +1681,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Volunteer Info</span>
-                <span style="font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('volunteer')">Edit</span>
+                <button type="button" style="background:none;border:none;padding:0;font-family:var(--font);font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('volunteer')">Edit</button>
               </div>
               <div class="sidebar-card-body">
                 <div class="profile-field"><span class="profile-field-lbl">Availability</span><span class="profile-field-val">Weekends</span></div>
@@ -1704,12 +1704,12 @@ table.atbl tr:last-child td{border-bottom:none;}
               </div>
               <div class="sidebar-card-body">
                 <div class="profile-address-card" style="border-bottom:1px solid var(--platform-10);">
-                  <div class="address-type" style="display:flex;align-items:center;">Home (Primary)<span style="margin-left:auto;font-size:14px;line-height:18px;font-weight:600;text-transform:none;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openAddressEdit(0)">Edit</span></div>
+                  <div class="address-type" style="display:flex;align-items:center;">Home (Primary)<button type="button" style="background:none;border:none;padding:0;font-family:var(--font);margin-left:auto;font-size:14px;line-height:18px;font-weight:600;text-transform:none;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openAddressEdit(0)">Edit</button></div>
                   <div class="address-text">1240 Winding Creek Rd<br>Carmel, IN 46032</div>
                   <a href="https://maps.google.com/maps?q=1240+Winding+Creek+Rd+Carmel+IN+46032" target="_blank" style="font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">View on map</a>
                 </div>
                 <div class="profile-address-card">
-                  <div class="address-type" style="display:flex;align-items:center;">Work<span style="margin-left:auto;font-size:14px;line-height:18px;font-weight:600;text-transform:none;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openAddressEdit(1)">Edit</span></div>
+                  <div class="address-type" style="display:flex;align-items:center;">Work<button type="button" style="background:none;border:none;padding:0;font-family:var(--font);margin-left:auto;font-size:14px;line-height:18px;font-weight:600;text-transform:none;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openAddressEdit(1)">Edit</button></div>
                   <div class="address-text">924 N Pennsylvania St, Suite 200<br>Indianapolis, IN 46204</div>
                   <a href="https://maps.google.com/maps?q=924+N+Pennsylvania+St+Suite+200+Indianapolis+IN+46204" target="_blank" style="font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">View on map</a>
                 </div>
@@ -1719,7 +1719,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Communication Preferences</span>
-                <span style="font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openCommPrefsEdit()">Edit</span>
+                <button type="button" style="background:none;border:none;padding:0;font-family:var(--font);font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openCommPrefsEdit()">Edit</button>
               </div>
               <div class="sidebar-card-body">
                 <div style="padding-bottom:16px;border-bottom:1px solid var(--platform-10);">
@@ -1740,7 +1740,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Groups</span>
-                <span style="font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openGroupsEdit()">Edit</span>
+                <button type="button" style="background:none;border:none;padding:0;font-family:var(--font);font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openGroupsEdit()">Edit</button>
               </div>
               <div class="sidebar-card-body">
                 <div style="padding-bottom:16px;border-bottom:1px solid var(--platform-10);">
