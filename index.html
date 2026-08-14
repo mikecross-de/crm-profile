@@ -136,12 +136,12 @@ button{font-family:var(--font);cursor:pointer;}
 .page-action{font-size:13px;color:var(--crm-100);font-weight:600;cursor:pointer;margin-top:2px;}
 .breadcrumb{font-size:12px;color:var(--crm-100);font-weight:600;margin-bottom:10px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;}
 /* BUTTONS */
-.btn-primary{background:var(--crm-100);color:var(--white);border:none;border-radius:4px;padding:8px 16px 10px;font-family:var(--font);font-size:14px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background 0.15s;line-height:16px;}
+.btn-primary{background:var(--crm-100);color:var(--white);border:none;border-radius:4px;padding:8px 16px 10px;font-family:var(--font);font-size:14px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background 0.15s;line-height:18px;}
 .btn-primary:disabled{background:var(--platform-10);color:var(--platform-40);cursor:default;}
 .btn-primary:hover{background:var(--crm-200);}
 .btn-primary.penny{background:var(--penny-100);}
 .btn-primary.penny:hover{background:var(--penny-200);}
-.btn-secondary{background:var(--white);color:var(--platform-100);border:1px solid var(--platform-100);border-radius:4px;padding:8px 16px 10px;font-family:var(--font);font-size:14px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background 0.15s;line-height:14px;}
+.btn-secondary{background:var(--white);color:var(--platform-100);border:1px solid var(--platform-100);border-radius:4px;padding:8px 16px 10px;font-family:var(--font);font-size:14px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background 0.15s;line-height:18px;}
 .btn-secondary:hover{background:var(--platform-10);}
 .btn-ghost{background:transparent;color:var(--crm-100);border:none;padding:0 6px;height:34px;font-family:var(--font);font-size:13px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:5px;}
 .btn-ghost:hover{color:var(--crm-200);}
@@ -766,10 +766,10 @@ table.atbl tr:last-child td{border-bottom:none;}
 .di-bar{width:3px;border-radius:2px;align-self:stretch;flex-shrink:0;}
 .di-body{flex:1;font-size:15px;color:var(--platform-100);line-height:22px;}
 .di-body strong{font-weight:700;}
-.di-action{font-family:var(--font);font-size:14px;font-weight:700;padding:4px 12px;border-radius:4px;cursor:pointer;border:none;flex-shrink:0;white-space:nowrap;line-height:21px;background:none;margin:-4px 0px;color:var(--crm-100);transition:background .12s;}
+.di-action{font-family:var(--font);font-size:14px;font-weight:600;padding:4px 12px;border-radius:4px;cursor:pointer;border:none;flex-shrink:0;white-space:nowrap;line-height:18px;background:none;margin:-4px 0px;color:var(--crm-100);transition:background .12s;}
 .di-action:hover{background:var(--crm-20);}
 .di-footer{display:flex;justify-content:space-between;align-items:center;padding-top:12px;margin-top:4px;position:relative;}
-.di-more{font-size:16px;font-weight:700;color:var(--crm-100);cursor:pointer;}
+.di-more{font-size:16px;font-weight:600;color:var(--crm-100);cursor:pointer;}
 .di-more:hover{text-decoration:underline;}
 .di-powered{font-size:12px;color:var(--platform-60);}
 .rel-summary-title{font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:12px;}
@@ -784,7 +784,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .glance-stat-val.orange{color:var(--orange-100);}
 .glance-stat-lbl{font-size:15px;font-weight:400;color:var(--platform-80);white-space:nowrap;}
 /* ═══ SUMMARY LAYOUT ═══ */
-.summary-grid{display:grid;grid-template-columns:1fr 350px;gap:16px;}
+.summary-grid{display:grid;grid-template-columns:1fr 360px;gap:16px;}
 /* Recent Activity — signal pattern */
 .sidebar-card{background:var(--white);border-radius:4px;overflow:hidden;border:1px solid var(--platform-10);}
 .sidebar-card+.sidebar-card{margin-top:0;}
@@ -827,7 +827,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .snapshot-badge.gray{background:var(--platform-10);color:var(--platform-80);}
 .info-tip{color:var(--platform-60);cursor:pointer;font-size:14px;line-height:18px;position:relative;display:inline-flex;align-items:center;transition:color .12s;}
 .info-tip:hover{color:var(--platform-100);}
-.info-tip-text{display:none;position:absolute;top:calc(100% + 8px);right:0;background:var(--platform-100);color:var(--white);font-size:14px;font-weight:400;line-height:18px;padding:8px 10px;border-radius:4px;z-index:200;text-align:left;box-shadow:0 4px 12px rgba(0,0,0,0.18);width:max-content;max-width:220px;white-space:normal;}
+.info-tip-text{display:none;position:absolute;top:calc(100% + 8px);right:0;background:var(--platform-100);color:var(--white);font-size:14px;font-weight:500;line-height:18px;padding:8px 10px;border-radius:4px;z-index:200;text-align:left;box-shadow:0 4px 12px rgba(0,0,0,0.18);width:max-content;max-width:220px;white-space:normal;}
 .info-tip:hover .info-tip-text{display:block;}
 /* Relationship sidebar */
 .rel-mini{display:flex;align-items:center;gap:10px;padding:8px 0;}
@@ -878,6 +878,10 @@ table.atbl tr:last-child td{border-bottom:none;}
 .edit-modal-header{padding:20px 24px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
 .edit-modal-title{font-size:20px;font-weight:700;color:var(--platform-100);}
 .edit-modal-close{width:24px;height:24px;border-radius:50%;background:none;border:none;cursor:pointer;display:grid;place-items:center;color:var(--platform-60);font-size:18px;transition:background .12s,color .12s;}
+.btn-tertiary-sm{background:none;border:none;font-family:var(--font);font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;padding:4px 10px;border-radius:4px;white-space:nowrap;transition:background .12s;}
+.btn-tertiary-sm:hover{background:var(--crm-20);}
+.btn-tertiary{background:none;border:none;font-family:var(--font);font-size:16px;line-height:21px;font-weight:600;color:var(--crm-100);cursor:pointer;padding:8px 12px;border-radius:4px;white-space:nowrap;transition:background .12s;}
+.btn-tertiary:hover{background:var(--crm-20);}
 .edit-modal-close:hover{background:var(--platform-20);color:var(--platform-80);}
 .edit-modal-body{padding:0 24px 24px;display:flex;flex-direction:column;gap:16px;overflow-y:auto;}
 .edit-modal-footer{padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
@@ -895,7 +899,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .form-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23525759' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:44px;}
 .form-row{display:flex;gap:16px;}
 .contact-edit-row{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
-.contact-edit-row .form-input,.contact-edit-row .form-select{height:40px;padding:8px 16px;font-size:14px;}
+.contact-edit-row .form-input,.contact-edit-row .form-select{height:40px;padding:8px 16px;font-size:14px;line-height:18px;}
 .contact-edit-primary{width:32px;height:32px;display:grid;place-items:center;border-radius:4px;border:none;background:none;color:var(--platform-40);font-size:13px;cursor:pointer;transition:color .12s;position:relative;flex-shrink:0;}
 .contact-edit-primary:hover{color:var(--crm-100);}
 .contact-edit-primary.active{color:var(--crm-100);cursor:default;}
@@ -903,7 +907,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .contact-edit-delete:hover{color:var(--platform-100);background:var(--platform-5);}
 .contact-edit-add{background:none;border:none;font-family:var(--font);font-size:14px;line-height:18px;font-weight:700;color:var(--crm-100);cursor:pointer;padding:4px 8px;border-radius:4px;text-decoration:none;display:inline-flex;align-items:center;gap:4px;transition:background .12s;}
 .contact-edit-add:hover{background:var(--crm-20);}
-.form-section-label{font-size:12px;font-weight:700;color:var(--platform-60);text-transform:uppercase;letter-spacing:.04em;margin:4px 0 -4px;}
+.form-section-label{font-size:12px;font-weight:500;color:var(--platform-60);text-transform:uppercase;letter-spacing:.04em;margin:4px 0 -4px;}
 .photo-dropzone{border:2px dashed var(--platform-40);border-radius:8px;padding:40px 24px;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;transition:border-color .12s,background .12s;cursor:pointer;}
 .photo-dropzone:hover,.photo-dropzone.dragover{border-color:var(--crm-100);background:var(--crm-5);}
 .photo-dropzone i{font-size:28px;color:var(--platform-40);}
@@ -933,7 +937,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .tlv-row:first-child{border-top:none;}
 .tlv-label{color:var(--platform-60);}
 .tlv-value{color:var(--platform-100);text-align:right;}
-.address-text{font-size:14px;color:var(--platform-100);font-weight:500;line-height:20px;margin-bottom:6px;}
+.address-text{font-size:14px;color:var(--platform-100);font-weight:500;line-height:18px;margin-bottom:6px;}
 .address-text a{color:var(--crm-100);font-weight:600;}
 .profile-section.full-width{}
 /* ═══ TIMELINE TAB — connected ═══ */
@@ -1007,10 +1011,10 @@ table.atbl tr:last-child td{border-bottom:none;}
 .pai-row{display:flex;justify-content:space-between;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--platform-10);}
 .pai-row:first-child{padding-top:0;}
 .pai-row:last-child{border-bottom:none;}
-.pai-key{color:var(--platform-80);font-size:14px;line-height:18px;font-weight:400;min-width:140px;flex-shrink:0;}
+.pai-key{color:var(--platform-80);font-size:14px;line-height:18px;font-weight:500;min-width:140px;flex-shrink:0;}
 .pai-val{font-size:14px;font-weight:500;color:var(--platform-100);line-height:18px;text-align:right;}
 .pai-src{color:var(--crm-100);cursor:pointer;margin-left:4px;font-size:10px;position:relative;display:inline-block;}
-.pai-src-tip{display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--platform-100);color:var(--white);font-family:'SFMono-Regular',Consolas,'Courier New',monospace;font-size:11px;font-weight:400;line-height:15px;padding:6px 10px;border-radius:4px;z-index:200;text-align:left;box-shadow:0 4px 12px rgba(0,0,0,0.18);text-decoration:none;width:max-content;max-width:360px;overflow-wrap:anywhere;white-space:normal;}
+.pai-src-tip{display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--platform-100);color:var(--white);font-family:'SFMono-Regular',Consolas,'Courier New',monospace;font-size:11px;font-weight:500;line-height:15px;padding:6px 10px;border-radius:4px;z-index:200;text-align:left;box-shadow:0 4px 12px rgba(0,0,0,0.18);text-decoration:none;width:max-content;max-width:360px;overflow-wrap:anywhere;white-space:normal;}
 .pai-src-tip::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:var(--platform-100);}
 .pai-src:hover .pai-src-tip{display:block;}
 /* ═══ GIVING STATEMENTS ═══ */
@@ -1063,7 +1067,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .pai-skel-line{height:10px;border-radius:4px;background:var(--platform-10);margin-bottom:8px;}
 .pai-skel-line:last-child{margin-bottom:0;}
 /* NEXT ACTION BADGE */
-.di-next{font-size:14px;line-height:18px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;}
+.di-next{font-size:12px;line-height:18px;font-weight:600;padding:2px 6px;border-radius:4px;white-space:nowrap;flex-shrink:0;}
 
 /* ═══ GIVING SUMMARY TILE ═══ */
 .gs-toggle-group{display:flex;gap:8px;}
@@ -1099,7 +1103,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .pai-error-icon.blue{background:var(--blue-20);color:var(--blue-300);}
 .pai-error-icon.yellow{background:var(--yellow-20);color:var(--yellow-300);}
 .pai-error-title{font-size:18px;font-weight:700;color:var(--platform-100);margin-bottom:8px;}
-.pai-error-body{font-size:14px;color:var(--platform-80);line-height:22px;max-width:540px;margin-bottom:20px;}
+.pai-error-body{font-size:14px;color:var(--platform-80);line-height:18px;max-width:540px;margin-bottom:20px;}
 .pai-error-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
 .pai-error-hint{font-size:13px;color:var(--platform-60);margin-top:12px;}
 .pai-error-steps{list-style:none;padding:0;margin:12px 0 20px;display:flex;flex-direction:column;gap:8px;}
@@ -1108,14 +1112,14 @@ table.atbl tr:last-child td{border-bottom:none;}
 .pai-error-demo-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;}
 /* ═══ REL TABLE (matched to reports redesign dg-table / dd-menu pattern) ═══ */
 .rel-table{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;line-height:18px;}
-.rel-table thead th{text-align:left;padding:14px 16px;font-size:14px;font-weight:600;color:var(--platform-80);background:var(--white);border-bottom:1px solid var(--platform-20);white-space:nowrap;user-select:none;line-height:18px;}
+.rel-table thead th{text-align:left;padding:14px 16px;font-size:14px;font-weight:500;color:var(--platform-80);background:var(--white);border-bottom:1px solid var(--platform-20);white-space:nowrap;user-select:none;line-height:18px;}
 .rel-table thead th.col-actions{text-align:left;padding-right:16px;}
 .rel-table tbody tr{transition:background .08s;position:relative;}
 .rel-table tbody tr td{border-bottom:1px solid var(--platform-20);padding:16px;color:var(--platform-100);vertical-align:middle;font-size:14px;line-height:18px;}
 .rel-table tbody tr:hover td{background:var(--platform-5);}
 .rel-table tbody tr:last-child td{border-bottom:1px solid var(--platform-20);}
 .dd-wrap{position:relative;display:inline-flex;}
-.actions-btn{display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--platform-100);border-radius:4px;padding:4px 8px;font-size:14px;font-weight:700;color:var(--platform-100);cursor:pointer;line-height:21px;}
+.actions-btn{display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--platform-100);border-radius:4px;padding:4px 8px;font-size:14px;font-weight:700;color:var(--platform-100);cursor:pointer;line-height:18px;}
 .actions-btn:hover{background:var(--platform-20);border-color:#DAD7D9;}
 .dd-menu{position:absolute;top:calc(100% + 4px);left:0;background:var(--white);border-radius:4px;box-shadow:0 4px 4px rgba(0,0,0,.25);z-index:200;min-width:200px;padding:8px 0;display:none;}
 .dd-menu.flip-up{top:auto;bottom:calc(100% + 4px);}
@@ -1266,8 +1270,8 @@ table.atbl tr:last-child td{border-bottom:none;}
           <div class="con-contact-row">
             <span class="con-contact-item"><i class="fa-solid fa-hashtag"></i> <span class="con-id">2089</span></span>
             <span class="con-contact-item"><i class="fa-solid fa-envelope"></i> <a href="#">eleanor.richardson@email.com</a></span>
-            <span class="con-contact-item" style="position:relative;" onmouseenter="this.querySelector('.phone-type-tip').style.opacity='1'" onmouseleave="this.querySelector('.phone-type-tip').style.opacity='0'"><i class="fa-solid fa-phone"></i> (317) 555-0294<span class="phone-type-tip" style="opacity:0;position:absolute;top:calc(100% + 6px);left:50%;transform:translateX(-50%);background:black;color:var(--white);font-family:var(--font);font-size:14px;font-weight:400;padding:4px 8px;border-radius:3px;white-space:nowrap;pointer-events:none;transition:opacity .12s;z-index:10;">Mobile</span></span>
-            <span class="con-contact-item" style="position:relative;" onmouseenter="this.querySelector('.addr-type-tip').style.opacity='1'" onmouseleave="this.querySelector('.addr-type-tip').style.opacity='0'"><i class="fa-solid fa-location-dot"></i> Carmel, IN<button onclick="copyFullAddress(event)" aria-label="Copy full address" style="background:none;border:none;padding:2px 2px 2px 0;cursor:pointer;display:inline-flex;align-items:center;" onmouseover="this.querySelector('i').style.color='var(--crm-200)'" onmouseout="this.querySelector('i').style.color='var(--crm-100)'"><i class="fa-regular fa-copy" style="font-size:12px;color:var(--crm-100);"></i></button><span class="addr-type-tip" style="opacity:0;position:absolute;top:calc(100% + 6px);left:0;background:black;color:var(--white);font-family:var(--font);font-size:14px;font-weight:400;padding:8px 10px;border-radius:3px;white-space:nowrap;line-height:18px;pointer-events:none;transition:opacity .12s;z-index:9999;">1240 Winding Creek Rd<br>Carmel, IN 46032</span></span>
+            <span class="con-contact-item" style="position:relative;" onmouseenter="this.querySelector('.phone-type-tip').style.opacity='1'" onmouseleave="this.querySelector('.phone-type-tip').style.opacity='0'"><i class="fa-solid fa-phone"></i> (317) 555-0294<span class="phone-type-tip" style="opacity:0;position:absolute;top:calc(100% + 6px);left:50%;transform:translateX(-50%);background:black;color:var(--white);font-family:var(--font);font-size:14px;line-height:18px;font-weight:400;padding:4px 8px;border-radius:3px;white-space:nowrap;pointer-events:none;transition:opacity .12s;z-index:10;">Mobile</span></span>
+            <span class="con-contact-item" style="position:relative;" onmouseenter="this.querySelector('.addr-type-tip').style.opacity='1'" onmouseleave="this.querySelector('.addr-type-tip').style.opacity='0'"><i class="fa-solid fa-location-dot"></i> Carmel, IN<button onclick="copyFullAddress(event)" aria-label="Copy full address" style="background:none;border:none;padding:2px 2px 2px 0;cursor:pointer;display:inline-flex;align-items:center;" onmouseover="this.querySelector('i').style.color='var(--crm-200)'" onmouseout="this.querySelector('i').style.color='var(--crm-100)'"><i class="fa-regular fa-copy" style="font-size:12px;color:var(--crm-100);"></i></button><span class="addr-type-tip" style="opacity:0;position:absolute;top:calc(100% + 6px);left:0;background:black;color:var(--white);font-family:var(--font);font-size:14px;font-weight:500;padding:8px 10px;border-radius:3px;white-space:nowrap;line-height:18px;pointer-events:none;transition:opacity .12s;z-index:9999;">1240 Winding Creek Rd<br>Carmel, IN 46032</span></span>
           </div>
         </div>
         <div class="con-header-actions">
@@ -1310,8 +1314,8 @@ table.atbl tr:last-child td{border-bottom:none;}
     <!-- PINNED NOTE -->
     <div id="pinnedNote" style="display:flex;align-items:center;gap:8px;padding:12px 32px;background:var(--white);border-bottom:1px solid var(--platform-10);">
       <i class="fa-solid fa-thumbtack" style="font-size:12px;color:var(--platform-80);flex-shrink:0;"></i>
-      <span style="font-size:14px;color:var(--platform-100);flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">Eleanor prefers to be contacted by email only. Do not call &mdash; she has requested this multiple times. Always reference her late husband Harold when acknowledging major gifts.</span>
-      <button type="button" style="background:none;border:none;padding:0;font-family:var(--font);font-size:14px;font-weight:700;color:var(--crm-100);white-space:nowrap;cursor:pointer;text-decoration:none;flex-shrink:0;margin-left:16px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">View note</button>
+      <span style="font-size:14px;line-height:18px;color:var(--platform-100);flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">Eleanor prefers to be contacted by email only. Do not call &mdash; she has requested this multiple times. Always reference her late husband Harold when acknowledging major gifts.</span>
+      <button type="button" style="background:none;border:none;padding:0;font-family:var(--font);font-size:14px;line-height:18px;font-weight:500;color:var(--crm-100);white-space:nowrap;cursor:pointer;text-decoration:none;flex-shrink:0;margin-left:16px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">View note</button>
     </div>
     <!-- TAB CONTENT -->
     <div class="con-body">
@@ -1379,7 +1383,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                   <!-- Row 1: Lifetime + Average -->
                   <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
                     <div>
-                      <span style="display:inline-block;margin-bottom:12px;font-size:12px;font-weight:700;background:var(--platform-10);color:var(--platform-80);padding:2px 6px;border-radius:4px;">Lifetime</span>
+                      <span style="display:inline-block;margin-bottom:12px;font-size:12px;font-weight:600;background:var(--platform-10);color:var(--platform-80);padding:2px 6px;border-radius:4px;">Lifetime</span>
                       <div style="display:flex;gap:6px;">
                         <div id="gs-lifetime-green" style="display:flex;gap:8px;align-items:center;flex:1;">
                           <div style="width:3px;background:var(--crm-100);border-radius:2px;align-self:stretch;min-height:32px;flex-shrink:0;"></div>
@@ -1399,7 +1403,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                       </div>
                     </div>
                     <div>
-                      <span style="display:inline-block;margin-bottom:12px;font-size:12px;font-weight:700;background:var(--platform-10);color:var(--platform-80);padding:2px 6px;border-radius:4px;">Average</span>
+                      <span style="display:inline-block;margin-bottom:12px;font-size:12px;font-weight:600;background:var(--platform-10);color:var(--platform-80);padding:2px 6px;border-radius:4px;">Average</span>
                       <div style="display:flex;gap:6px;">
                         <div id="gs-average-green" style="display:flex;gap:8px;align-items:center;flex:1;">
                           <div style="width:3px;background:var(--crm-100);border-radius:2px;align-self:stretch;min-height:32px;flex-shrink:0;"></div>
@@ -1503,7 +1507,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                   </div>
                 </div>
                 <div style="text-align:center;padding-top:16px;padding-bottom:12px;">
-                  <button type="button" style="background:none;border:none;padding:0;font-family:var(--font);font-size:16px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="document.querySelectorAll('#view-eleanor .con-tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('#view-eleanor .con-panel').forEach(p=>p.classList.remove('active'));document.getElementById('el-timeline').classList.add('active');document.querySelectorAll('.con-tab')[2].classList.add('active');var sc=document.querySelector('#view-eleanor .main-content');if(sc)sc.scrollTop=0;document.getElementById('main').scrollTop=0;">View full timeline</button>
+                  <button type="button" class="btn-tertiary" onclick="document.querySelectorAll('#view-eleanor .con-tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('#view-eleanor .con-panel').forEach(p=>p.classList.remove('active'));document.getElementById('el-timeline').classList.add('active');document.querySelectorAll('.con-tab')[2].classList.add('active');var sc=document.querySelector('#view-eleanor .main-content');if(sc)sc.scrollTop=0;document.getElementById('main').scrollTop=0;">View full timeline</button>
                 </div>
               </div>
             </div>
@@ -1522,7 +1526,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                   <div style="flex:1;height:12px;background:#F4913C;cursor:pointer;position:relative;" onmouseenter="showEngTip(this,'Warm')" onmouseleave="hideEngTip()"></div>
                   <div style="flex:1;height:12px;background:#F4913C;cursor:pointer;position:relative;" onmouseenter="showEngTip(this,'Hot')" onmouseleave="hideEngTip()"></div>
                   <div style="flex:1;height:12px;border-radius:0 4px 4px 0;background:var(--platform-20);cursor:pointer;position:relative;" onmouseenter="showEngTip(this,'On Fire!')" onmouseleave="hideEngTip()"></div>
-                  <div id="engTooltip" style="display:none;position:absolute;background:var(--platform-100);color:var(--white);font-size:12px;font-weight:600;padding:4px 10px;border-radius:4px;pointer-events:none;white-space:nowrap;z-index:99;bottom:18px;transform:translateX(-50%);">
+                  <div id="engTooltip" style="display:none;position:absolute;background:var(--platform-100);color:var(--white);font-size:12px;font-weight:500;padding:4px 10px;border-radius:4px;pointer-events:none;white-space:nowrap;z-index:99;bottom:18px;transform:translateX(-50%);">
                     <div style="position:absolute;bottom:-5px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid var(--platform-100);"></div>
                   </div>
                 </div>
@@ -1544,13 +1548,13 @@ table.atbl tr:last-child td{border-bottom:none;}
                   <div style="flex:1;height:12px;background:#FFC600;cursor:pointer;position:relative;" onmouseenter="showGenTip(this,'Warm')" onmouseleave="hideGenTip()"></div>
                   <div style="flex:1;height:12px;background:var(--platform-20);cursor:pointer;position:relative;" onmouseenter="showGenTip(this,'Hot')" onmouseleave="hideGenTip()"></div>
                   <div style="flex:1;height:12px;border-radius:0 4px 4px 0;background:var(--platform-20);cursor:pointer;position:relative;" onmouseenter="showGenTip(this,'On Fire!')" onmouseleave="hideGenTip()"></div>
-                  <div id="genTooltip" style="display:none;position:absolute;background:var(--platform-100);color:var(--white);font-size:12px;font-weight:600;padding:4px 10px;border-radius:4px;pointer-events:none;white-space:nowrap;z-index:99;bottom:18px;transform:translateX(-50%);">
+                  <div id="genTooltip" style="display:none;position:absolute;background:var(--platform-100);color:var(--white);font-size:12px;font-weight:500;padding:4px 10px;border-radius:4px;pointer-events:none;white-space:nowrap;z-index:99;bottom:18px;transform:translateX(-50%);">
                     <div style="position:absolute;bottom:-5px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid var(--platform-100);"></div>
                   </div>
                 </div>
                 <div style="text-align:center;font-size:15px;font-weight:700;color:var(--platform-100);margin-top:4px;">Warm</div>
                 <div style="text-align:center;margin-top:12px;">
-                  <span style="font-size:14px;line-height:18px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">View in DonorSearch</span>
+                  <button type="button" class="btn-tertiary-sm">View in DonorSearch</button>
                 </div>
               </div>
             </div>
@@ -1608,14 +1612,14 @@ table.atbl tr:last-child td{border-bottom:none;}
       </div><!-- /el-summary panel -->
       <!-- ═══ PROFILE ═══ -->
       <div class="con-panel" id="el-profile">
-        <div style="display:grid;grid-template-columns:1fr 350px;gap:16px;align-items:start;">
+        <div style="display:grid;grid-template-columns:1fr 360px;gap:16px;align-items:start;">
           <!-- Left column -->
           <div style="display:flex;flex-direction:column;gap:16px;">
             <!-- Basic Info -->
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Basic Info</span>
-                <button type="button" style="background:none;border:none;padding:0;font-family:var(--font);font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('basic')">Edit</button>
+                <button type="button" class="btn-tertiary-sm" onclick="openTileEdit('basic')">Edit</button>
               </div>
               <div class="sidebar-card-body">
                 <div class="profile-field"><span class="profile-field-lbl">Status</span><span class="profile-field-val"><span class="snapshot-badge green">Active</span></span></div>
@@ -1629,7 +1633,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Personal Information</span>
-                <button type="button" style="background:none;border:none;padding:0;font-family:var(--font);font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('personal')">Edit</button>
+                <button type="button" class="btn-tertiary-sm" onclick="openTileEdit('personal')">Edit</button>
               </div>
               <div class="sidebar-card-body">
                 <div class="profile-field"><span class="profile-field-lbl">Gender</span><span class="profile-field-val">Female</span></div>
@@ -1645,7 +1649,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Contact</span>
-                <button type="button" style="background:none;border:none;padding:0;font-family:var(--font);font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openContactEdit()">Edit</button>
+                <button type="button" class="btn-tertiary-sm" onclick="openContactEdit()">Edit</button>
               </div>
               <div class="sidebar-card-body">
                 <div class="profile-field"><span class="profile-field-lbl">Home Email (Primary)</span><span class="profile-field-val link">eleanor.richardson@email.com</span></div>
@@ -1658,7 +1662,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">General Info</span>
-                <button type="button" style="background:none;border:none;padding:0;font-family:var(--font);font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('general')">Edit</button>
+                <button type="button" class="btn-tertiary-sm" onclick="openTileEdit('general')">Edit</button>
               </div>
               <div class="sidebar-card-body">
                 <div class="profile-field"><span class="profile-field-lbl">Attributes</span><span class="profile-field-val">Volunteer, Major Donor</span></div>
@@ -1670,7 +1674,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Prospect Management Info</span>
-                <button type="button" style="background:none;border:none;padding:0;font-family:var(--font);font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('prospect')">Edit</button>
+                <button type="button" class="btn-tertiary-sm" onclick="openTileEdit('prospect')">Edit</button>
               </div>
               <div class="sidebar-card-body">
                 <div class="profile-field"><span class="profile-field-lbl">Giving Capacity</span><span class="profile-field-val">$25,001&ndash;$50,000</span></div>
@@ -1681,7 +1685,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Volunteer Info</span>
-                <button type="button" style="background:none;border:none;padding:0;font-family:var(--font);font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openTileEdit('volunteer')">Edit</button>
+                <button type="button" class="btn-tertiary-sm" onclick="openTileEdit('volunteer')">Edit</button>
               </div>
               <div class="sidebar-card-body">
                 <div class="profile-field"><span class="profile-field-lbl">Availability</span><span class="profile-field-val">Weekends</span></div>
@@ -1700,18 +1704,18 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Addresses</span>
-                <span style="font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openAddressEdit(-1)">Add new</span>
+                <button type="button" class="btn-tertiary-sm" onclick="openAddressEdit(-1)">Add new</button>
               </div>
               <div class="sidebar-card-body">
                 <div class="profile-address-card" style="border-bottom:1px solid var(--platform-10);">
-                  <div class="address-type" style="display:flex;align-items:center;">Home (Primary)<button type="button" style="background:none;border:none;padding:0;font-family:var(--font);margin-left:auto;font-size:14px;line-height:18px;font-weight:600;text-transform:none;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openAddressEdit(0)">Edit</button></div>
+                  <div class="address-type" style="display:flex;align-items:center;">Home (Primary)<button type="button" class="btn-tertiary-sm" style="margin-left:auto;" onclick="openAddressEdit(0)">Edit</button></div>
                   <div class="address-text">1240 Winding Creek Rd<br>Carmel, IN 46032</div>
-                  <a href="https://maps.google.com/maps?q=1240+Winding+Creek+Rd+Carmel+IN+46032" target="_blank" style="font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">View on map</a>
+                  <a href="https://maps.google.com/maps?q=1240+Winding+Creek+Rd+Carmel+IN+46032" target="_blank" style="font-size:14px;line-height:18px;font-weight:500;color:var(--crm-100);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">View on map</a>
                 </div>
                 <div class="profile-address-card">
-                  <div class="address-type" style="display:flex;align-items:center;">Work<button type="button" style="background:none;border:none;padding:0;font-family:var(--font);margin-left:auto;font-size:14px;line-height:18px;font-weight:600;text-transform:none;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openAddressEdit(1)">Edit</button></div>
+                  <div class="address-type" style="display:flex;align-items:center;">Work<button type="button" class="btn-tertiary-sm" style="margin-left:auto;" onclick="openAddressEdit(1)">Edit</button></div>
                   <div class="address-text">924 N Pennsylvania St, Suite 200<br>Indianapolis, IN 46204</div>
-                  <a href="https://maps.google.com/maps?q=924+N+Pennsylvania+St+Suite+200+Indianapolis+IN+46204" target="_blank" style="font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">View on map</a>
+                  <a href="https://maps.google.com/maps?q=924+N+Pennsylvania+St+Suite+200+Indianapolis+IN+46204" target="_blank" style="font-size:14px;line-height:18px;font-weight:500;color:var(--crm-100);text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">View on map</a>
                 </div>
               </div>
             </div>
@@ -1719,7 +1723,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Communication Preferences</span>
-                <button type="button" style="background:none;border:none;padding:0;font-family:var(--font);font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openCommPrefsEdit()">Edit</button>
+                <button type="button" class="btn-tertiary-sm" onclick="openCommPrefsEdit()">Edit</button>
               </div>
               <div class="sidebar-card-body">
                 <div style="padding-bottom:16px;border-bottom:1px solid var(--platform-10);">
@@ -1740,16 +1744,16 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Groups</span>
-                <button type="button" style="background:none;border:none;padding:0;font-family:var(--font);font-size:14px;line-height:18px;font-weight:600;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openGroupsEdit()">Edit</button>
+                <button type="button" class="btn-tertiary-sm" onclick="openGroupsEdit()">Edit</button>
               </div>
               <div class="sidebar-card-body">
                 <div style="padding-bottom:16px;border-bottom:1px solid var(--platform-10);">
                   <div class="address-type">Bloomerang Groups</div>
-                  <div style="font-size:14px;line-height:24px;"><a href="#" style="color:var(--crm-100);font-weight:500;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Major Donor Prospects</a>, <a href="#" style="color:var(--crm-100);font-weight:500;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Board Prospects</a></div>
+                  <div style="font-size:14px;line-height:18px;"><a href="#" style="color:var(--crm-100);font-weight:500;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Major Donor Prospects</a>, <a href="#" style="color:var(--crm-100);font-weight:500;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Board Prospects</a></div>
                 </div>
                 <div style="padding-top:16px;">
                   <div class="address-type">User Groups</div>
-                  <div style="font-size:14px;line-height:24px;"><a href="#" style="color:var(--crm-100);font-weight:500;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Gala Attendees 2026</a>, <a href="#" style="color:var(--crm-100);font-weight:500;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Youth Mentoring Supporters</a></div>
+                  <div style="font-size:14px;line-height:18px;"><a href="#" style="color:var(--crm-100);font-weight:500;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Gala Attendees 2026</a>, <a href="#" style="color:var(--crm-100);font-weight:500;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Youth Mentoring Supporters</a></div>
                 </div>
               </div>
             </div>
@@ -1760,9 +1764,9 @@ table.atbl tr:last-child td{border-bottom:none;}
               </div>
               <div class="sidebar-card-body">
                 <div class="stmt-list">
-                  <div class="stmt-row"><i class="fa-solid fa-file-pdf stmt-icon"></i><span class="stmt-label">Giving Statement 2025</span><span class="stmt-action">Download</span></div>
-                  <div class="stmt-row"><i class="fa-solid fa-file-pdf stmt-icon"></i><span class="stmt-label">Giving Statement 2024</span><span class="stmt-action">Download</span></div>
-                  <div class="stmt-row"><i class="fa-solid fa-file-pdf stmt-icon"></i><span class="stmt-label">Giving Statement 2023</span><span class="stmt-action">Download</span></div>
+                  <div class="stmt-row"><i class="fa-solid fa-file-pdf stmt-icon"></i><span class="stmt-label">Giving Statement 2025</span><button type="button" class="btn-tertiary-sm">Download</button></div>
+                  <div class="stmt-row"><i class="fa-solid fa-file-pdf stmt-icon"></i><span class="stmt-label">Giving Statement 2024</span><button type="button" class="btn-tertiary-sm">Download</button></div>
+                  <div class="stmt-row"><i class="fa-solid fa-file-pdf stmt-icon"></i><span class="stmt-label">Giving Statement 2023</span><button type="button" class="btn-tertiary-sm">Download</button></div>
                 </div>
               </div>
             </div>
@@ -1866,7 +1870,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             </div>
 
             <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--platform-10);">
-              <div style="font-size:12px;font-weight:700;color:var(--platform-60);text-transform:uppercase;letter-spacing:.04em;margin-bottom:12px;">Custom Fields</div>
+              <div style="font-size:12px;font-weight:500;color:var(--platform-60);text-transform:uppercase;letter-spacing:.04em;margin-bottom:12px;">Custom Fields</div>
               <div class="form-group" style="max-width:340px;">
                 <select class="form-select" id="noteFormType" data-empty="true" onchange="onNoteTypeChange(this.value)">
                   <option value=""></option>
@@ -1878,7 +1882,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             </div>
 
             <div id="noteGrantFieldsEdit" style="display:none;margin-top:20px;padding-top:20px;border-top:1px solid var(--platform-10);">
-              <div style="font-size:12px;font-weight:700;color:var(--platform-60);text-transform:uppercase;letter-spacing:.04em;margin-bottom:12px;">Grant Fields</div>
+              <div style="font-size:12px;font-weight:500;color:var(--platform-60);text-transform:uppercase;letter-spacing:.04em;margin-bottom:12px;">Grant Fields</div>
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
                 <div class="form-group"><input class="form-input" type="text" id="grantAskAmount" placeholder=" "><label class="form-label form-label-float">Grant Ask Amount</label></div>
                 <div class="form-group"><input class="form-input" type="text" id="grantAwardAmount" placeholder=" "><label class="form-label form-label-float">Grant Award Amount</label></div>
@@ -1892,7 +1896,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             </div>
 
             <div id="noteProspectFieldsEdit" style="display:none;margin-top:20px;padding-top:20px;border-top:1px solid var(--platform-10);">
-              <div style="font-size:12px;font-weight:700;color:var(--platform-60);text-transform:uppercase;letter-spacing:.04em;margin-bottom:12px;">Prospect Management Info</div>
+              <div style="font-size:12px;font-weight:500;color:var(--platform-60);text-transform:uppercase;letter-spacing:.04em;margin-bottom:12px;">Prospect Management Info</div>
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
                 <div class="form-group"><input class="form-input" type="text" id="prospectLastActionDate" placeholder=" "><label class="form-label form-label-float">Last Action Date</label></div>
                 <div class="form-group"><select class="form-select" id="prospectLastActionType" data-empty="true"><option value=""></option><option>Email</option><option>In Person</option><option>Phone Call</option></select><label class="form-label form-label-float">Last Action Type</label></div>
@@ -2242,8 +2246,8 @@ table.atbl tr:last-child td{border-bottom:none;}
                     <span class="tl-entry-title">$150.00 Split Payment</span>
                   </div>
                   <div class="tl-nest-body">
-                    <div class="tl-nest-row"><span class="tl-nest-link" onclick="openTlView('split-donation-2026')">$100.00 Donation</span> &middot; <span class="fund">Youth Mentoring</span></div>
-                    <div class="tl-nest-row"><span class="tl-nest-link" onclick="openTlView('split-pledge-2026')">$50.00 Pledge Payment</span> &middot; <span class="fund">Building Fund</span></div>
+                    <div class="tl-nest-row"><a href="#" class="tl-nest-link">$100.00 Donation</a> &middot; <span class="fund">Youth Mentoring</span></div>
+                    <div class="tl-nest-row"><a href="#" class="tl-nest-link">$50.00 Pledge Payment</a> &middot; <span class="fund">Building Fund</span></div>
                   </div>
                 </div>
               </div>
@@ -2447,7 +2451,7 @@ table.atbl tr:last-child td{border-bottom:none;}
       </div>
       <!-- ═══ RELATIONSHIPS ═══ -->
       <div class="con-panel" id="el-relationships">
-        <div style="display:grid;grid-template-columns:1fr 350px;gap:16px;align-items:start;">
+        <div style="display:grid;grid-template-columns:1fr 360px;gap:16px;align-items:start;">
 
           <!-- Left column -->
           <div style="display:flex;flex-direction:column;gap:16px;">
@@ -2469,7 +2473,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                     </thead>
                     <tbody id="householdTbody">
                       <tr>
-                        <td style="font-weight:700;color:var(--crm-100);cursor:pointer;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Eleanor Richardson</td>
+                        <td style="font-weight:500;color:var(--crm-100);cursor:pointer;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Eleanor Richardson</td>
                         <td style="color:var(--platform-100);">Head of Household</td>
                         <td class="col-actions" onclick="event.stopPropagation()">
                           <div class="dd-wrap">
@@ -2483,7 +2487,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                         </td>
                       </tr>
                       <tr>
-                        <td style="font-weight:700;color:var(--crm-100);cursor:pointer;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Richard Richardson</td>
+                        <td style="font-weight:500;color:var(--crm-100);cursor:pointer;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Richard Richardson</td>
                         <td style="color:var(--platform-100);">Spouse</td>
                         <td class="col-actions" onclick="event.stopPropagation()">
                           <div class="dd-wrap">
@@ -2502,7 +2506,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                 </div>
                 <div id="householdEmptyState" style="display:none;">
                   <p style="font-size:14px;line-height:18px;color:var(--platform-100);margin-bottom:12px;">Eleanor Richardson is not in a Household.</p>
-                  <span style="font-size:14px;line-height:18px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="document.getElementById('householdOverlay').classList.add('active')">Add to Household</span>
+                  <span style="font-size:14px;line-height:18px;font-weight:500;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="document.getElementById('householdOverlay').classList.add('active')">Add to Household</span>
                 </div>
               </div>
             </div>
@@ -2511,7 +2515,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             <div class="sidebar-card">
               <div class="sidebar-card-header">
                 <span class="sidebar-card-title">Relationships</span>
-                <span style="font-size:14px;line-height:18px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openNewRel()">New Relationship</span>
+                <button type="button" class="btn-tertiary-sm" onclick="openNewRel()">New Relationship</button>
               </div>
               <div class="sidebar-card-body">
                 <div id="relContent">
@@ -2525,7 +2529,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                     </thead>
                     <tbody id="relTbody">
                       <tr>
-                        <td style="font-weight:700;color:var(--crm-100);cursor:pointer;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Hope Valley Youth Forward</td>
+                        <td style="font-weight:500;color:var(--crm-100);cursor:pointer;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Hope Valley Youth Forward</td>
                         <td style="color:var(--platform-100);">Board Member</td>
                         <td class="col-actions" onclick="event.stopPropagation()">
                           <div class="dd-wrap">
@@ -2540,7 +2544,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                         </td>
                       </tr>
                       <tr>
-                        <td style="font-weight:700;color:var(--crm-100);cursor:pointer;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Hamilton County Education Alliance</td>
+                        <td style="font-weight:500;color:var(--crm-100);cursor:pointer;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Hamilton County Education Alliance</td>
                         <td style="color:var(--platform-100);">Board Member</td>
                         <td class="col-actions" onclick="event.stopPropagation()">
                           <div class="dd-wrap">
@@ -2575,11 +2579,11 @@ table.atbl tr:last-child td{border-bottom:none;}
               </div>
               <div class="sidebar-card-body" style="padding:24px;">
                 <div style="display:flex;align-items:center;justify-content:space-between;" id="rmStrip">
-                  <span style="font-size:14px;line-height:18px;font-weight:600;color:var(--platform-100);" id="rmName">Tim Paris</span>
-                  <div style="display:flex;align-items:center;gap:12px;">
-                    <span style="font-size:14px;line-height:18px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="openRMModal('reassign')">Reassign</span>
+                  <span style="font-size:14px;line-height:18px;font-weight:500;color:var(--platform-100);" id="rmName">Tim Paris</span>
+                  <div style="display:flex;align-items:center;gap:4px;">
+                    <button type="button" class="btn-tertiary-sm" onclick="openRMModal('reassign')">Reassign</button>
                     <span style="color:var(--platform-20);">|</span>
-                    <span style="font-size:14px;line-height:18px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="removeRelationshipManager()">Remove</span>
+                    <button type="button" class="btn-tertiary-sm" onclick="removeRelationshipManager()">Remove</button>
                   </div>
                 </div>
               </div>
@@ -2666,10 +2670,10 @@ table.atbl tr:last-child td{border-bottom:none;}
         <div id="elPaiEmpty">
         <div style="padding:24px;background:var(--white);border-radius:4px;border:1px solid var(--platform-10);">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
-              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;line-height:18px;font-weight:700;background:var(--crm-20);color:var(--crm-300);padding:3px 10px;border-radius:4px;"><i class="fa-solid fa-sparkles" style="font-size:11px;"></i> Prospect AI</span>
+              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;line-height:18px;font-weight:600;background:var(--crm-20);color:var(--crm-300);padding:3px 10px;border-radius:4px;"><i class="fa-solid fa-sparkles" style="font-size:11px;"></i> Prospect AI</span>
             </div>
             <div style="font-size:20px;font-weight:700;color:var(--platform-100);line-height:24px;margin-bottom:8px;" data-pai-title>Enrich Eleanor's profile with Prospect AI</div>
-            <div style="font-size:14px;color:var(--platform-80);line-height:22px;max-width:560px;margin-bottom:20px;" data-pai-sub>You're seeing CRM data and Dataro predictions. Prospect AI scans public sources to add biographical context, capacity signals, and conversation-ready talking points.</div>
+            <div style="font-size:14px;color:var(--platform-80);line-height:18px;max-width:560px;margin-bottom:20px;" data-pai-sub>You're seeing CRM data and Dataro predictions. Prospect AI scans public sources to add biographical context, capacity signals, and conversation-ready talking points.</div>
             <div style="display:flex;align-items:flex-end;gap:12px;">
               <button class="btn-primary" onclick="runEleanorPai()" style="display:inline-flex;align-items:center;gap:8px;" data-pai-btn><i class="fa-solid fa-sparkles" style="font-size:11px;"></i> Enrich profile</button>
               <div style="flex:1;"></div>
@@ -2677,7 +2681,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             </div>
             <!-- Demo: failure scenario switcher -->
             <div style="margin-top:16px;padding-top:16px;border-top:1px dashed var(--platform-20);display:none;">
-              <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--platform-40);margin-bottom:8px;">Prototype: simulate failure states</div>
+              <div style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;color:var(--platform-40);margin-bottom:8px;">Prototype: simulate failure states</div>
               <div class="pai-error-demo-bar">
                 <button class="btn-secondary" style="font-size:12px;height:28px;padding:0 10px;" onclick="showPaiError(1)">Scenario 1 — Credits exhausted</button>
                 <button class="btn-secondary" style="font-size:12px;height:28px;padding:0 10px;" onclick="showPaiError(2)">Scenario 2 — No match</button>
@@ -2687,7 +2691,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             </div>
           </div>
           <!-- Ghost skeleton layout -->
-          <div style="display:grid;grid-template-columns:1fr 350px;gap:16px;align-items:start;margin-top:16px;">
+          <div style="display:grid;grid-template-columns:1fr 360px;gap:16px;align-items:start;margin-top:16px;">
             <div style="display:flex;flex-direction:column;gap:16px;">
             <div class="pai-sec pai-ghost"><div class="pai-sec-hd"><span class="pai-sec-title">Executive Summary</span><i class="fa-solid fa-lock" style="font-size:12px;color:var(--platform-40);"></i></div><div class="pai-sec-body" style="display:block;"><div class="pai-skel-line" style="width:95%;"></div><div class="pai-skel-line" style="width:82%;"></div><div class="pai-skel-line" style="width:68%;"></div></div></div>
             <div class="pai-sec pai-ghost"><div class="pai-sec-hd"><span class="pai-sec-title">Capacity Assessment</span><i class="fa-solid fa-lock" style="font-size:12px;color:var(--platform-40);"></i></div><div class="pai-sec-body" style="display:block;"><div class="pai-skel-line" style="width:95%;"></div><div class="pai-skel-line" style="width:82%;"></div><div class="pai-skel-line" style="width:68%;"></div></div></div>
@@ -2708,18 +2712,18 @@ table.atbl tr:last-child td{border-bottom:none;}
         <div id="elPaiLoading" style="display:none;">
           <div style="padding:24px;background:var(--white);border-radius:4px;margin-bottom:20px;">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
-              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;line-height:18px;font-weight:700;background:var(--crm-20);color:var(--crm-300);padding:3px 10px;border-radius:4px;"><i class="fa-solid fa-sparkles" style="font-size:11px;"></i> Prospect AI</span>
+              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;line-height:18px;font-weight:600;background:var(--crm-20);color:var(--crm-300);padding:3px 10px;border-radius:4px;"><i class="fa-solid fa-sparkles" style="font-size:11px;"></i> Prospect AI</span>
             </div>
             <div class="pai-loading-banner">
               <div class="pai-loading-spinner"></div>
               <div>
-                <div style="font-size:14px;line-height:18px;font-weight:700;color:var(--crm-200);margin-bottom:4px;">Enriching Eleanor&#x2019;s profile&hellip;</div>
-                <div style="font-size:14px;color:var(--platform-80);line-height:21px;">Enrichment is running in the background. This typically takes 3 to 5 minutes. Feel free to keep working and come back when it's ready.</div>
+                <div style="font-size:14px;line-height:18px;font-weight:500;color:var(--crm-200);margin-bottom:4px;">Enriching Eleanor&#x2019;s profile&hellip;</div>
+                <div style="font-size:14px;color:var(--platform-80);line-height:18px;">Enrichment is running in the background. This typically takes 3 to 5 minutes. Feel free to keep working and come back when it's ready.</div>
               </div>
             </div>
           </div>
           <!-- Existing skeleton tiles remain visible below -->
-          <div style="display:grid;grid-template-columns:1fr 350px;gap:16px;align-items:start;">
+          <div style="display:grid;grid-template-columns:1fr 360px;gap:16px;align-items:start;">
             <div style="display:flex;flex-direction:column;gap:16px;">
               <div class="pai-sec pai-ghost"><div class="pai-sec-hd"><span class="pai-sec-title">Executive Summary</span><i class="fa-solid fa-lock" style="font-size:12px;color:var(--platform-40);"></i></div><div class="pai-sec-body" style="display:block;"><div class="pai-skel-line" style="width:95%;"></div><div class="pai-skel-line" style="width:82%;"></div><div class="pai-skel-line" style="width:68%;"></div></div></div>
               <div class="pai-sec pai-ghost"><div class="pai-sec-hd"><span class="pai-sec-title">Capacity Assessment</span><i class="fa-solid fa-lock" style="font-size:12px;color:var(--platform-40);"></i></div><div class="pai-sec-body" style="display:block;"><div class="pai-skel-line" style="width:95%;"></div><div class="pai-skel-line" style="width:82%;"></div><div class="pai-skel-line" style="width:68%;"></div></div></div>
@@ -2744,14 +2748,14 @@ table.atbl tr:last-child td{border-bottom:none;}
         <div id="elPaiError1" style="display:none;">
           <div class="pai-error-card" style="border-color:var(--crm-100);">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
-              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;line-height:18px;font-weight:700;background:var(--crm-20);color:var(--crm-300);padding:3px 10px;border-radius:4px;"> Prospect AI</span>
+              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;line-height:18px;font-weight:600;background:var(--crm-20);color:var(--crm-300);padding:3px 10px;border-radius:4px;"> Prospect AI</span>
             </div>
             <div class="pai-error-title">You've used all your Prospect AI credits</div>
             <div class="pai-error-body">Your organization has reached its annual credit limit of 200 enrichments. Previously enriched reports are still accessible. Credits reset on your contract renewal date.</div>
             <ul style="background:var(--platform-5);border-radius:4px;padding:12px 16px 12px 32px;margin:0 0 20px;display:flex;flex-direction:column;gap:6px;">
-              <li style="font-size:14px;color:var(--platform-100);line-height:20px;">All previously enriched profiles remain accessible.</li>
-              <li style="font-size:14px;color:var(--platform-100);line-height:20px;">No credits were charged for this request.</li>
-              <li style="font-size:14px;color:var(--platform-100);line-height:20px;">Credits reset annually — contact your account manager to purchase additional credits before your renewal date.</li>
+              <li style="font-size:14px;color:var(--platform-100);line-height:18px;">All previously enriched profiles remain accessible.</li>
+              <li style="font-size:14px;color:var(--platform-100);line-height:18px;">No credits were charged for this request.</li>
+              <li style="font-size:14px;color:var(--platform-100);line-height:18px;">Credits reset annually — contact your account manager to purchase additional credits before your renewal date.</li>
             </ul>
               <div class="pai-error-actions">
               <button class="btn-primary" onclick="createTaskToast('Contact re: Prospect AI credits','Email','Cultivation')">Contact</button>
@@ -2759,7 +2763,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             </div>
             <!-- Demo toggle (hidden) -->
             <div style="margin-top:16px;padding-top:16px;border-top:1px dashed var(--platform-20);display:none;">
-              <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--platform-40);margin-bottom:8px;">Prototype: simulate failure states</div>
+              <div style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;color:var(--platform-40);margin-bottom:8px;">Prototype: simulate failure states</div>
               <div class="pai-error-demo-bar">
                 <button class="btn-secondary" style="font-size:12px;height:28px;padding:0 10px;" onclick="showPaiError(1)">Scenario 1 — Credits exhausted</button>
                 <button class="btn-secondary" style="font-size:12px;height:28px;padding:0 10px;" onclick="showPaiError(2)">Scenario 2 — No match</button>
@@ -2769,7 +2773,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             </div>
           </div>
           <!-- Ghost skeleton -->
-          <div style="display:grid;grid-template-columns:1fr 350px;gap:16px;align-items:start;margin-top:20px;">
+          <div style="display:grid;grid-template-columns:1fr 360px;gap:16px;align-items:start;margin-top:20px;">
             <div style="display:flex;flex-direction:column;gap:16px;">
             <div class="pai-sec pai-ghost"><div class="pai-sec-hd"><span class="pai-sec-title">Executive Summary</span></div><div class="pai-sec-body" style="display:block;"><div class="pai-skel-line" style="width:95%;"></div><div class="pai-skel-line" style="width:82%;"></div><div class="pai-skel-line" style="width:68%;"></div></div></div>
             <div class="pai-sec pai-ghost"><div class="pai-sec-hd"><span class="pai-sec-title">Capacity Assessment</span></div><div class="pai-sec-body" style="display:block;"><div class="pai-skel-line" style="width:95%;"></div><div class="pai-skel-line" style="width:82%;"></div><div class="pai-skel-line" style="width:68%;"></div></div></div>
@@ -2790,14 +2794,14 @@ table.atbl tr:last-child td{border-bottom:none;}
         <div id="elPaiError2" style="display:none;">
           <div class="pai-error-card">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
-              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;line-height:18px;font-weight:700;background:var(--crm-20);color:var(--crm-300);padding:3px 10px;border-radius:4px;"> Prospect AI</span>
+              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;line-height:18px;font-weight:600;background:var(--crm-20);color:var(--crm-300);padding:3px 10px;border-radius:4px;"> Prospect AI</span>
             </div>
             <div class="pai-error-title">No match found for Eleanor Richardson</div>
             <div class="pai-error-body">Prospect AI searched public sources but couldn't find a reliable match. This is most common when a constituent uses a name variation, has a limited public presence, or record data is incomplete. <strong>No credit was used.</strong></div>
             <ol style="background:var(--platform-5);border-radius:4px;padding:12px 16px 12px 32px;margin:0 0 20px;display:flex;flex-direction:column;gap:6px;">
-              <li style="font-size:14px;color:var(--platform-100);line-height:20px;">Add or correct her full legal name, city, and state in the Profile tab</li>
-              <li style="font-size:14px;color:var(--platform-100);line-height:20px;">Add an employer or professional title if known — it significantly improves match rates</li>
-              <li style="font-size:14px;color:var(--platform-100);line-height:20px;">Try enriching again once the profile is more complete</li>
+              <li style="font-size:14px;color:var(--platform-100);line-height:18px;">Add or correct her full legal name, city, and state in the Profile tab</li>
+              <li style="font-size:14px;color:var(--platform-100);line-height:18px;">Add an employer or professional title if known — it significantly improves match rates</li>
+              <li style="font-size:14px;color:var(--platform-100);line-height:18px;">Try enriching again once the profile is more complete</li>
             </ol>
             <div class="pai-error-actions">
               <button class="btn-primary" onclick="elConTab(document.querySelectorAll('#view-eleanor .con-tab')[1],'profile')">Update profile data</button>
@@ -2805,7 +2809,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             </div>
             <!-- Demo toggle (hidden) -->
             <div style="margin-top:16px;padding-top:16px;border-top:1px dashed var(--platform-20);display:none;">
-              <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--platform-40);margin-bottom:8px;">Prototype: simulate failure states</div>
+              <div style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;color:var(--platform-40);margin-bottom:8px;">Prototype: simulate failure states</div>
               <div class="pai-error-demo-bar">
                 <button class="btn-secondary" style="font-size:12px;height:28px;padding:0 10px;" onclick="showPaiError(1)">Scenario 1 — Credits exhausted</button>
                 <button class="btn-secondary" style="font-size:12px;height:28px;padding:0 10px;" onclick="showPaiError(2)">Scenario 2 — No match</button>
@@ -2815,7 +2819,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             </div>
           </div>
           <!-- Ghost skeleton -->
-          <div style="display:grid;grid-template-columns:1fr 350px;gap:16px;align-items:start;margin-top:20px;">
+          <div style="display:grid;grid-template-columns:1fr 360px;gap:16px;align-items:start;margin-top:20px;">
             <div style="display:flex;flex-direction:column;gap:16px;">
             <div class="pai-sec pai-ghost"><div class="pai-sec-hd"><span class="pai-sec-title">Executive Summary</span></div><div class="pai-sec-body" style="display:block;"><div class="pai-skel-line" style="width:95%;"></div><div class="pai-skel-line" style="width:82%;"></div><div class="pai-skel-line" style="width:68%;"></div></div></div>
             <div class="pai-sec pai-ghost"><div class="pai-sec-hd"><span class="pai-sec-title">Capacity Assessment</span></div><div class="pai-sec-body" style="display:block;"><div class="pai-skel-line" style="width:95%;"></div><div class="pai-skel-line" style="width:82%;"></div><div class="pai-skel-line" style="width:68%;"></div></div></div>
@@ -2836,15 +2840,15 @@ table.atbl tr:last-child td{border-bottom:none;}
         <div id="elPaiError3" style="display:none;">
           <div class="pai-error-card">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
-              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;line-height:18px;font-weight:700;background:var(--crm-20);color:var(--crm-300);padding:3px 10px;border-radius:4px;"> Prospect AI</span>
+              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;line-height:18px;font-weight:600;background:var(--crm-20);color:var(--crm-300);padding:3px 10px;border-radius:4px;"> Prospect AI</span>
             </div>
             <div class="pai-error-title">Match found, but confidence is too low to generate a report</div>
             <div class="pai-error-body">Prospect AI found potential matches for Eleanor Richardson, but the confidence score wasn't high enough to generate a reliable report. Generating a low-confidence report risks surfacing inaccurate information about the wrong person. <strong>No credit was used.</strong></div>
             <ol style="background:var(--platform-5);border-radius:4px;padding:12px 16px 12px 32px;margin:0 0 20px;display:flex;flex-direction:column;gap:6px;">
-              <li style="font-size:14px;color:var(--platform-100);line-height:20px;">Confirm her full name spelling — even small variations affect match confidence</li>
-              <li style="font-size:14px;color:var(--platform-100);line-height:20px;">Add or verify city, state, and ZIP — location data is a primary matching signal</li>
-              <li style="font-size:14px;color:var(--platform-100);line-height:20px;">Add employer, job title, or LinkedIn URL if available</li>
-              <li style="font-size:14px;color:var(--platform-100);line-height:20px;">Try enriching again once the profile is more complete</li>
+              <li style="font-size:14px;color:var(--platform-100);line-height:18px;">Confirm her full name spelling — even small variations affect match confidence</li>
+              <li style="font-size:14px;color:var(--platform-100);line-height:18px;">Add or verify city, state, and ZIP — location data is a primary matching signal</li>
+              <li style="font-size:14px;color:var(--platform-100);line-height:18px;">Add employer, job title, or LinkedIn URL if available</li>
+              <li style="font-size:14px;color:var(--platform-100);line-height:18px;">Try enriching again once the profile is more complete</li>
             </ol>
             <div class="pai-error-actions">
               <button class="btn-primary" onclick="elConTab(document.querySelectorAll('#view-eleanor .con-tab')[1],'profile')">Update profile data</button>
@@ -2852,7 +2856,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             </div>
             <!-- Demo toggle (hidden) -->
             <div style="margin-top:16px;padding-top:16px;border-top:1px dashed var(--platform-20);display:none;">
-              <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--platform-40);margin-bottom:8px;">Prototype: simulate failure states</div>
+              <div style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;color:var(--platform-40);margin-bottom:8px;">Prototype: simulate failure states</div>
               <div class="pai-error-demo-bar">
                 <button class="btn-secondary" style="font-size:12px;height:28px;padding:0 10px;" onclick="showPaiError(1)">Scenario 1 — Credits exhausted</button>
                 <button class="btn-secondary" style="font-size:12px;height:28px;padding:0 10px;" onclick="showPaiError(2)">Scenario 2 — No match</button>
@@ -2862,7 +2866,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             </div>
           </div>
           <!-- Ghost skeleton -->
-          <div style="display:grid;grid-template-columns:1fr 350px;gap:16px;align-items:start;margin-top:20px;">
+          <div style="display:grid;grid-template-columns:1fr 360px;gap:16px;align-items:start;margin-top:20px;">
             <div style="display:flex;flex-direction:column;gap:16px;">
             <div class="pai-sec pai-ghost"><div class="pai-sec-hd"><span class="pai-sec-title">Executive Summary</span></div><div class="pai-sec-body" style="display:block;"><div class="pai-skel-line" style="width:95%;"></div><div class="pai-skel-line" style="width:82%;"></div><div class="pai-skel-line" style="width:68%;"></div></div></div>
             <div class="pai-sec pai-ghost"><div class="pai-sec-hd"><span class="pai-sec-title">Capacity Assessment</span></div><div class="pai-sec-body" style="display:block;"><div class="pai-skel-line" style="width:95%;"></div><div class="pai-skel-line" style="width:82%;"></div><div class="pai-skel-line" style="width:68%;"></div></div></div>
@@ -2883,14 +2887,14 @@ table.atbl tr:last-child td{border-bottom:none;}
         <div id="elPaiError4" style="display:none;">
           <div class="pai-error-card">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
-              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;line-height:18px;font-weight:700;background:var(--crm-20);color:var(--crm-300);padding:3px 10px;border-radius:4px;"> Prospect AI</span>
+              <span style="display:inline-flex;align-items:center;gap:6px;font-size:14px;line-height:18px;font-weight:600;background:var(--crm-20);color:var(--crm-300);padding:3px 10px;border-radius:4px;"> Prospect AI</span>
             </div>
             <div class="pai-error-title">Prospect AI is temporarily unavailable</div>
             <div class="pai-error-body">The enrichment service is experiencing high demand right now. This is temporary — your request wasn't processed and <strong>no credit was used.</strong></div>
             <ol style="background:var(--platform-5);border-radius:4px;padding:12px 16px 12px 32px;margin:0 0 20px;display:flex;flex-direction:column;gap:6px;">
-              <li style="font-size:14px;color:var(--platform-100);line-height:20px;">Wait a few minutes, then try again — this typically resolves on its own.</li>
-              <li style="font-size:14px;color:var(--platform-100);line-height:20px;">If it persists after 15 minutes, try refreshing the page.</li>
-              <li style="font-size:14px;color:var(--platform-100);line-height:20px;">Still seeing this? Contact support — we track repeated 429s and will follow up.</li>
+              <li style="font-size:14px;color:var(--platform-100);line-height:18px;">Wait a few minutes, then try again — this typically resolves on its own.</li>
+              <li style="font-size:14px;color:var(--platform-100);line-height:18px;">If it persists after 15 minutes, try refreshing the page.</li>
+              <li style="font-size:14px;color:var(--platform-100);line-height:18px;">Still seeing this? Contact support — we track repeated 429s and will follow up.</li>
             </ol>
             <div class="pai-error-actions">
               <button class="btn-primary" onclick="runEleanorPai()"> Try again</button>
@@ -2898,7 +2902,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             </div>
             <!-- Demo toggle (hidden) -->
             <div style="margin-top:16px;padding-top:16px;border-top:1px dashed var(--platform-20);display:none;">
-              <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--platform-40);margin-bottom:8px;">Prototype: simulate failure states</div>
+              <div style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;color:var(--platform-40);margin-bottom:8px;">Prototype: simulate failure states</div>
               <div class="pai-error-demo-bar">
                 <button class="btn-secondary" style="font-size:12px;height:28px;padding:0 10px;" onclick="showPaiError(1)">Scenario 1 — Credits exhausted</button>
                 <button class="btn-secondary" style="font-size:12px;height:28px;padding:0 10px;" onclick="showPaiError(2)">Scenario 2 — No match</button>
@@ -2908,7 +2912,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             </div>
           </div>
           <!-- Ghost skeleton -->
-          <div style="display:grid;grid-template-columns:1fr 350px;gap:16px;align-items:start;margin-top:20px;">
+          <div style="display:grid;grid-template-columns:1fr 360px;gap:16px;align-items:start;margin-top:20px;">
             <div style="display:flex;flex-direction:column;gap:16px;">
             <div class="pai-sec pai-ghost"><div class="pai-sec-hd"><span class="pai-sec-title">Executive Summary</span></div><div class="pai-sec-body" style="display:block;"><div class="pai-skel-line" style="width:95%;"></div><div class="pai-skel-line" style="width:82%;"></div><div class="pai-skel-line" style="width:68%;"></div></div></div>
             <div class="pai-sec pai-ghost"><div class="pai-sec-hd"><span class="pai-sec-title">Capacity Assessment</span></div><div class="pai-sec-body" style="display:block;"><div class="pai-skel-line" style="width:95%;"></div><div class="pai-skel-line" style="width:82%;"></div><div class="pai-skel-line" style="width:68%;"></div></div></div>
@@ -2926,7 +2930,7 @@ table.atbl tr:last-child td{border-bottom:none;}
         </div>
 
         <div id="elPaiFullReport" style="display:none;margin-bottom:16px;">
-        <div style="display:grid;grid-template-columns:1fr 350px;gap:16px;align-items:start;">
+        <div style="display:grid;grid-template-columns:1fr 360px;gap:16px;align-items:start;">
           <div style="display:flex;flex-direction:column;gap:16px;">
             <div style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);">
               <div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:16px;">
@@ -2939,10 +2943,10 @@ table.atbl tr:last-child td{border-bottom:none;}
                 </div>
               </div>
               <div style="display:flex;gap:8px;align-items:center;">
-                <button class="btn-primary" onclick="showOutreachModal('eleanor')" style="font-size:13px;height:32px;">Draft Email</button>
-                <button class="btn-secondary" onclick="createTaskToast('Call Eleanor Richardson &mdash; major donor cultivation','Phone','Cultivation')" style="font-size:13px;height:32px;">Create Task</button>
-                <button class="btn-secondary" style="font-size:13px;height:32px;">Export PDF</button>
-                <button class="btn-secondary" onclick="reEnrichEleanor()" style="font-size:13px;height:32px;">Re-enrich profile</button>
+                <button class="btn-primary" onclick="showOutreachModal('eleanor')" style="font-size:14px;line-height:18px;font-weight:600;height:32px;">Draft Email</button>
+                <button class="btn-secondary" onclick="createTaskToast('Call Eleanor Richardson &mdash; major donor cultivation','Phone','Cultivation')" style="font-size:14px;line-height:18px;font-weight:600;height:32px;">Create Task</button>
+                <button class="btn-secondary" style="font-size:14px;line-height:18px;font-weight:600;height:32px;">Export PDF</button>
+                <button class="btn-secondary" onclick="reEnrichEleanor()" style="font-size:14px;line-height:18px;font-weight:600;height:32px;">Re-enrich profile</button>
               </div>
               <div style="display:flex;align-items:baseline;justify-content:space-between;margin-top:12px;">
                 <div style="font-style:italic;font-size:12px;color:var(--platform-80);">AI-generated content may be inaccurate or misleading. Verify outputs before using them for anything critical.</div>
@@ -3070,7 +3074,7 @@ table.atbl tr:last-child td{border-bottom:none;}
               <div class="sidebar-card-body">
                 <div class="snapshot-row"><span class="snapshot-lbl">Gift Capacity</span><span class="snapshot-val" style="font-weight:500;">$25k&ndash;$50k</span></div>
                 <div class="snapshot-row"><span class="snapshot-lbl">Optimal Ask</span><span class="snapshot-val" style="font-weight:500;">$25,000</span></div>
-                <div class="snapshot-row"><span class="snapshot-lbl">Prospect Score</span><span style="background:var(--crm-20);color:var(--crm-300);font-size:12px;font-weight:700;padding:2px 8px;border-radius:4px;">96</span></div>
+                <div class="snapshot-row"><span class="snapshot-lbl">Prospect Score</span><span style="background:var(--crm-20);color:var(--crm-300);font-size:12px;font-weight:600;padding:2px 8px;border-radius:4px;">96</span></div>
                 <div class="snapshot-row"><span class="snapshot-lbl">Last Gift</span><span class="snapshot-val" style="font-weight:500;">Dec 18, 2025</span></div>
               </div>
             </div>
@@ -5579,7 +5583,7 @@ function showNoteView() {
       var g = data.grant;
       rows = [['Grant Ask Amount', g.askAmount || '\u2014'], ['Grant Award Amount', g.awardAmount || '\u2014'], ['Grant Status', g.status], ['Grant Type', g.type], ['Progress Report Deadline', g.progressDeadline || '\u2014'], ['Progress Report Submission Date', g.progressSubmitted || '\u2014'], ['Proposal Deadline', g.proposalDeadline || '\u2014'], ['Proposal Submission Date', g.proposalSubmitted || '\u2014']];
     }
-    customHtml = '<div style="font-size:12px;font-weight:700;color:var(--platform-60);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px;">' + data.noteType + ' Info</div>' +
+    customHtml = '<div style="font-size:12px;font-weight:500;color:var(--platform-60);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px;">' + data.noteType + ' Info</div>' +
       '<div style="display:grid;grid-template-columns:1fr 1fr;gap:0 32px;">' + rows.map(function(r) {
         return '<div class="tlv-row"><span class="tlv-label">' + r[0] + '</span><span class="tlv-value">' + r[1] + '</span></div>';
       }).join('') + '</div>';
@@ -5832,7 +5836,7 @@ function openAddressEdit(idx) {
       '<div class="form-group"><input class="form-input" type="text" value="' + addr.state + '" placeholder=" "><label class="form-label form-label-float">State</label></div>' +
       '<div class="form-group"><input class="form-input" type="text" value="' + addr.zip + '" placeholder=" "><label class="form-label form-label-float">ZIP</label></div>' +
     '</div>' +
-    '<label style="display:flex;align-items:center;gap:8px;font-size:14px;color:var(--platform-100);cursor:pointer;"><input type="checkbox"' + (addr.primary ? ' checked' : '') + '> Set as primary address</label>';
+    '<label style="display:flex;align-items:center;gap:8px;font-size:14px;line-height:18px;color:var(--platform-100);cursor:pointer;"><input type="checkbox"' + (addr.primary ? ' checked' : '') + '> Set as primary address</label>';
   document.getElementById('addressEditDeleteWrap').innerHTML = isNew ? '' : '<button class="contact-edit-delete" onmouseenter="showFixedTip(this)" onmouseleave="hideFixedTip(this)" onclick="showDeleteConfirm(\'address\')"><i class="fa-solid fa-trash-can"></i><span class="addr-del-tip" style="opacity:0;position:fixed;background:black;color:var(--white);font-family:var(--font);font-size:12px;font-weight:400;padding:4px 8px;border-radius:3px;white-space:nowrap;pointer-events:none;transition:opacity .12s;z-index:10001;">Delete</span></button>';
   document.getElementById('addressEditOverlay').classList.add('active');
 }
@@ -5888,8 +5892,8 @@ if (isOrganizationAccount) {
 }
 function removeRelationshipManager() {
   var strip = document.getElementById('rmStrip');
-  strip.innerHTML = '<span style="font-size:14px;color:var(--platform-80);">No Relationship Manager assigned</span>' +
-    '<span style="font-size:14px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration=\'underline\'" onmouseout="this.style.textDecoration=\'none\'" onclick="openRMModal(\'assign\')">Assign</span>';
+  strip.innerHTML = '<span style="font-size:14px;line-height:18px;color:var(--platform-80);">No Relationship Manager assigned</span>' +
+    '<button type="button" class="btn-tertiary-sm" onclick="openRMModal(\'assign\')">Assign</button>';
   showToast('<i class="fa-solid fa-circle-check" style="font-size:20px;color:var(--crm-100);flex-shrink:0;"></i> <span>Relationship Manager removed</span>');
 }
 function openRMModal(mode) {
@@ -5912,11 +5916,11 @@ function confirmRMAssign() {
   if (!name) return;
   var wasAssigned = document.getElementById('rmName') !== null;
   var strip = document.getElementById('rmStrip');
-  strip.innerHTML = '<span style="font-size:14px;font-weight:600;color:var(--platform-100);" id="rmName">' + name + '</span>' +
+  strip.innerHTML = '<span style="font-size:14px;line-height:18px;font-weight:500;color:var(--platform-100);" id="rmName">' + name + '</span>' +
     '<div style="display:flex;align-items:center;gap:12px;">' +
-    '<span style="font-size:14px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration=\'underline\'" onmouseout="this.style.textDecoration=\'none\'" onclick="openRMModal(\'reassign\')">Reassign</span>' +
+    '<button type="button" class="btn-tertiary-sm" onclick="openRMModal(\'reassign\')">Reassign</button>' +
     '<span style="color:var(--platform-20);">|</span>' +
-    '<span style="font-size:14px;font-weight:700;color:var(--crm-100);cursor:pointer;text-decoration:none;" onmouseover="this.style.textDecoration=\'underline\'" onmouseout="this.style.textDecoration=\'none\'" onclick="removeRelationshipManager()">Remove</span>' +
+    '<button type="button" class="btn-tertiary-sm" onclick="removeRelationshipManager()">Remove</button>' +
     '</div>';
   document.getElementById('assignRMOverlay').style.display = 'none';
   showToast('<i class="fa-solid fa-circle-check" style="font-size:20px;color:var(--crm-100);flex-shrink:0;"></i> <span>Relationship Manager ' + (wasAssigned ? 'reassigned' : 'assigned') + '</span>');
