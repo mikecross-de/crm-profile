@@ -769,7 +769,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .di-action{font-family:var(--font);font-size:14px;font-weight:600;padding:4px 12px;border-radius:4px;cursor:pointer;border:none;flex-shrink:0;white-space:nowrap;line-height:18px;background:none;margin:-4px 0px;color:var(--crm-100);transition:background .12s;}
 .di-action:hover{background:var(--crm-20);}
 .di-footer{display:flex;justify-content:space-between;align-items:center;padding-top:12px;margin-top:4px;position:relative;}
-.di-more{font-size:16px;font-weight:600;color:var(--crm-100);cursor:pointer;}
+.di-more{background:none;border:none;padding:0;font-family:var(--font);font-size:16px;font-weight:600;color:var(--crm-100);cursor:pointer;}
 .di-more:hover{text-decoration:underline;}
 .di-powered{font-size:12px;color:var(--platform-60);}
 .rel-summary-title{font-size:20px;font-weight:700;line-height:24px;color:var(--platform-100);margin-bottom:12px;}
@@ -1360,7 +1360,7 @@ table.atbl tr:last-child td{border-bottom:none;}
             </div>
           </div>
           <div class="di-footer" style="justify-content:center;">
-            <span class="di-more" id="el-di-toggle" onclick="var ex=document.getElementById('el-di-extra');var showing=ex.style.display==='none';ex.style.display=showing?'block':'none';this.textContent=showing?'Show less':'View 3 more scores';">View 3 more scores</span>
+            <button type="button" class="btn-tertiary" id="el-di-toggle" onclick="var ex=document.getElementById('el-di-extra');var showing=ex.style.display==='none';ex.style.display=showing?'block':'none';this.textContent=showing?'Show less':'View 3 more scores';">View 3 more scores</button>
           </div>
         </div>
             <!-- Giving Summary -->
