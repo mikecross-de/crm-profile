@@ -116,7 +116,7 @@ button{font-family:var(--font);cursor:pointer;}
 .left-nav.collapsed .nav-sub{display:none!important;}
 .sub-item{display:block;padding:7px 12px 7px 46px;font-size:13px;color:var(--platform-80);cursor:pointer;transition:background 0.1s;}
 .sub-item:hover{background:var(--platform-5);}
-.nav-collapse-btn{position:absolute;top:10px;right:-13px;width:24px;height:24px;background:var(--white);border:0.667px solid var(--platform-10);border-radius:50%;box-shadow:0px 2px 4px rgba(0,0,0,0.14);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;color:var(--platform-80);font-size:10px;}
+.nav-collapse-btn{position:absolute;top:10px;right:-13px;width:24px;height:24px;background:var(--white);border:0.667px solid var(--platform-10);border-radius:50%;box-shadow:0px 2px 4px rgba(0,0,0,0.14);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:250;color:var(--platform-80);font-size:10px;}
 .nav-collapse-btn:hover{background:var(--platform-5);}
 .nav-collapse-btn i{transition:transform 0.2s ease;}
 .left-nav.collapsed .nav-collapse-btn i{transform:rotate(180deg);}
@@ -717,7 +717,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .con-id{font-size:16px;color:var(--platform-80);font-weight:400;}
 .con-status-badge{font-size:12px;font-weight:600;padding:2px 8px;border-radius:4px;background:var(--crm-20);color:var(--crm-300);}
 .con-status-badge.lapsed{background:var(--red-20);color:var(--red-300);}
-.con-contact-row{display:flex;align-items:center;gap:16px;font-size:16px;color:var(--platform-80);flex-wrap:wrap;margin-top:4px;}
+.con-contact-row{display:flex;align-items:center;column-gap:16px;row-gap:10px;font-size:16px;color:var(--platform-80);flex-wrap:wrap;margin-top:6px;}
 .con-contact-item{display:flex;align-items:center;gap:6px;}
 .con-contact-item i{font-size:12px;color:var(--platform-60);}
 .con-contact-item a{color:var(--crm-100);font-weight:600;text-decoration:none;}
@@ -733,6 +733,25 @@ table.atbl tr:last-child td{border-bottom:none;}
 .con-header-actions{display:flex;gap:8px;flex-shrink:0;margin-left:auto;align-self:center;}
 /* ═══ TABS ═══ */
 .con-tab-bar{display:flex;background:var(--white);border-bottom:1px solid var(--platform-20);padding:0 32px;}
+.con-subline{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:8px;}
+.con-household{display:inline-flex;align-items:center;gap:6px;font-size:15px;color:var(--platform-80);}
+.con-household i{font-size:13px;color:var(--platform-60);}
+.con-household a{color:var(--crm-100);font-weight:600;text-decoration:none;}
+.con-household a:hover{text-decoration:underline;}
+.con-mgr{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--platform-80);background:var(--platform-10);border-radius:20px;padding:3px 12px 3px 3px;}
+.con-mgr-av{width:20px;height:20px;border-radius:50%;background:var(--crm-100);color:var(--white);font-size:10px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
+.con-mgr-label{color:var(--platform-60);font-weight:400;}
+.con-sticky{position:fixed;top:var(--topnav-h);left:var(--nav-width);right:0;height:56px;background:var(--white);border-bottom:1px solid var(--platform-10);display:flex;align-items:center;gap:12px;padding:0 32px;z-index:150;opacity:0;transform:translateY(-6px);pointer-events:none;transition:opacity .16s ease,transform .16s ease;}
+.con-sticky.show{opacity:1;transform:translateY(0);pointer-events:auto;}
+.con-sticky-av{width:32px;height:32px;border-radius:50%;background:var(--platform-10);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--platform-60);flex-shrink:0;}
+.con-sticky-name{font-size:18px;font-weight:700;color:var(--platform-100);white-space:nowrap;flex-shrink:0;}
+.con-sticky-sep{width:1px;height:20px;background:var(--platform-20);flex-shrink:0;}
+.con-sticky-meta{font-size:14px;color:var(--platform-80);display:inline-flex;align-items:center;gap:6px;white-space:nowrap;flex-shrink:0;}
+.con-sticky-meta i{font-size:12px;color:var(--platform-60);}
+.con-sticky-meta a{color:var(--crm-100);text-decoration:none;font-weight:600;}
+.con-sticky-addr{font-size:14px;color:var(--platform-80);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:inline-flex;align-items:center;gap:6px;min-width:60px;flex-shrink:1;}
+.con-sticky-addr i{font-size:12px;color:var(--platform-60);flex-shrink:0;}
+.con-sticky-actions{margin-left:auto;display:flex;gap:8px;flex-shrink:0;align-items:center;}
 .con-tab{padding:0 32px;height:48px;display:flex;align-items:center;gap:6px;font-size:16px;font-weight:400;color:var(--platform-80);cursor:pointer;border-bottom:2px solid transparent;border-top:none;border-left:none;border-right:none;background:none;font-family:var(--font);transition:all .15s;white-space:nowrap;margin-bottom:-1px;}
 .con-tab:hover{color:var(--platform-100);}
 .con-tab.active{color:var(--platform-100);font-weight:600;border-bottom-color:var(--crm-100);}
@@ -1258,6 +1277,41 @@ table.atbl tr:last-child td{border-bottom:none;}
   <main class="main-content" id="main" role="main">
     <div class="view active" id="view-eleanor">
       <div class="main-content" style="overflow-y:auto;height:100%;">
+    <!-- CONDENSED STICKY HEADER (appears on scroll) -->
+    <div class="con-sticky" id="conSticky" aria-hidden="true">
+      <div class="con-sticky-av">ER</div>
+      <span class="con-sticky-name">Eleanor Richardson</span>
+      <span class="con-sticky-sep"></span>
+      <span class="con-sticky-meta"><i class="fa-solid fa-hashtag"></i> 2089</span>
+      <span class="con-sticky-addr"><i class="fa-solid fa-location-dot"></i> 1240 Winding Creek Rd, Carmel, IN 46032</span>
+      <span class="con-sticky-meta"><i class="fa-solid fa-envelope"></i> <a href="#" onclick="event.preventDefault()">eleanor.richardson@email.com</a></span>
+      <div class="con-sticky-actions">
+        <div class="dropdown" id="stickyKebabDropdown" style="display:inline-flex;">
+          <div class="dropdown-overlay" onclick="document.getElementById('stickyKebabDropdown').classList.remove('open')"></div>
+          <button class="btn-secondary" style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;font-size:14px;font-weight:700;" onclick="toggleHeaderDropdown('stickyKebabDropdown', this)">More <i class="fa-solid fa-caret-down" style="font-size:14px;"></i></button>
+          <div class="dropdown-menu" style="right:0;left:auto;min-width:160px;">
+            <button class="dropdown-item" onclick="document.getElementById('stickyKebabDropdown').classList.remove('open');document.getElementById('mergeOverlay').classList.add('active')">Merge</button>
+            <button class="dropdown-item" onclick="document.getElementById('stickyKebabDropdown').classList.remove('open');document.getElementById('changeTypeOverlay').classList.add('active')">Change Type</button>
+            <div class="dd-divider"></div>
+            <button class="dropdown-item" style="color:var(--platform-40);cursor:default;" onclick="event.stopPropagation()" title="You cannot delete this constituent because the timeline has transaction information.">Delete</button>
+          </div>
+        </div>
+        <div class="dropdown" id="stickyNewDropdown">
+          <div class="dropdown-overlay" onclick="document.getElementById('stickyNewDropdown').classList.remove('open')"></div>
+          <button class="btn-primary" style="display:inline-flex;align-items:center;gap:6px;padding:6px 14px;font-size:14px;font-weight:700;" onclick="toggleHeaderDropdown('stickyNewDropdown', this)">New <i class="fa-solid fa-caret-down" style="font-size:14px;"></i></button>
+          <div class="dropdown-menu">
+            <button class="dropdown-item">Donation</button>
+            <button class="dropdown-item">Pledge</button>
+            <button class="dropdown-item">Recurring Donation</button>
+            <button class="dropdown-item">Membership</button>
+            <button class="dropdown-item">Interaction</button>
+            <button class="dropdown-item" onclick="document.getElementById('stickyNewDropdown').classList.remove('open');document.getElementById('newTaskOverlay').classList.add('active')">Task</button>
+            <button class="dropdown-item" onclick="document.getElementById('stickyNewDropdown').classList.remove('open');openNotePage(null,'create')">Note</button>
+            <button class="dropdown-item" onclick="document.getElementById('stickyNewDropdown').classList.remove('open');openNewRel()">Relationship</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- CONSTITUENT HEADER -->
     <div class="con-header">
       <div class="con-header-top">
@@ -1279,7 +1333,9 @@ table.atbl tr:last-child td{border-bottom:none;}
             <span class="con-contact-item"><i class="fa-solid fa-hashtag"></i> <span class="con-id">2089</span></span>
             <span class="con-contact-item"><i class="fa-solid fa-envelope"></i> <a href="#">eleanor.richardson@email.com</a></span>
             <span class="con-contact-item" style="position:relative;" onmouseenter="this.querySelector('.phone-type-tip').style.opacity='1'" onmouseleave="this.querySelector('.phone-type-tip').style.opacity='0'"><i class="fa-solid fa-phone"></i> (317) 555-0294<span class="phone-type-tip" style="opacity:0;position:absolute;top:calc(100% + 6px);left:50%;transform:translateX(-50%);background:black;color:var(--white);font-family:var(--font);font-size:14px;line-height:18px;font-weight:400;padding:4px 8px;border-radius:3px;white-space:nowrap;pointer-events:none;transition:opacity .12s;z-index:10;">Mobile</span></span>
-            <span class="con-contact-item"><i class="fa-solid fa-location-dot"></i> 1240 Winding Creek Rd, Carmel, IN<span class="copy-addr"><button class="copy-addr-btn" onclick="copyFullAddress(event, this)" aria-label="Copy address"><i class="fa-regular fa-copy"></i></button><span class="copy-addr-tip" aria-hidden="true">Copy address</span></span><span id="copyLive" aria-live="polite" class="sr-only"></span></span>
+            <span class="con-contact-item"><i class="fa-solid fa-location-dot"></i> 1240 Winding Creek Rd, Carmel, IN 46032<span class="copy-addr"><button class="copy-addr-btn" onclick="copyFullAddress(event, this)" aria-label="Copy address"><i class="fa-regular fa-copy"></i></button><span class="copy-addr-tip" aria-hidden="true">Copy address</span></span><span id="copyLive" aria-live="polite" class="sr-only"></span></span>
+            <span class="con-contact-item"><i class="fa-solid fa-house"></i> <a href="#" onclick="event.preventDefault()">The Richardson Household</a></span>
+            <span class="con-contact-item"><i class="fa-solid fa-user"></i> Managed by <a href="#" onclick="event.preventDefault()">Tim Paris</a></span>
           </div>
         </div>
         <div class="con-header-actions">
@@ -5969,7 +6025,7 @@ function deleteRelationship(item) {
 function toggleHeaderDropdown(id, btn) {
   var dropdown = document.getElementById(id);
   var isOpen = dropdown.classList.contains('open');
-  document.querySelectorAll('#kebabDropdown.open,#newDropdown.open').forEach(function(d) { d.classList.remove('open'); });
+  document.querySelectorAll('#kebabDropdown.open,#newDropdown.open,#stickyKebabDropdown.open,#stickyNewDropdown.open').forEach(function(d) { d.classList.remove('open'); });
   if (isOpen) return;
   var menu = dropdown.querySelector('.dropdown-menu');
   var rect = btn.getBoundingClientRect();
@@ -6084,5 +6140,25 @@ document.addEventListener('click', function(e) {
           <span style="font-size:14px;font-weight:400;color:var(--penny-100);cursor:pointer;">More suggestions</span>
         </div>
       </div></div>
+<script>
+/* Condensed sticky constituent header: show once the full header's name scrolls above the content-area top. Scroller-agnostic (uses the name's viewport rect). */
+(function(){
+  function initStickyHeader(){
+    var sticky = document.getElementById('conSticky');
+    var name = document.querySelector('#view-eleanor .con-name');
+    if(!sticky || !name) return;
+    var topLimit = 68; // just below the 60px top nav
+    var onScroll = function(){
+      var show = name.getBoundingClientRect().bottom < topLimit;
+      sticky.classList.toggle('show', show);
+      sticky.setAttribute('aria-hidden', show ? 'false' : 'true');
+    };
+    document.addEventListener('scroll', onScroll, true); // capture: catches scroll from whichever container scrolls
+    onScroll();
+  }
+  if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', initStickyHeader); }
+  else { initStickyHeader(); }
+})();
+</script>
 </body>
 </html>
