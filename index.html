@@ -1092,8 +1092,7 @@ table.atbl tr:last-child td{border-bottom:none;}
 .pai-conf [data-conf-badge]{margin-left:12px;}
 .pai-conf .g-infotip{margin-left:6px;}
 .pai-conf-lbl{font-size:14px;line-height:18px;font-weight:600;color:var(--platform-100);}
-.pai-conf-note{font-size:14px;line-height:18px;color:var(--platform-80);align-items:flex-start;gap:6px;}
-.pai-conf-note i{font-size:14px;line-height:18px;flex-shrink:0;}
+.pai-conf-note{font-size:14px;line-height:18px;font-style:italic;color:var(--platform-80);}
 /* Grove Alert, small, info (blue tone): 16px pad, 20px glyph, 12px gap, 14/18 body */
 .g-alert{display:flex;align-items:flex-start;gap:12px;padding:16px;border-radius:4px;background:var(--blue-20);max-width:604px;box-sizing:border-box;}
 .g-alert > i{font-size:20px;line-height:18px;height:18px;display:flex;align-items:center;color:var(--blue-200);flex-shrink:0;}
@@ -3068,14 +3067,14 @@ table.atbl tr:last-child td{border-bottom:none;}
         <div style="display:grid;grid-template-columns:1fr 360px;gap:16px;align-items:start;">
           <div style="display:flex;flex-direction:column;gap:16px;">
             <div style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);">
-              <div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:16px;">
+              <div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:20px;">
                 <div style="flex:1;">
                   <div style="font-size:20px;line-height:24px;font-weight:700;color:var(--platform-100);margin-bottom:6px;">Prospect AI report</div>
                   <div class="pai-conf" id="elPaiConf"><span style="font-size:14px;line-height:18px;color:var(--platform-80);">Comprehensive intelligence for <strong style="color:var(--platform-100);">Eleanor Richardson</strong></span>
                     <span class="g-badge sm green" data-conf-badge>High match</span>
                     <span class="g-infotip" tabindex="0" role="button" aria-label="About the match rating" aria-describedby="elPaiConfTip"><i class="fa-regular fa-circle-info"></i><span class="g-tip" role="tooltip" id="elPaiConfTip" data-conf-tip></span></span>
                   </div>
-                  <div class="pai-conf-note" data-conf-note style="display:none;margin-top:8px;"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true" data-conf-note-icon></i><span data-conf-note-text></span></div>
+                  <div class="pai-conf-note" data-conf-note style="margin-top:10px;"><span data-conf-note-text></span></div>
                 </div>
                 <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0;">
                   <span style="font-size:12px;color:var(--platform-80);">Last updated: <span class="pai-date-dynamic">Apr 10, 2026</span></span>
@@ -3087,8 +3086,6 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <button class="btn-secondary">Export PDF</button>
                 <button class="btn-secondary" onclick="reEnrichEleanor()">Re-enrich profile</button>
               </div>
-              <!-- AI accuracy note: was 12px italic; now 14px italic body text so it gets read -->
-              <div style="margin-top:16px;font-size:14px;line-height:18px;font-style:italic;color:var(--platform-100);">AI can get things wrong or out of date. Open the linked sources to check facts before you use them in outreach.</div>
               <!-- Report feedback (one per user per report; resets when the report is re-enriched) -->
               <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin:10px 0 -6px;"><!-- -6px: the 30px IconButtons overhang into the padding so the text sits on the tile's 24px bottom pad -->
                 <div class="pai-fb" id="elPaiFb">
@@ -5476,9 +5473,10 @@ function amyGsToggle2(btn, mode) {
 /* ── Prospect AI: identity confidence + report feedback ── */
 var PAI_CONF_BASE = 'How sure we are this report is about the right person, based on how well the location, employer and giving history match your constituent.';
 var PAI_CONF = {
-  high:   { tone:'green',  label:'High match',   note:'' },
-  medium: { tone:'yellow', label:'Medium match', note:'Some matching evidence. Check the sources before outreach.' },
-  low:    { tone:'orange', label:'Low match',    note:'Closest match we found, but the evidence is thin. Check the sources before you use this report.' }
+  /* One line per level: the match read + the AI-accuracy caution, always shown (Best, 11-20: combine them, keep the space at High) */
+  high:   { tone:'green',  label:'High match',   note:'AI can be wrong. Check the sources before outreach.' },
+  medium: { tone:'yellow', label:'Medium match', note:'AI can be wrong and some details may not match. Check the sources before outreach.' },
+  low:    { tone:'orange', label:'Low match',    note:'AI can be wrong and this may not be the right person. Check the sources before outreach.' }
 };
 function setPaiConfidence(level) {
   var c = PAI_CONF[level]; if (!c) return;
@@ -5488,8 +5486,6 @@ function setPaiConfidence(level) {
   document.querySelector('#elPaiConf [data-conf-tip]').textContent = PAI_CONF_BASE;
   var n = document.querySelector('#elPaiFullReport [data-conf-note]');
   n.querySelector('[data-conf-note-text]').textContent = c.note;
-  n.querySelector('[data-conf-note-icon]').style.color = 'var(--' + c.tone + '-300)';
-  n.style.display = c.note ? 'flex' : 'none';
 }
 document.addEventListener('DOMContentLoaded', function(){ setPaiConfidence('high'); });
 var paiFbOpener = null;
