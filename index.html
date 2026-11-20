@@ -1138,6 +1138,14 @@ table.atbl tr:last-child td{border-bottom:none;}
 .g-textarea:hover{border-color:var(--platform-100);}
 .g-textarea:focus{outline:none;border:2px solid var(--crm-100);padding:15px;}
 .g-helper{font-size:14px;line-height:18px;color:var(--platform-100);margin-top:4px;padding-left:16px;}
+/* Prototype-only floating controls (not product UI) */
+.proto-float{position:fixed;right:24px;bottom:24px;z-index:9500;background:var(--platform-100);color:var(--white);border-radius:4px;padding:12px 16px 16px;box-shadow:0 4px 12px rgba(0,0,0,0.25);font-family:var(--font);}
+.proto-float-hd{font-size:12px;line-height:18px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--yellow-20);margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.proto-float-lbl{font-size:14px;line-height:18px;font-weight:600;margin-bottom:8px;}
+.proto-float-opts{display:flex;gap:8px;}
+.proto-float .btn-secondary[aria-pressed="true"]{background:var(--white);color:var(--platform-100);border-color:var(--white);}
+.proto-float .btn-secondary[aria-pressed="false"]{background:transparent;color:var(--white);border-color:var(--platform-60);}
+.proto-float .btn-secondary[aria-pressed="false"]:hover{border-color:var(--white);}
 /* PROSPECT AI ENRICHMENT MODAL */
 .pai-enrich-overlay{position:fixed;inset:0;z-index:9999;background:rgba(31,27,46,0.58);display:none;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(3px);}
 .pai-enrich-overlay.active{display:flex;}
@@ -3047,6 +3055,16 @@ table.atbl tr:last-child td{border-bottom:none;}
         </div>
 
         <div id="elPaiFullReport" style="display:none;margin-bottom:16px;">
+        <!-- Demo: identity-confidence switcher — floating, outside the report UI (prototype only) -->
+        <div class="proto-float" role="group" aria-label="Prototype controls">
+          <div class="proto-float-hd"><i class="fa-solid fa-flask" aria-hidden="true"></i> Prototype only</div>
+          <div class="proto-float-lbl">Identity match</div>
+          <div class="proto-float-opts">
+            <button type="button" class="btn-secondary btn-sm" data-proto-conf="high" aria-pressed="true" onclick="setPaiConfidence('high')">High</button>
+            <button type="button" class="btn-secondary btn-sm" data-proto-conf="medium" aria-pressed="false" onclick="setPaiConfidence('medium')">Medium</button>
+            <button type="button" class="btn-secondary btn-sm" data-proto-conf="low" aria-pressed="false" onclick="setPaiConfidence('low')">Low</button>
+          </div>
+        </div>
         <div style="display:grid;grid-template-columns:1fr 360px;gap:16px;align-items:start;">
           <div style="display:flex;flex-direction:column;gap:16px;">
             <div style="background:var(--white);border-radius:4px;padding:16px 24px 24px;border:1px solid var(--platform-10);">
@@ -3072,7 +3090,7 @@ table.atbl tr:last-child td{border-bottom:none;}
               <!-- AI accuracy note: was 12px italic; now 14px italic body text so it gets read -->
               <div style="margin-top:16px;font-size:14px;line-height:18px;font-style:italic;color:var(--platform-100);">AI can get things wrong or out of date. Open the linked sources to check facts before you use them in outreach.</div>
               <!-- Report feedback (one per user per report; resets when the report is re-enriched) -->
-              <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:16px;">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin:10px 0 -6px;"><!-- -6px: the 30px IconButtons overhang into the padding so the text sits on the tile's 24px bottom pad -->
                 <div class="pai-fb" id="elPaiFb">
                   <span class="pai-fb-q" data-fb-q>Is this report helpful?</span>
                   <button type="button" class="g-iconbtn" data-fb="up" aria-label="Helpful" aria-pressed="false" onclick="paiFeedbackUp()"><i class="fa-regular fa-thumbs-up"></i><span class="g-tip" aria-hidden="true">Helpful</span></button>
@@ -3081,16 +3099,7 @@ table.atbl tr:last-child td{border-bottom:none;}
                 </div>
                 <span style="font-size:12px;line-height:18px;color:var(--platform-80);white-space:nowrap;">Powered by <span style="color:var(--platform-100);font-weight:600;">Dataro</span></span>
               </div>
-              <!-- Demo: identity-confidence switcher (prototype only) -->
-              <div style="margin-top:16px;padding-top:16px;border-top:1px dashed var(--platform-20);">
-                <div style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;color:var(--platform-60);margin-bottom:8px;">Prototype: identity match</div>
-                <div style="display:flex;gap:8px;flex-wrap:wrap;">
-                  <button class="btn-secondary btn-sm" onclick="setPaiConfidence('high')">High</button>
-                  <button class="btn-secondary btn-sm" onclick="setPaiConfidence('medium')">Medium</button>
-                  <button class="btn-secondary btn-sm" onclick="setPaiConfidence('low')">Low</button>
-                </div>
-              </div>
-            </div>
+                          </div>
             <!-- Executive Summary -->
             <div class="pai-sec">
               <div class="pai-sec-hd" onclick="this.classList.toggle('collapsed')">
@@ -5475,6 +5484,7 @@ function setPaiConfidence(level) {
   var c = PAI_CONF[level]; if (!c) return;
   var b = document.querySelector('#elPaiConf [data-conf-badge]');
   b.className = 'g-badge sm ' + c.tone; b.textContent = c.label;
+  document.querySelectorAll('[data-proto-conf]').forEach(function(x){ x.setAttribute('aria-pressed', x.getAttribute('data-proto-conf') === level ? 'true' : 'false'); });
   document.querySelector('#elPaiConf [data-conf-tip]').textContent = PAI_CONF_BASE;
   var n = document.querySelector('#elPaiFullReport [data-conf-note]');
   n.querySelector('[data-conf-note-text]').textContent = c.note;
