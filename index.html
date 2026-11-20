@@ -1072,6 +1072,72 @@ table.atbl tr:last-child td{border-bottom:none;}
 /* ═══ AUDIT FOOTER ═══ */
 .audit-footer{padding:0;margin-top:8px;display:flex;gap:24px;font-size:14px;line-height:18px;color:var(--platform-80);}
 .audit-item strong{color:var(--platform-80);}
+
+/* ═══ PROSPECT AI: identity confidence + report feedback (2026-11-19, Grove-built) ═══
+   Shape from #proj-dataro-crm thread 1795048482 + Dataro (Nicole) in #bloomerang-dataro-tech:
+   one identity-confidence label per report, one thumbs up/down per user per report. */
+/* Grove Badge, default size (14/18 600, 6px pad, 24px, 4px radius) */
+.g-badge{display:inline-flex;align-items:center;height:24px;box-sizing:border-box;padding:0 6px;border:1px solid transparent;border-radius:4px;font-size:14px;line-height:18px;font-weight:600;white-space:nowrap;}
+.g-badge.sm{height:22px;font-size:12px;line-height:18px;}
+.g-badge.green{background:var(--crm-20);color:var(--crm-200);}
+.g-badge.yellow{background:var(--yellow-20);color:var(--yellow-300);}
+.g-badge.orange{background:var(--orange-20);color:var(--orange-300);}
+/* Grove InfoTip: circle-info Regular 14, platform-60 rest -> 100, no fill, focus ring; Grove Tooltip plate */
+.g-infotip{position:relative;display:inline-flex;align-items:center;justify-content:center;color:var(--platform-60);cursor:help;font-size:14px;line-height:1;border-radius:50%;outline:none;}
+.g-infotip:hover,.g-infotip:focus-visible{color:var(--platform-100);}
+.g-infotip:focus-visible{outline:2px solid var(--crm-100);outline-offset:2px;}
+.g-tip{display:none;position:absolute;left:50%;bottom:calc(100% + 16px);transform:translateX(-50%);width:max-content;max-width:300px;background:var(--platform-100);color:var(--white);font-size:14px;line-height:18px;font-weight:400;padding:8px 16px;border-radius:3px;z-index:300;white-space:normal;text-align:left;pointer-events:none;}
+.g-infotip:hover .g-tip,.g-infotip:focus-visible .g-tip{display:block;}
+.pai-conf{display:flex;align-items:center;flex-wrap:wrap;row-gap:4px;}
+.pai-conf [data-conf-badge]{margin-left:12px;}
+.pai-conf .g-infotip{margin-left:6px;}
+.pai-conf-lbl{font-size:14px;line-height:18px;font-weight:600;color:var(--platform-100);}
+.pai-conf-note{font-size:14px;line-height:18px;color:var(--platform-80);align-items:flex-start;gap:6px;}
+.pai-conf-note i{font-size:14px;line-height:18px;flex-shrink:0;}
+/* Grove Alert, small, info (blue tone): 16px pad, 20px glyph, 12px gap, 14/18 body */
+.g-alert{display:flex;align-items:flex-start;gap:12px;padding:16px;border-radius:4px;background:var(--blue-20);max-width:604px;box-sizing:border-box;}
+.g-alert > i{font-size:20px;line-height:18px;height:18px;display:flex;align-items:center;color:var(--blue-200);flex-shrink:0;}
+.g-alert-body{font-size:14px;line-height:18px;color:var(--platform-100);}
+/* Feedback row */
+.pai-fb{display:flex;align-items:center;gap:4px;min-height:30px;}
+.pai-fb-q{font-size:14px;line-height:18px;color:var(--platform-80);margin-right:4px;}
+.pai-fb-done{font-size:14px;line-height:18px;color:var(--platform-80);margin-left:4px;}
+/* Grove IconButton, small (30px), circular, default tone; selected -> primary + aria-pressed */
+.g-iconbtn{width:30px;height:30px;border-radius:50%;border:none;background:transparent;color:var(--platform-60);display:inline-flex;align-items:center;justify-content:center;font-size:14px;cursor:pointer;padding:0;transition:background .12s,color .12s;position:relative;}
+.g-iconbtn:hover{background:var(--platform-10);color:var(--platform-100);}
+.g-iconbtn:focus-visible{outline:2px solid var(--platform-60);outline-offset:2px;}
+.g-iconbtn[aria-pressed="true"]{color:var(--crm-100);}
+.g-iconbtn:disabled{cursor:default;background:transparent;}
+.g-iconbtn:disabled:not([aria-pressed="true"]){color:var(--platform-20);}
+.g-iconbtn.lg{width:36px;height:36px;font-size:18px;}
+.g-iconbtn .g-tip{bottom:calc(100% + 16px);}
+.g-iconbtn:hover .g-tip,.g-iconbtn:focus-visible .g-tip{display:block;}
+.g-iconbtn:disabled .g-tip{display:none!important;}
+/* Grove Modal (xs 444px): 60% black scrim, 4px radius, Drop Shadow token, 24px header/body/footer, 16px action gap */
+.g-modal-scrim{position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:100000;display:none;align-items:center;justify-content:center;padding:24px;}
+.g-modal-scrim.open{display:flex;}
+.g-modal{width:100%;max-width:444px;background:var(--white);border-radius:4px;box-shadow:0 4px 4px rgba(0,0,0,0.25);font-family:var(--font);}
+.g-modal-hd{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:24px 24px 8px;}
+.g-modal-title{font-size:20px;line-height:24px;font-weight:700;color:var(--platform-100);margin:0;padding-top:6px;}
+.g-modal-hd .g-iconbtn{margin:0 -6px 0 0;}
+.g-modal-body{padding:8px 24px 0;}
+.g-modal-ft{display:flex;justify-content:flex-end;gap:16px;padding:24px;}
+/* Grove RadioGroup: FA regular ring / ring-dot at 20px in a 30px hover circle; body 16/24 labels */
+.g-radio{display:flex;align-items:center;gap:4px;margin-left:-5px;cursor:pointer;font-size:16px;line-height:24px;color:var(--platform-100);}
+.g-radio input{position:absolute;opacity:0;width:1px;height:1px;}
+.g-radio-ring{width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:20px;color:var(--platform-60);flex-shrink:0;}
+.g-radio:hover .g-radio-ring{background:var(--platform-10);}
+.g-radio .fa-circle-dot{display:none;color:var(--crm-100);}
+.g-radio input:checked ~ .g-radio-ring .fa-circle{display:none;}
+.g-radio input:checked ~ .g-radio-ring .fa-circle-dot{display:inline;}
+.g-radio input:focus-visible ~ .g-radio-ring i{outline:2px solid var(--crm-100);outline-offset:2px;border-radius:50%;}
+.g-radio-group{display:flex;flex-direction:column;gap:4px;border:none;margin:0 0 24px;padding:0;}
+/* Grove TextArea, top label: label 16/21 -> 8px -> box (4 rows = 128px, 16px pad, 16/24) -> 4px -> helper 14/18 */
+.g-field-lbl{display:block;font-size:16px;line-height:21px;color:var(--platform-100);margin-bottom:8px;}
+.g-textarea{display:block;width:100%;box-sizing:border-box;height:128px;min-height:128px;max-height:320px;resize:vertical;padding:16px;border:1px solid var(--platform-60);border-radius:4px;font-family:var(--font);font-size:16px;line-height:24px;color:var(--platform-100);background:var(--white);overflow-y:auto;}
+.g-textarea:hover{border-color:var(--platform-100);}
+.g-textarea:focus{outline:none;border:2px solid var(--crm-100);padding:15px;}
+.g-helper{font-size:14px;line-height:18px;color:var(--platform-100);margin-top:4px;padding-left:16px;}
 /* PROSPECT AI ENRICHMENT MODAL */
 .pai-enrich-overlay{position:fixed;inset:0;z-index:9999;background:rgba(31,27,46,0.58);display:none;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(3px);}
 .pai-enrich-overlay.active{display:flex;}
@@ -1407,7 +1473,7 @@ table.atbl tr:last-child td{border-bottom:none;}
           <div class="di-title">Donor Intelligence</div>
           <div class="di-row">
             <div class="di-bar" style="background:var(--crm-100);"></div>
-            <span class="di-next" style="background:var(--crm-20);color:var(--crm-300);">Next Action</span>
+            <span class="di-next" style="background:var(--crm-20);color:var(--crm-200);">Next action</span>
             <div class="di-body">Likely to give again <span style="margin:0 6px 0 4px;">&middot;</span><strong>91 (Very Likely)</strong></div>
             <button class="di-action" onclick="showOutreachModal('eleanor')">Draft Email</button>
           </div>
@@ -2987,7 +3053,11 @@ table.atbl tr:last-child td{border-bottom:none;}
               <div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:16px;">
                 <div style="flex:1;">
                   <div style="font-size:20px;line-height:24px;font-weight:700;color:var(--platform-100);margin-bottom:6px;">Prospect AI report</div>
-                  <div style="font-size:14px;line-height:18px;color:var(--platform-80);">Comprehensive intelligence for <strong style="color:var(--platform-100);">Eleanor Richardson</strong></div>
+                  <div class="pai-conf" id="elPaiConf"><span style="font-size:14px;line-height:18px;color:var(--platform-80);">Comprehensive intelligence for <strong style="color:var(--platform-100);">Eleanor Richardson</strong></span>
+                    <span class="g-badge sm green" data-conf-badge>High match</span>
+                    <span class="g-infotip" tabindex="0" role="button" aria-label="About the match rating" aria-describedby="elPaiConfTip"><i class="fa-regular fa-circle-info"></i><span class="g-tip" role="tooltip" id="elPaiConfTip" data-conf-tip></span></span>
+                  </div>
+                  <div class="pai-conf-note" data-conf-note style="display:none;margin-top:8px;"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true" data-conf-note-icon></i><span data-conf-note-text></span></div>
                 </div>
                 <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0;">
                   <span style="font-size:12px;color:var(--platform-80);">Last updated: <span class="pai-date-dynamic">Apr 10, 2026</span></span>
@@ -2999,9 +3069,26 @@ table.atbl tr:last-child td{border-bottom:none;}
                 <button class="btn-secondary">Export PDF</button>
                 <button class="btn-secondary" onclick="reEnrichEleanor()">Re-enrich profile</button>
               </div>
-              <div style="display:flex;align-items:baseline;justify-content:space-between;margin-top:12px;">
-                <div style="font-style:italic;font-size:12px;color:var(--platform-80);">AI-generated content may be inaccurate or misleading. Verify outputs before using them for anything critical.</div>
-                <span style="font-size:12px;line-height:18px;color:var(--platform-80);white-space:nowrap;margin-left:16px;">Powered by <span style="color:var(--platform-100);font-weight:600;">Dataro</span></span>
+              <!-- AI accuracy note: was 12px italic; now 14px italic body text so it gets read -->
+              <div style="margin-top:16px;font-size:14px;line-height:18px;font-style:italic;color:var(--platform-100);">AI can get things wrong or out of date. Open the linked sources to check facts before you use them in outreach.</div>
+              <!-- Report feedback (one per user per report; resets when the report is re-enriched) -->
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:16px;">
+                <div class="pai-fb" id="elPaiFb">
+                  <span class="pai-fb-q" data-fb-q>Is this report helpful?</span>
+                  <button type="button" class="g-iconbtn" data-fb="up" aria-label="Helpful" aria-pressed="false" onclick="paiFeedbackUp()"><i class="fa-regular fa-thumbs-up"></i><span class="g-tip" aria-hidden="true">Helpful</span></button>
+                  <button type="button" class="g-iconbtn" data-fb="down" aria-label="Not helpful" aria-pressed="false" aria-haspopup="dialog" onclick="openPaiFeedback()"><i class="fa-regular fa-thumbs-down"></i><span class="g-tip" aria-hidden="true">Not helpful</span></button>
+                  <span class="pai-fb-done" data-fb-done style="display:none;">Thanks for your feedback</span>
+                </div>
+                <span style="font-size:12px;line-height:18px;color:var(--platform-80);white-space:nowrap;">Powered by <span style="color:var(--platform-100);font-weight:600;">Dataro</span></span>
+              </div>
+              <!-- Demo: identity-confidence switcher (prototype only) -->
+              <div style="margin-top:16px;padding-top:16px;border-top:1px dashed var(--platform-20);">
+                <div style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;color:var(--platform-60);margin-bottom:8px;">Prototype: identity match</div>
+                <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                  <button class="btn-secondary btn-sm" onclick="setPaiConfidence('high')">High</button>
+                  <button class="btn-secondary btn-sm" onclick="setPaiConfidence('medium')">Medium</button>
+                  <button class="btn-secondary btn-sm" onclick="setPaiConfidence('low')">Low</button>
+                </div>
               </div>
             </div>
             <!-- Executive Summary -->
@@ -5376,7 +5463,83 @@ function amyGsToggle2(btn, mode) {
   amyGivingChartInstance2.update();
 }
 
+
+/* ── Prospect AI: identity confidence + report feedback ── */
+var PAI_CONF_BASE = 'How sure we are this report is about the right person, based on how well the location, employer and giving history match your constituent.';
+var PAI_CONF = {
+  high:   { tone:'green',  label:'High match',   note:'' },
+  medium: { tone:'yellow', label:'Medium match', note:'Some matching evidence. Check the sources before outreach.' },
+  low:    { tone:'orange', label:'Low match',    note:'Closest match we found, but the evidence is thin. Check the sources before you use this report.' }
+};
+function setPaiConfidence(level) {
+  var c = PAI_CONF[level]; if (!c) return;
+  var b = document.querySelector('#elPaiConf [data-conf-badge]');
+  b.className = 'g-badge sm ' + c.tone; b.textContent = c.label;
+  document.querySelector('#elPaiConf [data-conf-tip]').textContent = PAI_CONF_BASE;
+  var n = document.querySelector('#elPaiFullReport [data-conf-note]');
+  n.querySelector('[data-conf-note-text]').textContent = c.note;
+  n.querySelector('[data-conf-note-icon]').style.color = 'var(--' + c.tone + '-300)';
+  n.style.display = c.note ? 'flex' : 'none';
+}
+document.addEventListener('DOMContentLoaded', function(){ setPaiConfidence('high'); });
+var paiFbOpener = null;
+function paiFbLock(which) {
+  var fb = document.getElementById('elPaiFb');
+  fb.querySelectorAll('[data-fb]').forEach(function(btn) {
+    var on = btn.getAttribute('data-fb') === which;
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    btn.querySelector('i').className = (on ? 'fa-solid' : 'fa-regular') + ' fa-thumbs-' + btn.getAttribute('data-fb');
+    btn.disabled = true;
+  });
+  fb.querySelector('[data-fb-q]').style.display = 'none';
+  fb.querySelector('[data-fb-done]').style.display = '';
+}
+function paiFbReset() {
+  var fb = document.getElementById('elPaiFb'); if (!fb) return;
+  fb.querySelectorAll('[data-fb]').forEach(function(btn) {
+    btn.setAttribute('aria-pressed', 'false'); btn.disabled = false;
+    btn.querySelector('i').className = 'fa-regular fa-thumbs-' + btn.getAttribute('data-fb');
+  });
+  fb.querySelector('[data-fb-q]').style.display = '';
+  fb.querySelector('[data-fb-done]').style.display = 'none';
+}
+function paiFbToast() {
+  showToast('<i class="fa-solid fa-circle-check" style="font-size:20px;color:var(--crm-100);flex-shrink:0;"></i> <span>Feedback sent. Thanks for helping improve Prospect AI.</span>');
+}
+function paiFeedbackUp() { paiFbLock('up'); paiFbToast(); }
+function openPaiFeedback() {
+  paiFbOpener = document.activeElement;
+  document.querySelectorAll('input[name="paiFbCat"]').forEach(function(r){ r.checked = false; });
+  document.getElementById('paiFbText').value = '';
+  paiFbReady();
+  document.getElementById('paiFbModal').classList.add('open');
+  setTimeout(function(){ document.querySelector('input[name="paiFbCat"]').focus(); }, 0);
+}
+function closePaiFeedback() {
+  document.getElementById('paiFbModal').classList.remove('open');
+  if (paiFbOpener && !paiFbOpener.disabled) paiFbOpener.focus();
+}
+function paiFbReady() {
+  document.getElementById('paiFbSend').disabled = !document.querySelector('input[name="paiFbCat"]:checked');
+}
+function sendPaiFeedback() {
+  if (!document.querySelector('input[name="paiFbCat"]:checked')) return;
+  document.getElementById('paiFbModal').classList.remove('open');
+  paiFbLock('down'); paiFbToast();
+}
+document.addEventListener('keydown', function(e) {
+  var m = document.getElementById('paiFbModal');
+  if (!m || !m.classList.contains('open')) return;
+  if (e.key === 'Escape') { closePaiFeedback(); return; }
+  if (e.key === 'Tab') { // focus trap
+    var f = [].slice.call(m.querySelectorAll('button:not([disabled]),input,textarea')).filter(function(el){ return el.type !== 'radio' || el.checked || !m.querySelector('input[name="'+el.name+'"]:checked'); });
+    var first = f[0], last = f[f.length-1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
+});
 function reEnrichEleanor() {
+  paiFbReset(); // one rating per report: a re-enriched report can be rated again
   var full = document.getElementById('elPaiFullReport');
   var empty = document.getElementById('elPaiEmpty');
   // Swap to empty state and trigger loading
@@ -6147,5 +6310,29 @@ document.addEventListener('click', function(e) {
   else { initStickyHeader(); }
 })();
 </script>
+
+<!-- Prospect AI report feedback (thumbs down) — Grove Modal xs -->
+<div class="g-modal-scrim" id="paiFbModal" onclick="if(event.target===this)closePaiFeedback()">
+  <div class="g-modal" role="dialog" aria-modal="true" aria-labelledby="paiFbTitle">
+    <div class="g-modal-hd">
+      <h4 class="g-modal-title" id="paiFbTitle">What's wrong with this report?</h4>
+      <button type="button" class="g-iconbtn lg" aria-label="Close" onclick="closePaiFeedback()"><i class="fa-regular fa-xmark"></i></button>
+    </div>
+    <div class="g-modal-body">
+      <fieldset class="g-radio-group" aria-labelledby="paiFbTitle">
+        <label class="g-radio"><input type="radio" name="paiFbCat" value="wrong_person" onchange="paiFbReady()"><span class="g-radio-ring"><i class="fa-regular fa-circle"></i><i class="fa-regular fa-circle-dot"></i></span>Wrong person</label>
+        <label class="g-radio"><input type="radio" name="paiFbCat" value="fact_wrong" onchange="paiFbReady()"><span class="g-radio-ring"><i class="fa-regular fa-circle"></i><i class="fa-regular fa-circle-dot"></i></span>Fact is wrong or out of date</label>
+        <label class="g-radio"><input type="radio" name="paiFbCat" value="bad_source" onchange="paiFbReady()"><span class="g-radio-ring"><i class="fa-regular fa-circle"></i><i class="fa-regular fa-circle-dot"></i></span>Bad or irrelevant source</label>
+        <label class="g-radio"><input type="radio" name="paiFbCat" value="not_useful" onchange="paiFbReady()"><span class="g-radio-ring"><i class="fa-regular fa-circle"></i><i class="fa-regular fa-circle-dot"></i></span>Report not useful</label>
+      </fieldset>
+      <label class="g-field-lbl" for="paiFbText">Add details (optional)</label>
+      <textarea class="g-textarea" id="paiFbText"></textarea>
+    </div>
+    <div class="g-modal-ft">
+      <button type="button" class="btn-secondary" onclick="closePaiFeedback()">Cancel</button>
+      <button type="button" class="btn-primary" id="paiFbSend" disabled onclick="sendPaiFeedback()">Send feedback</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
